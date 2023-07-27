@@ -1,17 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Navbar from './components/Navbar'
 
 export default function Home() {
   return (
     <> 
       <main> 
-        <Image
-          src="/nxx.png"
-          width={500}
-          height={500}
-          alt="Picture of the author"
-          priority
-        />
+        <Navbar/>
       </main>
     </>
   )
