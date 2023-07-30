@@ -1,13 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Navbar from './components/Navbar'
+import NavHome from './components/NavHome' 
 
 export default function Home() {
   return (
-    <> 
-      <main> 
-        <Navbar/>
-      </main>
+    <>  
+      <NavHome/>
     </>
   )
 }
