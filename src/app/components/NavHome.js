@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown'; 
+import { motion } from 'framer-motion'
 
 const NavHome = () => {
     const [showProcess, setShowProcess] = useState(false);
@@ -81,6 +82,17 @@ const NavHome = () => {
                 <h3 className="text-md text-white mx-auto">
                     Página de documentación interna
                 </h3>
+                <motion.div className="bg-transparent px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+                hover:!bg-white hover:!text-black"
+                    whileHover={{ 
+                        y: [-5, -10, -12, -10, -5],
+                        transition: {
+                            repeat: Infinity
+                        }
+                    }}>
+                        Ver Dashboard
+                </motion.div>
+                
             </div>
         </main>
         <div className="-mt-32 z-10 relative">
@@ -92,8 +104,8 @@ const NavHome = () => {
                 <path fill="#121212" d="M500 97C126.7 96.3.8 19.8 0 0v100h1000V1c0 18.4-126.7 96.8-500 96z" />
             </svg>
         </div>
-        <div className="bg-[#121212] h-screen"> 
-            <Image src="/logo-claro-giant.png" width={400} height={400} className="absolute mr-[50%]" />
+        <div className="bg-[#121212] h-screen w-full flex"> 
+            <Image src="/logo-claro-giant.png" width={300} height={300} className="absolute left-1/2 -ml-[150px] -mt-[150px] z-10" alt="Logo Claro" />
         </div>
     </>
     
