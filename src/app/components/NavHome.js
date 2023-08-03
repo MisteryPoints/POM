@@ -26,7 +26,7 @@ const NavHome = () => {
   return (
     <>
         <main className={'bg-hero h-screen bg-cover bg-no-repeat relative -z-0 shadow-xl selection:bg-red-700 selection:text-white'}> 
-            <div className='h-screen w-full bg-gray-700/60 absolute -z-10 select-none'>
+            <div className='h-screen w-full bg-gray-700/40 absolute -z-10 select-none'>
                 <Image src="/logo-pom.png" priority="true" width="110" height="59" alt="Logo POM" className="mx-auto mt-4" /> 
             </div>
             <div className="pt-24 mx-auto select-none">
@@ -82,11 +82,12 @@ const NavHome = () => {
                 <h3 className="text-md text-white mx-auto">
                     Página de documentación interna
                 </h3>
-                <motion.div className="bg-transparent px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+                <motion.div className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
                 hover:!bg-white hover:!text-black"
                     whileHover={{ 
                         y: [-5, -10, -12, -10, -5],
                         transition: {
+                            duration: 1.2,
                             repeat: Infinity
                         }
                     }}>
@@ -104,7 +105,7 @@ const NavHome = () => {
                 <path fill="#121212" d="M500 97C126.7 96.3.8 19.8 0 0v100h1000V1c0 18.4-126.7 96.8-500 96z" />
             </svg>
         </div>
-        <div className="bg-[#121212] h-screen w-full flex"> 
+        <div className="bg-[#121212] w-full flex"> 
             <Image src="/logo-claro-giant.png" width={300} height={300} className="absolute left-1/2 -ml-[150px] -mt-[150px] z-10" alt="Logo Claro" />
         </div>
     </>
