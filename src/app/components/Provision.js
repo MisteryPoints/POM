@@ -7,10 +7,34 @@ import Link from 'next/link'
 
 const FramerImage = motion(Image);
 
+const SPIAnimate = {
+  enter: {
+    opacity: 1,
+    rotateX: 0,
+    x: 0,
+    transition: {
+      duration: 0.5
+    },
+    display: "block"
+  },
+  exit: {
+    opacity: 0,
+    rotateX: -15,
+    x: -700,
+    transition: {
+      duration: 0.5,
+      delay: 0.1
+    },
+    transitionEnd: {
+      display: "none"
+    }
+  }
+};
+
 const ProvisionCard = ({nombre, descripcion, responsable, link, logo, mail}) => (
   
   <article className="w-full items-center justify-center rounded-2xl border border-solid border-gray-900 bg-light shadow-xl hover:shadow-2xl p-6 relative transition-all duration-200  overflow-hidden">
-    <div className="absolute top-0 -right-4  -z-10 w-[102%] h-[101.5%] rounded-[32px] bg-gray-900" />
+    <div className="absolute top-0 -right-4  -z-10 w-[102%] h-[101.5%] rounded-[32px] bg-red-600" />
     <Link href={mail} target="_blank" className="w-full cursor-pointer">
       <FramerImage
         src={logo}
@@ -56,63 +80,67 @@ const Provision = () => {
 
   return (
     <motion.div className="bg-[#121212] w-full">  
-      <div onClick={() => setSpi(!spi)} className="mx-20 pt-48 text-gray-300 text-6xl hover:cursor-pointer flex">
-        <motion.p  className="-rotate-90" 
-          animate={spi ? { rotate: 90 } : ''}
-          transition={{ duration: 1 }}><MdOutlineArrowDropDownCircle/></motion.p>
+      <div onClick={() => setSpi(!spi)} className="mx-20 pt-48 text-gray-300 text-5xl hover:cursor-pointer flex pb-10">
+        <motion.p
+          initial={{ rotate: -90 }}
+          animate={spi ? { rotate: 0 } : ''}
+          transition={{ duration: .3 }}><MdOutlineArrowDropDownCircle/></motion.p>
         <p>&nbsp;Soporte Provisión Inalámbricos</p>
       </div> 
-      <div className="w-full px-20 py-10 grid grid-cols-2 gap-4">
-        <ProvisionCard 
-          nombre="Rebotes Prepago"
-          descripcion="Gestión de manejo de los Rebotes generados por Transacciones en el Portal de Administración Prepago, gestionado por el Analista de Rebotes Prepago."
-          responsable="Willy Alcantara X-4002"
-          link="/rebotes/prepago"
-          logo="/WillyAlcantara.png"
-          mail="mailto:willy_alcantara@claro.com.do"
-          />
-        <ProvisionCard 
-          nombre="Rebotes Postpago"
-          descripcion="Gestión de manejo de los Rebotes generados por Transacciones en el Switch de Ensamble, gestionado por el Analista de Rebotes Postpago."
-          responsable="Mabeel Fernandez X-5735"
-          link="/rebotes/postpago"
-          logo="/MabeelFernandez.png"
-          mail="mailto:mabeel_fernandez@claro.com.do"
-          />
-        <ProvisionCard 
-          nombre="Compare de Aprovisionamiento"
-          descripcion="Gestión de los diferentes Compares entre nuestros Nodos y los Sistemas, gestionado por el Analista de Compare."
-          responsable="Ariangel Diaz X-2847"
-          link="/compare"
-          logo="/AriangelDiaz.png"
-          mail="mailto:ariangel_diaz@claro.com.do"
-          /> 
-        <ProvisionCard 
-          nombre="Casos SAAM / SWAT Team"
-          descripcion="Gestión de casos de Aprovisionamiento y Avería. Soporte SWAT Team de casos Flota y Conectividad."
-          responsable="Cristian Melo X-3230"
-          link="/casos"
-          logo="/CristianMelo.png"
-          mail="mailto:cristian_melo@claro.com.do"
-          />
-        <ProvisionCard 
-          nombre="Casos SAAM / Desarrollos Operativos"
-          descripcion="Gestión de casos de Aprovisionamiento y Avería. Encargado de los desarrollos requeridos en el área de Operaciones Móviles."
-          responsable="Víctor Tejada X-5118"
-          link="/casos"
-          logo="/VictorTejada.png"
-          mail="mailto:victor_tejada@claro.com.do"
-          />
-        <ProvisionCard 
-          nombre="Soporte Vespertino SAAM y Medios"
-          descripcion="Soporte Vespertino de casos nocturnos. Gestión de casos de Aprovisionamiento y Avería. Gestión de casos de Medio de Recargo de Reclamaciones de balance y ofertas de datos."
-          responsable="Kelvin Ceballo X-2031"
-          link="/rebotes/prepago"
-          logo="/KelvinCeballos.png"
-          mail="mailto:kelvin_ceballo@claro.com.do"
-          /> 
-        
-      </div>
+      <motion.div className={"w-full px-20 pb-10 overflow-hidden"}
+          animate={spi ? "enter" : "exit"}
+          variants={SPIAnimate}>
+          <div className='grid grid-cols-2 gap-4'>
+            <ProvisionCard 
+              nombre="Rebotes Prepago"
+              descripcion="Gestión de manejo de los Rebotes generados por Transacciones en el Portal de Administración Prepago, gestionado por el Analista de Rebotes Prepago."
+              responsable="Willy Alcantara X-4002"
+              link="/rebotes/prepago"
+              logo="/WillyAlcantara.png"
+              mail="mailto:willy_alcantara@claro.com.do"
+              />
+            <ProvisionCard 
+              nombre="Rebotes Postpago"
+              descripcion="Gestión de manejo de los Rebotes generados por Transacciones en el Switch de Ensamble, gestionado por el Analista de Rebotes Postpago."
+              responsable="Mabeel Fernandez X-5735"
+              link="/rebotes/postpago"
+              logo="/MabeelFernandez.png"
+              mail="mailto:mabeel_fernandez@claro.com.do"
+              />
+            <ProvisionCard 
+              nombre="Compare de Aprovisionamiento"
+              descripcion="Gestión de los diferentes Compares entre nuestros Nodos y los Sistemas, gestionado por el Analista de Compare."
+              responsable="Ariangel Diaz X-2847"
+              link="/compare"
+              logo="/AriangelDiaz.png"
+              mail="mailto:ariangel_diaz@claro.com.do"
+              /> 
+            <ProvisionCard 
+              nombre="Casos SAAM / SWAT Team"
+              descripcion="Gestión de casos de Aprovisionamiento y Avería. Soporte SWAT Team de casos Flota y Conectividad."
+              responsable="Cristian Melo X-3230"
+              link="/casos"
+              logo="/CristianMelo.png"
+              mail="mailto:cristian_melo@claro.com.do"
+              />
+            <ProvisionCard 
+              nombre="Casos SAAM / Desarrollos Operativos"
+              descripcion="Gestión de casos de Aprovisionamiento y Avería. Encargado de los desarrollos requeridos en el área de Operaciones Móviles."
+              responsable="Víctor Tejada X-5118"
+              link="/casos"
+              logo="/VictorTejada.png"
+              mail="mailto:victor_tejada@claro.com.do"
+              />
+            <ProvisionCard 
+              nombre="Soporte Vespertino SAAM y Medios"
+              descripcion="Soporte Vespertino de casos nocturnos. Gestión de casos de Aprovisionamiento y Avería. Gestión de casos de Medio de Recargo de Reclamaciones de balance y ofertas de datos."
+              responsable="Kelvin Ceballo X-2031"
+              link="/rebotes/prepago"
+              logo="/KelvinCeballos.png"
+              mail="mailto:kelvin_ceballo@claro.com.do"
+              /> 
+          </div> 
+      </motion.div>
     </motion.div>
   )
 }
