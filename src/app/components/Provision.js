@@ -55,8 +55,13 @@ const Provision = () => {
   const [spi, setSpi] = useState(false)
 
   return (
-    <div className="bg-[#121212] w-full pb-48">  
-      <h1 onClick={() => setSpi(!spi)} className="mx-20 text-gray-300 text-6xl hover:cursor-pointer"><span className={spi ? '-rotate-90' : ''}><MdOutlineArrowDropDownCircle/></span> Soporte Provisión Inalámbricos</h1> 
+    <motion.div className="bg-[#121212] w-full">  
+      <div onClick={() => setSpi(!spi)} className="mx-20 pt-48 text-gray-300 text-6xl hover:cursor-pointer flex">
+        <motion.p  className="-rotate-90" 
+          animate={spi ? { rotate: 90 } : ''}
+          transition={{ duration: 1 }}><MdOutlineArrowDropDownCircle/></motion.p>
+        <p>&nbsp;Soporte Provisión Inalámbricos</p>
+      </div> 
       <div className="w-full px-20 py-10 grid grid-cols-2 gap-4">
         <ProvisionCard 
           nombre="Rebotes Prepago"
@@ -108,7 +113,7 @@ const Provision = () => {
           /> 
         
       </div>
-    </div>
+    </motion.div>
   )
 }
 
