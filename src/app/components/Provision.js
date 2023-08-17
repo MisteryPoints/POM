@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MdOutlineArrowDropDownCircle } from "react-icons/md";
 import Image from "next/image";
@@ -87,13 +87,14 @@ const ProvisionCard = ({
 
 const Provision = () => {
   const [spi, setSpi] = useState(false);
+  const reference = useRef(null);
   const { scrollYProgress } = useScroll();
   const yPosAnim = useTransform(scrollYProgress, [0, 0.4, 1], [0, -250, -100]);
 
   useEffect(() => {
     if (spi) {
       setTimeout(() => {
-        window.scrollTo(0, 800);
+        window.scrollTo(0, reference?.current?.offsetTop - 110);
       }, 200);
     }
   }, [spi]);
@@ -104,7 +105,7 @@ const Provision = () => {
         onClick={() => {
           setSpi(!spi);
         }}
-        className="mx-20 pt-48 text-gray-300 text-5xl hover:cursor-pointer flex pb-10"
+        className="mx-20 mt-48 text-gray-300 text-5xl hover:cursor-pointer flex pb-10"
         style={{
           y: yPosAnim,
         }}
@@ -119,6 +120,7 @@ const Provision = () => {
         <p>&nbsp;Soporte Provisión Inalámbricos</p>
       </div>
       <motion.div
+        ref={reference}
         className={"w-full px-20 pb-10 overflow-hidden"}
         animate={spi ? "enter" : "exit"}
         variants={SPIAnimate}

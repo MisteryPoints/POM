@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MdOutlineArrowDropDownCircle } from "react-icons/md";
 import Image from "next/image";
@@ -87,13 +87,14 @@ const PrevencionCard = ({
 
 const Prevencion = () => {
   const [prev, setPrev] = useState(false);
+  const reference = useRef(null);
   const { scrollYProgress } = useScroll();
   const yPosAnim = useTransform(scrollYProgress, [0, 0.4, 1], [0, -250, -100]);
 
   useEffect(() => {
     if (prev) {
       setTimeout(() => {
-        window.scrollTo(0, 800);
+        window.scrollTo(0, reference?.current?.offsetTop - 110);
       }, 200);
     }
   }, [prev]);
@@ -102,9 +103,9 @@ const Prevencion = () => {
     <motion.div className="bg-[#121212] w-full">
       <div
         onClick={() => {
-          setPrev(!Prev);
+          setPrev(!prev);
         }}
-        className="mx-20 pt-48 text-gray-300 text-5xl hover:cursor-pointer flex pb-10"
+        className="mx-20 mt-2 text-gray-300 text-5xl hover:cursor-pointer flex pb-10"
         style={{
           y: yPosAnim,
         }}
@@ -116,9 +117,10 @@ const Prevencion = () => {
         >
           <MdOutlineArrowDropDownCircle />
         </motion.p>
-        <p>&nbsp;Prevencion y Proyectos</p>
+        <p>&nbsp;Prevencion de Averias y Proyectos</p>
       </div>
       <motion.div
+        ref={reference}
         className={"w-full px-20 pb-10 overflow-hidden"}
         animate={prev ? "enter" : "exit"}
         variants={PrevAnimate}
