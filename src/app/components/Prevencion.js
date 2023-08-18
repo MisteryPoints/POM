@@ -62,11 +62,11 @@ const PrevencionCard = ({
         target="_blank"
         className="hover:underline underline-offset-2 decoration-gray-900 hover:opacity-80 w-full"
       >
-        <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-2xl text-gray-900 ">
+        <h2 className="my-2 w-full text-left text-2xl font-bold lg:text-3xl text-gray-900 ">
           {nombre}
         </h2>
       </Link>
-      <h2 className="my-2 w-full text-left text-md lg:text-lg select-none">
+      <h2 className="my-2 w-full text-left text-base lg:text-lg select-none">
         {descripcion}
       </h2>
       <div className="mt-2 flex items-center w-full justify-between md:justify-start">
@@ -77,7 +77,7 @@ const PrevencionCard = ({
         >
           Visita
         </Link>
-        <h2 className="my-2 w-full text-right text-2xl font-bold lg:text-xl select-none">
+        <h2 className="my-2 w-full text-right text-2xl font-bold lg:text-xl md:text-md select-none">
           {responsable}
         </h2>
       </div>
@@ -125,7 +125,7 @@ const Prevencion = () => {
         animate={prev ? "enter" : "exit"}
         variants={PrevAnimate}
       >
-        <div className="grid grid-cols-2 gap-4 mx-auto">
+        <div className="grid 2xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4 mx-auto">
           <PrevencionCard
             nombre="Síntomas Aprovisionamiento / Funcional SAAM / Reportes CNOC"
             descripcion="Análisis de Causa Raiz y seguimiento de Sintomas de Aprovisionamiento. Soporte Funcional de SAAM sus aplicativos y adición de nuevos modulos o features."
@@ -142,7 +142,7 @@ const Prevencion = () => {
             logo="/GinetMatos.png"
             mail="mailto:ginet_matos@claro.com.do"
           />
-          <div className="col-span-2 mx-auto">
+          <div className="lg:grid-cols-2 md:grid-cols-1 mx-auto">
             <PrevencionCard
               nombre="Síntomas Averías / Auditorías Pines / Síntomas SIF"
               descripcion="Análisis de Causa Raiz y seguimiento de Sintomas de Averías. Gestión de Auditorías Pines. Análisis de Causa Raiz y seguimiento de Sintomas del Producto SIF."

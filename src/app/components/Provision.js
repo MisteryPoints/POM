@@ -62,11 +62,11 @@ const ProvisionCard = ({
         target="_blank"
         className="hover:underline underline-offset-2 decoration-gray-900 hover:opacity-80 w-full"
       >
-        <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-2xl text-gray-900 ">
+        <h2 className="my-2 w-full text-left text-2xl font-bold lg:text-3xl text-gray-900 ">
           {nombre}
         </h2>
       </Link>
-      <h2 className="my-2 w-full text-left text-md lg:text-lg select-none">
+      <h2 className="my-2 w-full text-left text-base lg:text-lg select-none">
         {descripcion}
       </h2>
       <div className="mt-2 flex items-center w-full justify-between md:justify-start">
@@ -125,7 +125,7 @@ const Provision = () => {
         animate={spi ? "enter" : "exit"}
         variants={SPIAnimate}
       >
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid 2xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4">
           <ProvisionCard
             nombre="Rebotes Prepago"
             descripcion="Gestión de manejo de los Rebotes generados por Transacciones en el Portal de Administración Prepago, gestionado por el Analista de Rebotes Prepago."
