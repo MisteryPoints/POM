@@ -8,3 +8,8 @@ html{
 .dropdown-toggle::after {
     display: none !important; 
 }
+
+.btn-flat {
+    background-color: transparent !important;
+    color: white !important;
+}

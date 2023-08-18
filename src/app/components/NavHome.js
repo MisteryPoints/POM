@@ -7,10 +7,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown'; 
 import { motion } from 'framer-motion'
+import { Dropdown, SplitButton } from 'react-bootstrap';
 
 const NavHome = () => {
     const [showProcess, setShowProcess] = useState(false);
     const [showTech, setShowTech] = useState(false);
+    const [showProv, setShowProv] = useState(false);
     const showDropdownP = (e)=>{
         setShowProcess(!showProcess);
     }
@@ -22,6 +24,12 @@ const NavHome = () => {
     }
     const hideDropdownT = e => { 
         setShowTech(false); 
+    }
+    const showDropdownProv = (e)=>{
+        setShowProv(!showProv);
+    }
+    const hideDropdownProv = e => { 
+        setShowProv(false); 
     }
   return (
     <>
@@ -65,9 +73,22 @@ const NavHome = () => {
                         </NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">
-                            Separated link
-                        </NavDropdown.Item>
+                        <NavDropdown
+                            title={<span className='text-md font-normal pl-2 !text-gray-200'>Averias</span>}
+                            variant='flat' 
+                            drop='end' 
+                            menuVariant="dark"
+                            show={showProv}
+                            onMouseEnter={showDropdownProv} 
+                            onMouseLeave={hideDropdownProv} 
+                            className='hover:!bg-gray-200/10'
+                        > 
+                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">
+                                Another action
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                        </NavDropdown>
                         </NavDropdown>
                         <Nav.Link href="/link" className="mx-8 !font-bold !text-xl !text-slate-200 uppercase">Nosotros</Nav.Link>
                     </Nav>

@@ -40,7 +40,7 @@ const PrevencionCard = ({
   logo,
   mail,
 }) => (
-  <article className="w-full items-center justify-center rounded-2xl border border-solid border-gray-900 bg-white shadow-gray-200 shadow-none hover:shadow-md p-6 relative transition-all duration-200">
+  <article className="w-full max-w-[550px] items-center justify-center rounded-2xl border border-solid border-gray-900 bg-white shadow-gray-200 shadow-none hover:shadow-md p-6 relative transition-all duration-200 opacity-80 hover:opacity-100 ">
     <Link
       href={mail}
       target="_blank"
@@ -117,7 +117,7 @@ const Prevencion = () => {
         >
           <MdOutlineArrowDropDownCircle />
         </motion.p>
-        <p>&nbsp;Prevencion de Averias y Proyectos</p>
+        <p>&nbsp;Soporte Proyectos y Averías Móviles</p>
       </div>
       <motion.div
         ref={reference}
@@ -125,55 +125,33 @@ const Prevencion = () => {
         animate={prev ? "enter" : "exit"}
         variants={PrevAnimate}
       >
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 mx-auto">
           <PrevencionCard
-            nombre="Rebotes Prepago"
-            descripcion="Gestión de manejo de los Rebotes generados por Transacciones en el Portal de Administración Prepago, gestionado por el Analista de Rebotes Prepago."
-            responsable="Willy Alcantara X-4002"
-            link="/rebotes/prepago"
-            logo="/WillyAlcantara.png"
-            mail="mailto:willy_alcantara@claro.com.do"
+            nombre="Síntomas Aprovisionamiento / Funcional SAAM / Reportes CNOC"
+            descripcion="Análisis de Causa Raiz y seguimiento de Sintomas de Aprovisionamiento. Soporte Funcional de SAAM sus aplicativos y adición de nuevos modulos o features."
+            responsable="Yael Segura X-4776"
+            link="/prevencion/aprovisionamiento"
+            logo="/YaelSegura.png"
+            mail="mailto:yael_segura@claro.com.do"
           />
           <PrevencionCard
-            nombre="Rebotes Postpago"
-            descripcion="Gestión de manejo de los Rebotes generados por Transacciones en el Switch de Ensamble, gestionado por el Analista de Rebotes Postpago."
-            responsable="Mabeel Fernandez X-5735"
-            link="/rebotes/postpago"
-            logo="/MabeelFernandez.png"
-            mail="mailto:mabeel_fernandez@claro.com.do"
+            nombre="Síntomas Reclamación / Auditorías Prepago y Postpago / Funcional OTA"
+            descripcion="Análisis de Causa Raiz y seguimiento de Sintomas de Reclamación. Gestión de Auditorías Prepago y Postpago de ofertas aplicadas. Soporte Funcional de OTA."
+            responsable="Ginet Matos X-4797"
+            link="/prevencion/reclamacion"
+            logo="/GinetMatos.png"
+            mail="mailto:ginet_matos@claro.com.do"
           />
-          <PrevencionCard
-            nombre="Compare de Aprovisionamiento"
-            descripcion="Gestión de los diferentes Compares entre nuestros Nodos y los Sistemas, gestionado por el Analista de Compare."
-            responsable="Ariangel Diaz X-2847"
-            link="/compare"
-            logo="/AriangelDiaz.png"
-            mail="mailto:ariangel_diaz@claro.com.do"
-          />
-          <PrevencionCard
-            nombre="Casos SAAM / SWAT Team"
-            descripcion="Gestión de casos de Aprovisionamiento y Avería. Soporte SWAT Team de casos Flota y Conectividad."
-            responsable="Cristian Melo X-3230"
-            link="/casos"
-            logo="/CristianMelo.png"
-            mail="mailto:cristian_melo@claro.com.do"
-          />
-          <PrevencionCard
-            nombre="Casos SAAM / Desarrollos Operativos"
-            descripcion="Gestión de casos de Aprovisionamiento y Avería. Encargado de los desarrollos requeridos en el área de Operaciones Móviles."
-            responsable="Víctor Tejada X-5118"
-            link="/casos"
-            logo="/VictorTejada.png"
-            mail="mailto:victor_tejada@claro.com.do"
-          />
-          <PrevencionCard
-            nombre="Soporte Vespertino SAAM y Medios"
-            descripcion="Soporte Vespertino de casos nocturnos. Gestión de casos de Aprovisionamiento y Avería. Gestión de casos de Medio de Recargo de Reclamaciones de balance y ofertas de datos."
-            responsable="Kelvin Ceballo X-2031"
-            link="/rebotes/prepago"
-            logo="/KelvinCeballos.png"
-            mail="mailto:kelvin_ceballo@claro.com.do"
-          />
+          <div className="col-span-2 mx-auto">
+            <PrevencionCard
+              nombre="Síntomas Averías / Auditorías Pines / Síntomas SIF"
+              descripcion="Análisis de Causa Raiz y seguimiento de Sintomas de Averías. Gestión de Auditorías Pines. Análisis de Causa Raiz y seguimiento de Sintomas del Producto SIF."
+              responsable="Rafael Pichardo X-8112"
+              link="/prevencion/averias"
+              logo="/RafaelPichardo.png"
+              mail="mailto:rafael_pichardo@claro.com.do"
+            />
+          </div>
         </div>
       </motion.div>
     </motion.div>
