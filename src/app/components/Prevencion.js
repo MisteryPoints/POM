@@ -40,7 +40,7 @@ const PrevencionCard = ({
   logo,
   mail,
 }) => (
-  <article className="w-full max-w-[550px] items-center justify-center rounded-2xl border border-solid border-gray-900 bg-white shadow-gray-200 shadow-none hover:shadow-md p-6 relative transition-all duration-200 opacity-80 hover:opacity-100 ">
+  <article className="w-full max-w-[550px] h-full items-center justify-center rounded-2xl border border-solid border-gray-900 bg-white shadow-gray-200 shadow-none hover:shadow-md p-6 relative transition-all duration-200 opacity-80 hover:opacity-100 ">
     <Link
       href={mail}
       target="_blank"
@@ -135,7 +135,7 @@ const Prevencion = () => {
             mail="mailto:yael_segura@claro.com.do"
           />
           <PrevencionCard
-            nombre="Síntomas Reclamación / Auditorías Prepago y Postpago / Funcional OTA"
+            nombre="Síntomas Reclamación / Auditorías Ofertas / Funcional OTA"
             descripcion="Análisis de Causa Raiz y seguimiento de Sintomas de Reclamación. Gestión de Auditorías Prepago y Postpago de ofertas aplicadas. Soporte Funcional de OTA."
             responsable="Ginet Matos X-4797"
             link="/prevencion/reclamacion"
