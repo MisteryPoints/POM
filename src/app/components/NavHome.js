@@ -8,6 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { motion } from "framer-motion";
 import { Dropdown, SplitButton } from "react-bootstrap";
+import NavDrop from "./NavDrop";
 
 const NavHome = () => {
   const [showProcess, setShowProcess] = useState(false);
@@ -77,18 +78,70 @@ const NavHome = () => {
                     onMouseLeave={hideDropdownT}
                     className="mx-8 !font-bold !text-xl !text-white"
                   >
-                    <NavDropdown.Item href="#action/3.1">
+                    <NavDrop name={
+                        <span className="text-md font-normal !text-gray-200">
+                          Casos SAAM
+                        </span>
+                      }
+                    >
+                      <NavDrop name={
+                        <span className="text-md font-normal !text-gray-200">
+                          Nodos / Plataformas
+                        </span>
+                        }
+                      >
+                        <NavDropdown.Item href="#action/3.1" className="pr-2 pl-3">
+                          ECMS
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                          EMA / EDA
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                          SDP
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                          AIR
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                          HLR
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                          SMSC / ZTE
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                          SMGR
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                          Voice Mail
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                          SPG / IMS
+                        </NavDropdown.Item>
+                      </NavDrop>
+                      <NavDropdown.Divider />
+                      <NavDrop name={
+                        <span className="text-md font-normal !text-gray-200">
+                          Sistemas
+                        </span>
+                        }
+                      >
+                        <NavDropdown.Item href="#action/3.1" className="pr-2 pl-3">
+                          Commplex
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                          PPG
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                          Ensamble
+                        </NavDropdown.Item>
+                      </NavDrop>
+                    </NavDrop>
+                    <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
                       Dashboard Estadísticas
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
-                      Something
-                    </NavDropdown.Item>
+                    </NavDropdown.Item> 
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">
-                      Separated link
+                    <NavDropdown.Item href="/tecnologias/links" className="pr-2 pl-3">
+                      Links
                     </NavDropdown.Item>
                   </NavDropdown>
                   <NavDropdown
@@ -104,64 +157,59 @@ const NavHome = () => {
                     onMouseLeave={hideDropdownP}
                     className="mx-8 !font-bold !text-xl !text-white"
                   >
-                    <NavDropdown.Item href="#action/3.1">
-                      Action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
-                      Something
-                    </NavDropdown.Item>
+                    <NavDrop name={
+                        <span className="text-md font-normal  !text-gray-200">
+                          Rebotes
+                        </span>
+                      }
+                    >
+                      <NavDropdown.Item href="#action/3.1" className="pr-2 pl-3">
+                        Rebotes Prepago
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        Rebotes Postpago
+                      </NavDropdown.Item> 
+                    </NavDrop>
                     <NavDropdown.Divider />
-                    <NavDropdown
-                      title={
-                        <span className="text-md font-normal pl-2 !text-gray-200">
-                          Averias
+                    <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                      Compare
+                    </NavDropdown.Item> 
+                    <NavDropdown.Divider />
+                    <NavDrop name={
+                        <span className="text-md font-normal !text-gray-200">
+                          Casos SAAM
                         </span>
                       }
-                      variant="flat"
-                      drop="end"
-                      menuVariant="dark"
-                      show={showProv}
-                      onMouseEnter={showDropdownProv}
-                      onMouseLeave={hideDropdownProv}
-                      className="hover:!bg-gray-200/10"
                     >
-                      <NavDropdown.Item href="#action/3.1">
-                        Action
+                      <NavDropdown.Item href="#action/3.1" className="pr-2 pl-3">
+                        Aprovisionamiento
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.2">
-                        Another action
+                      <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        Averías
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.3">
-                        Something
+                      <NavDropdown.Item href="#action/3.3" className="pr-2 pl-3">
+                        Reclamación
                       </NavDropdown.Item>
-                    </NavDropdown>
-                    <NavDropdown
-                      title={
-                        <span className="text-md font-normal pl-2 !text-gray-200">
-                          Casos
+                    </NavDrop>
+                    <NavDrop name={
+                        <span className="text-md font-normal  !text-gray-200">
+                          Prevención de Averías
                         </span>
-                      }
-                      variant="flat"
-                      drop="end"
-                      menuVariant="dark"
-                      show={showProv}
-                      onMouseEnter={showDropdownProv}
-                      onMouseLeave={hideDropdownProv}
-                      className="hover:!bg-gray-200/10"
+                      } 
                     >
-                      <NavDropdown.Item href="#action/3.1">
-                        Action
+                      <NavDropdown.Item href="#action/3.1" className="pr-2 pl-3">
+                        Síntomas Aprovisionamiento
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.2">
-                        Another action
+                      <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        Síntomas Averías
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.3">
-                        Something
+                      <NavDropdown.Item href="#action/3.3" className="pr-2 pl-3">
+                        Síntomas Reclamación
                       </NavDropdown.Item>
-                    </NavDropdown>
+                      <NavDropdown.Item href="#action/3.3" className="pr-2 pl-3">
+                        Síntomas SIF
+                      </NavDropdown.Item>
+                    </NavDrop>
                   </NavDropdown>
                   <Nav.Link
                     href="/link"
