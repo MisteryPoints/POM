@@ -35,10 +35,10 @@ const NavHome = () => {
     <>
       <main
         className={
-          "bg-hero h-screen bg-cover bg-no-repeat relative -z-0 shadow-xl selection:bg-red-700 selection:text-white"
+          "bg-hero h-screen -mt-12 max-h-[800px] bg-cover bg-no-repeat relative -z-0 shadow-xl selection:bg-red-700 selection:text-white"
         }
       >
-        <div className="h-screen w-full bg-gray-700/40 absolute -z-10 select-none">
+        <div className="h-screen mt-12 max-h-[750px] w-full bg-gray-700/40 absolute -z-10 select-none">
           <Image
             src="/logo-pom.png"
             priority="true"
@@ -48,7 +48,7 @@ const NavHome = () => {
             className="mx-auto mt-4"
           />
         </div>
-        <div className="pt-24 mx-auto select-none">
+        <div className="pt-36 mx-auto select-none">
           <Navbar expand="lg" className="bg-transparent mx-auto">
             <Container fluid>
               <Navbar.Toggle aria-controls="navbarScroll" />
@@ -196,7 +196,7 @@ const NavHome = () => {
           </motion.div>
         </div>
       </main>
-      <div className="-mt-32 z-10 relative">
+      <div className=" -mt-[175px] z-10 relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
@@ -213,7 +213,7 @@ const NavHome = () => {
           src="/logo-claro-giant.png"
           width={300}
           height={300}
-          className="absolute left-1/2 -ml-[150px] -mt-[150px] z-10"
+          className="absolute left-1/2 -ml-[150px] -mt-[175px] z-10"
           alt="Logo Claro"
         />
       </div>

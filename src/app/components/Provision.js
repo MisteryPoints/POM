@@ -105,7 +105,7 @@ const Provision = () => {
         onClick={() => {
           setSpi(!spi);
         }}
-        className="mx-20 mt-48 text-gray-300 text-5xl hover:cursor-pointer flex pb-10"
+        className="mx-20 mt-36 text-gray-300 text-5xl hover:cursor-pointer flex pb-10"
         style={{
           y: yPosAnim,
         }}
