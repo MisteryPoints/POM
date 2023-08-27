@@ -9,6 +9,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { motion } from "framer-motion";
 import { Dropdown, SplitButton } from "react-bootstrap";
 import NavDrop from "./NavDrop";
+import Link from "next/link";
 
 const NavHome = () => {
   const [showProcess, setShowProcess] = useState(false);
@@ -36,7 +37,7 @@ const NavHome = () => {
     <>
       <main
         className={
-          "bg-hero h-screen -mt-12 max-h-[800px] bg-cover bg-no-repeat relative -z-0 shadow-xl selection:bg-red-700 selection:text-white"
+          "bg-hero h-screen -mt-12 max-h-[800px] bg-cover bg-no-repeat relative -z-0 selection:bg-red-700 selection:text-white"
         }
       >
         <div className="h-screen mt-12 max-h-[750px] w-full bg-gray-700/40 absolute -z-10 select-none">
@@ -67,7 +68,7 @@ const NavHome = () => {
                   </Nav.Link>
                   <NavDropdown
                     title={
-                      <span className="!font-bold !text-xl !text-slate-200 uppercase">
+                      <span className="mx-8 !font-bold !text-xl !text-slate-200 uppercase">
                         Tecnologías
                       </span>
                     }
@@ -78,75 +79,133 @@ const NavHome = () => {
                     onMouseLeave={hideDropdownT}
                     className="mx-8 !font-bold !text-xl !text-white"
                   >
-                    <NavDrop name={
-                        <span className="text-md font-normal !text-gray-200">
-                          Casos SAAM
-                        </span>
+                    <NavDropdown.Item href="/saam" className="pr-2 pl-3">
+                      SAAM
+                    </NavDropdown.Item>
+                    <NavDrop
+                      name={
+                        <Link
+                          href="/herramientas"
+                          className="text-md font-normal block w-[150px] !text-gray-200 no-underline"
+                        >
+                          Herramientas
+                        </Link>
                       }
                     >
-                      <NavDrop name={
-                        <span className="text-md font-normal !text-gray-200">
-                          Nodos / Plataformas
-                        </span>
+                      <NavDrop
+                        name={
+                          <Link
+                            href="/nodos"
+                            className="text-md font-normal block w-[150px] !text-gray-200 no-underline"
+                          >
+                            Nodos
+                          </Link>
                         }
                       >
-                        <NavDropdown.Item href="#action/3.1" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/nodos/ecms"
+                          className="pr-2 pl-3"
+                        >
                           ECMS
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/nodos/eda"
+                          className="pr-2 pl-3"
+                        >
                           EMA / EDA
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/nodos/sdp"
+                          className="pr-2 pl-3"
+                        >
                           SDP
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/nodos/air"
+                          className="pr-2 pl-3"
+                        >
                           AIR
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/nodos/hlr"
+                          className="pr-2 pl-3"
+                        >
                           HLR
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/nodos/zte"
+                          className="pr-2 pl-3"
+                        >
                           SMSC / ZTE
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/nodos/sm"
+                          className="pr-2 pl-3"
+                        >
                           SMGR
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/nodos/vm"
+                          className="pr-2 pl-3"
+                        >
                           Voice Mail
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/nodos/volte"
+                          className="pr-2 pl-3"
+                        >
                           SPG / IMS
                         </NavDropdown.Item>
                       </NavDrop>
                       <NavDropdown.Divider />
-                      <NavDrop name={
-                        <span className="text-md font-normal !text-gray-200">
-                          Sistemas
-                        </span>
+                      <NavDrop
+                        name={
+                          <Link
+                            href="/sistemas"
+                            className="text-md font-normal block w-[150px] !text-gray-200 no-underline"
+                          >
+                            Sistemas
+                          </Link>
                         }
                       >
-                        <NavDropdown.Item href="#action/3.1" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/sistemas/commplex"
+                          className="pr-2 pl-3"
+                        >
                           Commplex
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/sistemas/ppg"
+                          className="pr-2 pl-3"
+                        >
                           PPG
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
-                          Ensamble
+                        <NavDropdown.Item
+                          href="/sistemas/ensemble"
+                          className="pr-2 pl-3"
+                        >
+                          Ensemble
                         </NavDropdown.Item>
                       </NavDrop>
                     </NavDrop>
-                    <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                    <NavDropdown.Item href="/dashboard" className="pr-2 pl-3">
                       Dashboard Estadísticas
-                    </NavDropdown.Item> 
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="/tecnologias/links" className="pr-2 pl-3">
+                    <NavDropdown.Item href="/links" className="pr-2 pl-3">
                       Links
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item
+                      href="/instructivos"
+                      className="pr-2 pl-3"
+                    >
+                      Instructivos
                     </NavDropdown.Item>
                   </NavDropdown>
                   <NavDropdown
                     title={
-                      <span className="!font-bold !text-xl !text-slate-200 uppercase">
+                      <span className="mx-8 !font-bold !text-xl !text-slate-200 uppercase">
                         Procesos
                       </span>
                     }
@@ -157,62 +216,101 @@ const NavHome = () => {
                     onMouseLeave={hideDropdownP}
                     className="mx-8 !font-bold !text-xl !text-white"
                   >
-                    <NavDrop name={
-                        <span className="text-md font-normal  !text-gray-200">
+                    <NavDrop
+                      name={
+                        <Link
+                          href="/rebotes"
+                          className="text-md font-normal block w-[150px] !text-gray-200 no-underline"
+                        >
                           Rebotes
-                        </span>
+                        </Link>
                       }
                     >
-                      <NavDropdown.Item href="#action/3.1" className="pr-2 pl-3">
+                      <NavDropdown.Item
+                        href="/rebotes/prepago"
+                        className="pr-2 pl-3"
+                      >
                         Rebotes Prepago
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                      <NavDropdown.Item
+                        href="/rebotes/postpago"
+                        className="pr-2 pl-3"
+                      >
                         Rebotes Postpago
-                      </NavDropdown.Item> 
+                      </NavDropdown.Item>
                     </NavDrop>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                    <NavDropdown.Item href="/compare" className="pr-2 pl-3">
                       Compare
-                    </NavDropdown.Item> 
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDrop name={
-                        <span className="text-md font-normal !text-gray-200">
+                    <NavDrop
+                      name={
+                        <Link
+                          href="/casos"
+                          className="text-md font-normal block w-[150px] !text-gray-200 no-underline"
+                        >
                           Casos SAAM
-                        </span>
+                        </Link>
                       }
                     >
-                      <NavDropdown.Item href="#action/3.1" className="pr-2 pl-3">
+                      <NavDropdown.Item
+                        href="/casos/provision"
+                        className="pr-2 pl-3"
+                      >
                         Aprovisionamiento
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                      <NavDropdown.Item
+                        href="/casos/averias"
+                        className="pr-2 pl-3"
+                      >
                         Averías
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.3" className="pr-2 pl-3">
+                      <NavDropdown.Item
+                        href="/casos/reclamacion"
+                        className="pr-2 pl-3"
+                      >
                         Reclamación
                       </NavDropdown.Item>
                     </NavDrop>
-                    <NavDrop name={
-                        <span className="text-md font-normal  !text-gray-200">
+                    <NavDrop
+                      name={
+                        <Link
+                          href="/prevencion"
+                          className="text-md font-normal block w-[150px] !text-gray-200 no-underline"
+                        >
                           Prevención de Averías
-                        </span>
-                      } 
+                        </Link>
+                      }
                     >
-                      <NavDropdown.Item href="#action/3.1" className="pr-2 pl-3">
+                      <NavDropdown.Item
+                        href="/prevencion/provision"
+                        className="pr-2 pl-3"
+                      >
                         Síntomas Aprovisionamiento
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.2" className="pr-2 pl-3">
+                      <NavDropdown.Item
+                        href="/prevencion/averias"
+                        className="pr-2 pl-3"
+                      >
                         Síntomas Averías
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.3" className="pr-2 pl-3">
+                      <NavDropdown.Item
+                        href="/prevencion/reclamacion"
+                        className="pr-2 pl-3"
+                      >
                         Síntomas Reclamación
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.3" className="pr-2 pl-3">
+                      <NavDropdown.Item
+                        href="/prevencion/sif"
+                        className="pr-2 pl-3"
+                      >
                         Síntomas SIF
                       </NavDropdown.Item>
                     </NavDrop>
                   </NavDropdown>
                   <Nav.Link
-                    href="/link"
+                    href="/nosotros"
                     className="mx-8 !font-bold !text-xl !text-slate-200 uppercase"
                   >
                     Nosotros
@@ -244,19 +342,20 @@ const NavHome = () => {
           </motion.div>
         </div>
       </main>
-      <div className=" -mt-[175px] z-10 relative">
+      <div className=" -mt-[190px] z-10 relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
           viewBox="0 0 1000 100"
+          fill="#E2E8F0"
         >
           <path
-            fill="#121212"
+            fill="#E2E8F0"
             d="M500 97C126.7 96.3.8 19.8 0 0v100h1000V1c0 18.4-126.7 96.8-500 96z"
           />
         </svg>
       </div>
-      <div className="bg-[#121212] w-full flex">
+      <div className="bg-slate-200 w-full flex">
         <Image
           src="/logo-claro-giant.png"
           width={300}

@@ -1,13 +1,20 @@
-import NavHome from "./components/NavHome";
-import Prevencion from "./components/Prevencion";
-import Provision from "./components/Provision";
+"use client";
+import NavHome from "@/components/NavHome";
+import TransitionEffect from "@/components/TransitionEffect";
+
+export const metadata = {
+  title: "POM | Pagina de Inicio",
+  description: "Portal de Operaciones Moviles",
+  icons: {
+    icon: "/icono-pom.jpg",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="bg-[#121212] w-full">
+    <div className="bg-slate-200 w-full">
+      <TransitionEffect />
       <NavHome />
-      <Provision />
-      <Prevencion />
     </div>
   );
 }

@@ -59,7 +59,6 @@ const PrevencionCard = ({
     <div className="w-full flex flex-col items-start justify-between mt-4">
       <Link
         href={link}
-        target="_blank"
         className="hover:underline underline-offset-2 decoration-gray-900 hover:opacity-80 w-full"
       >
         <h2 className="my-2 w-full text-left text-2xl font-bold lg:text-3xl text-gray-900 ">
@@ -72,7 +71,6 @@ const PrevencionCard = ({
       <div className="mt-2 flex items-center w-full justify-between md:justify-start">
         <Link
           href={link}
-          target="_blank"
           className="text-red-700 hover:text-white border-1 border-red-700 hover:bg-red-800 focus:ring-4 no-underline focus:ring-red-300 rounded-lg text-md px-5 py-2.5 text-center mr-2 mb-2 transition-all duration-200"
         >
           Visita
@@ -100,12 +98,12 @@ const Prevencion = () => {
   }, [prev]);
 
   return (
-    <motion.div className="bg-[#121212] w-full">
+    <motion.div className="bg-slate-200 w-full">
       <div
         onClick={() => {
           setPrev(!prev);
         }}
-        className="mx-20 mt-2 text-gray-300 text-5xl hover:cursor-pointer flex pb-10"
+        className="mx-20 mt-2 text-gray-800 text-5xl hover:cursor-pointer flex pb-10"
         style={{
           y: yPosAnim,
         }}
