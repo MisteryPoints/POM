@@ -347,15 +347,15 @@ const NavHome = () => {
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
           viewBox="0 0 1000 100"
-          fill="#E2E8F0"
+          fill="#CBD5E1"
         >
           <path
-            fill="#E2E8F0"
+            fill="#CBD5E1"
             d="M500 97C126.7 96.3.8 19.8 0 0v100h1000V1c0 18.4-126.7 96.8-500 96z"
           />
         </svg>
       </div>
-      <div className="bg-slate-200 w-full flex">
+      <div className="bg-slate-300 w-full flex pb-[125px]">
         <Image
           src="/logo-claro-giant.png"
           width={300}
