@@ -19,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.variable + " bg-slate-200"}>{children}</body>
+      <body className={poppins.variable + " bg-slate-200 scrollbar scrollbar-thumb-red-600 scrollbar-track-slate-300"}>{children}</body>
     </html>
   );
 }

@@ -6,15 +6,16 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { motion } from "framer-motion";
-import { Dropdown, SplitButton } from "react-bootstrap";
+import { motion } from "framer-motion"; 
 import NavDrop from "./NavDrop";
-import Link from "next/link";
+import Link from "next/link"; 
+
+const FramerLink = motion(Link);
+const FramerImage = motion(Image);
 
 const NavHome = () => {
   const [showProcess, setShowProcess] = useState(false);
-  const [showTech, setShowTech] = useState(false);
-  const [showProv, setShowProv] = useState(false);
+  const [showTech, setShowTech] = useState(false); 
   const showDropdownP = (e) => {
     setShowProcess(!showProcess);
   };
@@ -26,13 +27,7 @@ const NavHome = () => {
   };
   const hideDropdownT = (e) => {
     setShowTech(false);
-  };
-  const showDropdownProv = (e) => {
-    setShowProv(!showProv);
-  };
-  const hideDropdownProv = (e) => {
-    setShowProv(false);
-  };
+  };  
   return (
     <>
       <main
@@ -327,9 +322,10 @@ const NavHome = () => {
           <h3 className="text-md text-white mx-auto">
             Página de documentación interna
           </h3>
-          <motion.div
+          <FramerLink
+            href="/dashboard"
             className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
-                hover:!bg-white hover:!text-black"
+                hover:!bg-white hover:!text-black no-underline"
             whileHover={{
               y: [-5, -10, -12, -10, -5],
               transition: {
@@ -339,10 +335,10 @@ const NavHome = () => {
             }}
           >
             Ver Dashboard
-          </motion.div>
+          </FramerLink>
         </div>
       </main>
-      <div className=" -mt-[190px] z-10 relative">
+      <div className="-mt-[180px] z-10 relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
@@ -355,15 +351,17 @@ const NavHome = () => {
           />
         </svg>
       </div>
-      <div className="bg-slate-300 w-full flex pb-[125px]">
-        <Image
+      <Link className="bg-slate-300 w-full flex pb-[125px]" href='http://intranet/Pages/default.aspx' target='_blank'>
+        <FramerImage
           src="/logo-claro-giant.png"
           width={300}
           height={300}
           className="absolute left-1/2 -ml-[150px] -mt-[175px] z-10"
-          alt="Logo Claro"
+          alt="Logo Claro" 
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
         />
-      </div>
+      </Link>
     </>
   );
 };
