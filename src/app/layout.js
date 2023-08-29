@@ -12,14 +12,14 @@ export const metadata = {
   title: "Portal de Operaciones Moviles",
   description: "Portal de Operaciones Moviles",
   icons: {
-    icon: "/icono-pom.jpg",
+    icon: "/logo-pom.png",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.variable + " bg-slate-200 scrollbar scrollbar-thumb-red-600 scrollbar-track-slate-300"}>{children}</body>
+      <body className={poppins.variable + " bg-slate-300 scrollbar scrollbar-thumb-red-600 scrollbar-track-slate-300 scroll-smooth  "}>{children}</body>
     </html>
   );
 }
