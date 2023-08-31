@@ -6,16 +6,16 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import NavDrop from "./NavDrop";
-import Link from "next/link"; 
+import Link from "next/link";
 
 const FramerLink = motion(Link);
 const FramerImage = motion(Image);
 
 const NavHome = () => {
   const [showProcess, setShowProcess] = useState(false);
-  const [showTech, setShowTech] = useState(false); 
+  const [showTech, setShowTech] = useState(false);
   const showDropdownP = (e) => {
     setShowProcess(!showProcess);
   };
@@ -27,15 +27,15 @@ const NavHome = () => {
   };
   const hideDropdownT = (e) => {
     setShowTech(false);
-  };  
+  };
   return (
     <>
       <main
         className={
-          "bg-hero h-screen -mt-12 max-h-[800px] bg-cover bg-no-repeat relative -z-0 selection:bg-red-700 selection:text-white"
+          "bg-hero h-screen -mt-12 lg:min-h-[700px] 2xl:max-h-[800px] bg-cover bg-no-repeat relative -z-0 selection:bg-red-700 selection:text-white"
         }
       >
-        <div className="h-screen mt-12 max-h-[750px] w-full bg-gray-700/40 absolute -z-10 select-none">
+        <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/40 absolute -z-10 select-none">
           <Image
             src="/logo-pom.png"
             priority="true"
@@ -76,9 +76,7 @@ const NavHome = () => {
                   >
                     <NavDrop
                       name={
-                        <span 
-                          className="text-md font-normal block w-[150px] !text-gray-200 no-underline"
-                        >
+                        <span className="text-md font-normal block w-[150px] !text-gray-200 no-underline">
                           Herramientas
                         </span>
                       }
@@ -337,7 +335,7 @@ const NavHome = () => {
           </FramerLink>
         </div>
       </main>
-      <div className="-mt-[175px] z-10 relative">
+      <div className="lg:-mt-[120px] 2xl:-mt-[175px] z-10 relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
@@ -350,13 +348,17 @@ const NavHome = () => {
           />
         </svg>
       </div>
-      <Link className="bg-slate-300 w-full flex pb-[125px]" href='http://intranet/Pages/default.aspx' target='_blank'>
+      <Link
+        className="bg-slate-300 w-full flex pb-[125px]"
+        href="http://intranet/Pages/default.aspx"
+        target="_blank"
+      >
         <FramerImage
           src="/logo-claro-giant.png"
           width={300}
           height={300}
           className="absolute left-1/2 -ml-[150px] -mt-[175px] z-10"
-          alt="Logo Claro" 
+          alt="Logo Claro"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         />
