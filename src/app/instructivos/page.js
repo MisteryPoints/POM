@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const FramerLink = motion(Link); 
 
-const Links = ({name, img, link,}) => {
+const Instructivos = ({name, img, link,}) => {
   return ( 
     <FramerLink className="col-span-1 rounded-[2rem] select-none m-auto drop-shadow-md w-[240px] h-[240px] no-underline relative inline-flex items-center justify-start overflow-hidden transition-all group bg-cover"   
       href={link}
@@ -57,113 +57,113 @@ const Home = () => {
           </div>
         </motion.div>  
         <div className="grid xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-1 min-h-screen gap-y-8 gap-x-16 mx-24 my-12"> 
-          <Links
+          <Instructivos
             name='Diagnóstico Averías Móviles'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/Documentos/DIAGN%C3%93STICO%20AVER%C3%8DAS%20M%C3%93VILES.docx'
             file=''
           />  
-          <Links
+          <Instructivos
             name='Manejo Fallas Móviles Provisión'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/Documentos/MANEJO%20DE%20FALLAS%20M%C3%93VILES%20EN%20SISTEMAS%20DE%20APROVISIONAMIENTO.docx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
           />  
-          <Links
+          <Instructivos
             name='SOX'
             img={'../Sharepoint.jpg'}
             link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
