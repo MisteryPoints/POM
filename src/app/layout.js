@@ -12,7 +12,7 @@ export const metadata = {
   title: "Portal de Operaciones Moviles",
   description: "Portal de Operaciones Moviles",
   icons: {
-    icon: "/logo-pom.png",
+    icon: "/POM.png",
   },
 };
 

@@ -3,24 +3,14 @@ import React, { useState } from "react";
 import NavHome from "@/components/NavHome";
 import TransitionEffect from "@/components/TransitionEffect";
 import {motion} from 'framer-motion'
-import Link from "next/link";
-import Image from "next/image"; 
+import Link from "next/link"; 
 
 
-const FramerLink = motion(Link);
-const FramerImage = motion(Image);
+const FramerLink = motion(Link); 
 
 const Links = ({name, img, link}) => {
-  const [isHover, setIsHover] = useState(false)
-  
-  const hovering = (e) => {
-    setIsHover(!isHover);
-  };
-  const stopHovering = (e) => {
-    setIsHover(false);
-  }; 
   return ( 
-    <FramerLink className="col-span-1 rounded-3xl select-none m-auto drop-shadow-md w-full h-full min-h-[225px] no-underline relative inline-flex items-center justify-start overflow-hidden transition-all group bg-cover"   
+    <FramerLink className="col-span-1 rounded-[2rem] select-none m-auto drop-shadow-md w-full h-full min-h-[240px] no-underline relative inline-flex items-center justify-start overflow-hidden transition-all group bg-cover"   
       href={link}
       target="_blank"
       style={{backgroundImage: `url(${img})`}}
@@ -35,8 +25,8 @@ const Links = ({name, img, link}) => {
       }}
       viewport={{ once: true }}
     >  
-      <span className="w-0 h-0 rounded bg-black absolute bottom-0 left-1/2 -translate-x-1/2 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1 opacity-50"></span> 
-      <h1 className="absolute bottom-0 uppercase font-extrabold text-3xl text-[#800000] text-center left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out group-hover:text-white z-10 group-hover:-translate-y-[70px] group-hover:text-6xl">{name}</h1> 
+      <span className="w-0 h-0 rounded-[2rem] bg-black absolute bottom-0 left-1/2 -translate-x-1/2 ease-out duration-500 transition-all w-full group-hover:h-full -z-1 opacity-50"></span> 
+      <h1 className="absolute bottom-0 uppercase font-extrabold text-3xl text-[#800000] text-center left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out group-hover:text-white z-10 group-hover:-translate-y-[60px] group-hover:text-6xl group-hover:hyphens-auto">{name}</h1> 
     </FramerLink>
   )
 }
@@ -53,7 +43,7 @@ const Home = () => {
             opacity: 1,
             y: 0,
             transition: { 
-              delay: 0.6,
+              delay: 0.4,
               duration: 0.6 
             },
           }}
@@ -97,59 +87,149 @@ const Home = () => {
             link='http://172.27.4.133/age-web-admin/'
           />   
           <Links
-            name='ECMS'
-            img={'../Ericsson.png'}
-            link='https://172.18.167.74/custcare_cmax/login'
+            name='SAAM'
+            img={'../SAAM.png'}
+            link='http://portalweb/userportal/EntradaApp.aspx?idApp=SAAM-WEB-NEW'
           />   
           <Links
-            name='ECMS'
-            img={'../Ericsson.png'}
-            link='https://172.18.167.74/custcare_cmax/login'
+            name='HP SM'
+            img={'../SM%20Consulta.png'}
+            link='http://smweb:8080/smanager/index.do?'
           />  
           <Links
-            name='ECMS'
-            img={'../Ericsson.png'}
-            link='https://172.18.167.74/custcare_cmax/login'
+            name='SM Report'
+            img={'../SM%20Catalog.png'}
+            link='http://smcatalogo:8180/src/secure/main.jsp'
           />  
           <Links
-            name='ECMS'
-            img={'../Ericsson.png'}
-            link='https://172.18.167.74/custcare_cmax/login'
+            name='ZTE'
+            img={'../ZTE.png'}
+            link='http://172.18.247.82:8080/uniportal/frame/welcome.action'
           />  
           <Links
-            name='ECMS'
-            img={'../Ericsson.png'}
-            link='https://172.18.167.74/custcare_cmax/login'
+            name='Porta node'
+            img={'../Portanode.png'}
+            link='http://portalweb/userportal/EntradaApp.aspx?idApp=PORTANODE'
           />  
           <Links
-            name='ECMS'
-            img={'../Ericsson.png'}
-            link='https://172.18.167.74/custcare_cmax/login'
+            name='Mapa Digital'
+            img={'../Mapa%20digital.jpg'}
+            link='http://portalweb/userportal/EntradaApp.aspx?idApp=mapa-digital'
           />  
           <Links
-            name='ECMS'
-            img={'../Ericsson.png'}
-            link='https://172.18.167.74/custcare_cmax/login'
+            name='Serien'
+            img={'../SERIEN.png'}
+            link='http://portalweb/userportal/EntradaApp.aspx?idApp=SERNEGWEB'
           />  
           <Links
-            name='ECMS'
-            img={'../Ericsson.png'}
-            link='https://172.18.167.74/custcare_cmax/login'
+            name='VoLTE SIM'
+            img={'../VoLTE.jpg'}
+            link='http://nttappsweb0005/ClaroAyuda/A_Formularios/Frm_VoLTE.aspx'
           />  
           <Links
-            name='ECMS'
-            img={'../Ericsson.png'}
-            link='https://172.18.167.74/custcare_cmax/login'
+            name='OTA'
+            img={'../OTA.png'}
+            link='https://172.18.64.59:9080/SCI/login'
           />  
           <Links
-            name='ECMS'
-            img={'../Ericsson.png'}
-            link='https://172.18.167.74/custcare_cmax/login'
+            name='POC'
+            img={'../Claro.png'}
+            link='http://portalweb/userportal/EntradaApp.aspx?idApp=POC01'
           />  
           <Links
-            name='ECMS'
-            img={'../Ericsson.png'}
-            link='https://172.18.167.74/custcare_cmax/login'
+            name='Ens Dash'
+            img={'../EnsDash.jpg'}
+            link='http://172.27.17.32:7040/HerramientaAR/Switch_CheckQ3.jsp'
+          />  
+          <Links
+            name='SMART CARE'
+            img={'../SmartCare.png'}
+            link='https://172.18.67.2:8443/cas/login'
+          />  
+          <Links
+            name='Switch Backup'
+            img={'../TrxBackup.png'}
+            link='https://pawtest/userportal/EntradaApp.aspx?idApp=TRXBACKUP'
+          />    
+          <Links
+            name='PSR'
+            img={'../SWAGGER.jpg'}
+            link='http://ntpappsweb0008/PSR/swagger/ui/index#!/MainService/MainService_UpdateProfileByPhoneNumber'
+          />  
+          <Links
+            name='ENS API'
+            img={'../API.png'}
+            link='http://cwl-soaprod.corp.codetel.com.do/EJB-EnsembleServicesWrapper-context-root/EnWrapperServiceSoapHttpPort?wsdl'
+          />
+          <Links
+            name='HUB API'
+            img={'../API.png'}
+            link='http://osbprod.corp.codetel.com.do/services/ServiceGateway/ServiceGatewayPostActivationService?wsdl'
+          />  
+          <Links
+            name='SMGR'
+            img={'../SMGR.avif'}
+            link='https://172.27.72.88/tools/Tabla-Offers/'
+          />  
+          <Links
+            name='Offers'
+            img={'../SMGR.avif'}
+            link='https://172.27.72.88/portal/catalogo-de-offertas-red-prepago/'
+          />  
+          <Links
+            name='MAPA CELDAS'
+            img={'../Mapa%20digital.jpg'}
+            link='http://portallmetricas/CorpoMovilSite/1CORNoDisponTest.aspx'
+          />  
+          <Links
+            name='Claro Ayuda'
+            img={'../claroayuda.png'}
+            link='http://nttappsweb0005/claroayuda/'
+          />    
+          <Links
+            name='Fripick'
+            img={'../Fripick.png'}
+            link='https://p.fripick.com/login/'
+          />  
+          <Links
+            name='SOX'
+            img={'../Sharepoint.jpg'}
+            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+          />  
+          <Links
+            name='PAC'
+            img={'../PAC.png'}
+            link='https://pac.corp.codetel.com.do/isf-web/login.xhtml'
+          />   
+          <Links
+            name='QA22 PPG'
+            img={'../PPG.png'}
+            link='http://lxtwlcluts03:7010/PPG/cas/Home.jsp'
+          /> 
+          <Links
+            name='QA22 PAP'
+            img={'../PAP.png'}
+            link='http://lxtwlcluts04:7020/PAP/app/IccidStatus.jsp'
+          /> 
+          <Links
+            name='QA9 PPG'
+            img={'../PPG.png'}
+            link='http://lxtwlcluts04:7110/PPG/cas/Home.jsp'
+          /> 
+          <Links
+            name='QA9 PAP'
+            img={'../PAP.png'}
+            link='http://lxtwlcluts04:7120/PAP/app/IccidStatus.jsp'
+          /> 
+          <Links
+            name='RHOL'
+            img={'../Claro.png'}
+            link='http://rhol'
+          />  
+          <Links
+            name='JIRA'
+            img={'../JIRA.png'}
+            link='https://monitortdtb.atlassian.net/servicedesk/customer/portal/1/user/login?destination=portal%2F1'
           />  
         </div>
       </div>

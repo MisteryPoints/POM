@@ -74,17 +74,13 @@ const NavHome = () => {
                     onMouseLeave={hideDropdownT}
                     className="mx-8 !font-bold !text-xl !text-white"
                   >
-                    <NavDropdown.Item href="/saam" className="pr-2 pl-3">
-                      SAAM
-                    </NavDropdown.Item>
                     <NavDrop
                       name={
-                        <Link
-                          href="/herramientas"
+                        <span 
                           className="text-md font-normal block w-[150px] !text-gray-200 no-underline"
                         >
                           Herramientas
-                        </Link>
+                        </span>
                       }
                     >
                       <NavDrop
@@ -163,6 +159,9 @@ const NavHome = () => {
                           </Link>
                         }
                       >
+                        <NavDropdown.Item href="/saam" className="pr-2 pl-3">
+                          SAAM
+                        </NavDropdown.Item>
                         <NavDropdown.Item
                           href="/sistemas/commplex"
                           className="pr-2 pl-3"
@@ -338,7 +337,7 @@ const NavHome = () => {
           </FramerLink>
         </div>
       </main>
-      <div className="-mt-[180px] z-10 relative">
+      <div className="-mt-[175px] z-10 relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"

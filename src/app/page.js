@@ -86,7 +86,7 @@ export default function Home() {
             opacity: 1,
             x: 0,
             transition: { 
-              delay: 0.6,
+              delay: 0.9,
               duration: 0.6 
             },
           }}
@@ -101,7 +101,7 @@ export default function Home() {
             opacity: 1,
             x: 0,
             transition: { 
-              delay: 0.6,
+              delay: 0.9,
               duration: 0.6 
             },
           }}
@@ -116,7 +116,7 @@ export default function Home() {
             opacity: 1,
             y: 0,
             transition: { 
-              delay: 0.6,
+              delay: 1.2,
               duration: 0.6 
             },
           }}
