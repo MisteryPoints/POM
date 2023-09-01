@@ -12,8 +12,8 @@ const Valor = ({nombre, descripcion, par}) => (
       opacity: 1,
       x: 0,
       transition: { 
-        delay: 0.6,
-        duration: 0.6 
+        delay: 0.4,
+        duration: 0.5 
       },
     }} 
     viewport={{ once: true }}
@@ -37,8 +37,8 @@ export default function Home() {
             opacity: 1,
             y: 0,
             transition: { 
-              delay: 0.6,
-              duration: 0.6 
+              delay: 0.5,
+              duration: 0.5 
             },
           }}
           viewport={{ once: true }}> 
@@ -57,7 +57,7 @@ export default function Home() {
             x: 0,
             transition: { 
               delay: 0.6,
-              duration: 0.6 
+              duration: 0.5 
             },
           }}
           viewport={{ once: true }}> 
@@ -71,8 +71,8 @@ export default function Home() {
             opacity: 1,
             x: 0,
             transition: { 
-              delay: 0.6,
-              duration: 0.6 
+              delay: 0.5,
+              duration: 0.5 
             },
           }}
           viewport={{ once: true }}> 
@@ -86,8 +86,8 @@ export default function Home() {
             opacity: 1,
             x: 0,
             transition: { 
-              delay: 0.9,
-              duration: 0.6 
+              delay: 0.8,
+              duration: 0.5 
             },
           }}
           viewport={{ once: true }}> 
@@ -101,8 +101,8 @@ export default function Home() {
             opacity: 1,
             x: 0,
             transition: { 
-              delay: 0.9,
-              duration: 0.6 
+              delay: 0.8,
+              duration: 0.5 
             },
           }}
           viewport={{ once: true }}> 
@@ -116,8 +116,8 @@ export default function Home() {
             opacity: 1,
             y: 0,
             transition: { 
-              delay: 1.2,
-              duration: 0.6 
+              delay: 1,
+              duration: 0.5 
             },
           }}
           viewport={{ once: true }}> 

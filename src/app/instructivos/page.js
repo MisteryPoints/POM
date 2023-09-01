@@ -60,13 +60,12 @@ const Home = () => {
           <Instructivos
             name='Diagnóstico Averías Móviles'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/Documentos/DIAGN%C3%93STICO%20AVER%C3%8DAS%20M%C3%93VILES.docx'
-            file=''
+            link='../sox/DIAGN%C3%93STICO%20AVER%C3%8DAS%20M%C3%93VILES.docx' 
           />  
           <Instructivos
             name='Manejo Fallas Móviles Provisión'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/Documentos/MANEJO%20DE%20FALLAS%20M%C3%93VILES%20EN%20SISTEMAS%20DE%20APROVISIONAMIENTO.docx'
+            link='../sox/MANEJO%20DE%20FALLAS%20M%C3%93VILES%20EN%20SISTEMAS%20DE%20APROVISIONAMIENTO.docx'
           />  
           <Instructivos
             name='SOX'

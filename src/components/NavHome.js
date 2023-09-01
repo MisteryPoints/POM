@@ -35,7 +35,7 @@ const NavHome = () => {
           "bg-hero h-screen -mt-12 lg:min-h-[700px] 2xl:max-h-[800px] bg-cover bg-no-repeat relative -z-0 selection:bg-red-700 selection:text-white"
         }
       >
-        <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/40 absolute -z-10 select-none">
+        <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/60 absolute -z-10 select-none">
           <Image
             src="/logo-pom.png"
             priority="true"
@@ -321,8 +321,8 @@ const NavHome = () => {
           </h3>
           <FramerLink
             href="/dashboard"
-            className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
-                hover:!bg-white hover:!text-black no-underline"
+              className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+              hover:!bg-white hover:!text-black no-underline"
             whileHover={{
               y: [-5, -10, -12, -10, -5],
               transition: {
