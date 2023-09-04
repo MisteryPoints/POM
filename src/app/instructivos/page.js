@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import NavHome from "@/components/NavHome";
 import TransitionEffect from "@/components/TransitionEffect";
 import {motion} from 'framer-motion'
-import Link from "next/link"; 
+import Link from "next/link";  
 
 
 const FramerLink = motion(Link); 
 
-const Instructivos = ({name, img, link,}) => {
+const Instructivos = ({name, img, link,}) => { 
   return ( 
     <FramerLink className="col-span-1 rounded-[2rem] select-none m-auto drop-shadow-md w-[240px] h-[240px] no-underline relative inline-flex items-center justify-start overflow-hidden transition-all group bg-cover"   
       href={link}
@@ -23,15 +23,14 @@ const Instructivos = ({name, img, link,}) => {
           duration: 0.6 
         },
       }}
-      viewport={{ once: true }}
-      download=''
+      viewport={{ once: true }} 
     >  
       <span className="w-0 h-0 rounded-[2rem] bg-black absolute bottom-0 left-1/2 -translate-x-1/2 ease-out duration-500 transition-all w-[102%] group-hover:h-full -z-1 opacity-50"></span> 
       <h1 className="absolute bottom-0 uppercase font-extrabold text-2xl text-gray-800 text-center left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out group-hover:text-white z-10 group-hover:-translate-y-[60px] group-hover:text-3xl group-hover:hyphens-auto">{name}</h1> 
     </FramerLink>
   )
 }
-
+ 
 const Home = () => {
   return (
     <div className="bg-slate-300 w-full">
@@ -60,12 +59,12 @@ const Home = () => {
           <Instructivos
             name='Diagnóstico Averías Móviles'
             img={'../Sharepoint.jpg'}
-            link='../sox/DIAGN%C3%93STICO%20AVER%C3%8DAS%20M%C3%93VILES.docx' 
+            link='../sox/DIAGN%C3%93STICO%20AVER%C3%8DAS%20M%C3%93VILES.pdf' 
           />  
           <Instructivos
             name='Manejo Fallas Móviles Provisión'
             img={'../Sharepoint.jpg'}
-            link='../sox/MANEJO%20DE%20FALLAS%20M%C3%93VILES%20EN%20SISTEMAS%20DE%20APROVISIONAMIENTO.docx'
+            link='../sox/MANEJO%20DE%20FALLAS%20M%C3%93VILES%20EN%20SISTEMAS%20DE%20APROVISIONAMIENTO.pdf'
           />  
           <Instructivos
             name='SOX'
