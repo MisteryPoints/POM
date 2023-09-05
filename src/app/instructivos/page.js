@@ -51,7 +51,7 @@ const Home = () => {
           <div style={{background: "url(https://media.istockphoto.com/id/1292947888/vector/%C3%B0%C3%B0%C3%B0%C3%B0%C3%B0%C3%B1%C3%B0%C3%B0%C3%B0%C2%B5-%C3%B1%C3%B1%C3%B1%C3%B1%C3%B0%C3%B0%C3%B1%C3%B1%C3%B0%C3%B0.jpg?s=612x612&w=0&k=20&c=YagL6dH_mSj9NfTN8vCvsT3Lya9d8SbI32LKYPLDhVs=)"}}
               className="m-20">
               <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
-                INSTRUCTIVOS 
+                INSTRUCTIVOS
               </h1>
           </div>
         </motion.div>  
@@ -67,104 +67,149 @@ const Home = () => {
             link='../sox/MANEJO%20DE%20FALLAS%20M%C3%93VILES%20EN%20SISTEMAS%20DE%20APROVISIONAMIENTO.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Manejo Errores Rebotes'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/MANEJO%20DE%20ERRORES%20Y%20REBOTES.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Manual Voucher Server'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/MANUAL%20DE%20USUARIO%20VOUCHER%20SERVER.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Reverso'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/REVERSO.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Fallas Cancelación Servicios Móviles'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/GESTI%C3%93N%20DE%20FALLAS%20EN%20CANCELACI%C3%93N%20DE%20SERVICIOS%20M%C3%93VILES.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Reclamación Medios de Recarga'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/CIERRE%20RECLAMACIONES%20MEDIOS%20DE%20RECARGA.pdf'
+          />   
+          <Instructivos
+            name='Contingencia No Disp Ensamble'
+            img={'../Sharepoint.jpg'}
+            link='../sox/CONTINGENCIA%20ANTE%20NO%20DISPONIBILIDAD%20DE%20ENSEMBLE.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Sistema Commplex'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/SISTEMA%20COMMPLEX.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='SAAM'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/SISTEMA%20DE%20ADMINISTRACI%C3%93N%20DE%20AVER%C3%8DAS%20M%C3%93VILES.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Manual Bancatel'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/MANUAL%20DE%20USUARIOS%20BANCATEL.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Operacional CCM Móviles'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/OPERACIONAL%20CCM%20M%C3%93VILES.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Series Negadas'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/MANEJO%20DE%20SERIES%20NEGADAS.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Reverso Carga Fácil'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/REVERSO%20CARGA%20F%C3%81CIL.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Compares Provisión'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/COMPARES%20DE%20APROVISIONAMIENTO.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Contingencia Provisión Manejados OpeMov'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/CONTINGENCIA%20APROVISIONAMIENTO%20DE%20SERVICIOS%20MANEJADA%20POR%20OPERACIONES%20M%C3%93VILES.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Averías Segmento EyF Automáticas'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/AVER%C3%8DAS%20APLICACIONES%20M%C3%93VILES%20AUTOM%C3%81TICAS%20SEGMENTO%20E%20Y%20F.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Averías Localización Vehicular'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/AVER%C3%8DAS%20DE%20LOCALIZACI%C3%93N%20VEHICULAR.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Reclamación Norton Antivirus'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/GESTI%C3%93N%20DE%20RECLAMACIONES%20Y%20AVER%C3%8DAS%20NORTON%20SEGURIDAD%20DIGITAL.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Casos SWAT TEAM'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/ATENCI%C3%93N%20CASOS%20SWAT%20TEAM.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Desbloqueo Equipos Móviles'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/DESBLOQUEO%20EQUIPOS%20M%C3%93VILES.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Validaciones CCM'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/VALIDACI%C3%93N%20DE%20USUARIOS%20EN%20CALL%20CENTER%20M%C3%93VILES.pdf'
           />  
           <Instructivos
-            name='SOX'
+            name='Ajustes por Averías y Provisión'
             img={'../Sharepoint.jpg'}
-            link='http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx'
+            link='../sox/AJUSTES%20POR%20APROVISIONAMIENTO%20M%C3%93VIL%20Y%20AVER%C3%8DAS.pdf'
+          />  
+          <Instructivos
+            name='Ajustes Prepago'
+            img={'../Sharepoint.jpg'}
+            link='../sox/AJUSTE%20PREPAGO.pdf'
+          />  
+          <Instructivos
+            name='Excepción Límites Líneas Prepago'
+            img={'../Sharepoint.jpg'}
+            link='../sox/MANEJO%20DE%20EXCEPCI%C3%93N%20L%C3%8DMITE%20DE%20L%C3%8DNEAS%20PREPAGADAS.pdf'
+          />  
+          <Instructivos
+            name='Fallas Provisión Datos Móviles'
+            img={'../Sharepoint.jpg'}
+            link='../sox/GESTI%C3%93N%20DE%20FALLAS%20APROVISIONAMIENTO%20SERVICIO%20DE%20DATOS%20M%C3%93VILES.pdf'
+          />  
+          <Instructivos
+            name='Averías Móviles'
+            img={'../Sharepoint.jpg'}
+            link='../sox/AVER%C3%8DAS%20M%C3%93VILES.pdf'
+          />  
+          <Instructivos
+            name='Admin Códigos NXX'
+            img={'../Sharepoint.jpg'}
+            link='../sox/ADMINISTRACI%C3%93N%20DE%20C%C3%93DIGOS%20NXX.pdf'
+          />  
+          <Instructivos
+            name='Acceso al 911'
+            img={'../Sharepoint.jpg'}
+            link='../sox/BLOQUEO%20Y%20DESBLOQUEO%20ACCESO%20AL%20911.pdf'
+          />  
+          <Instructivos
+            name='Averías Claro Sync'
+            img={'../Sharepoint.jpg'}
+            link='../sox/AVER%C3%8DA%20SERVICIO%20CLARO%20SYNC.pdf'
+          />  
+          <Instructivos
+            name='Auditorías Ofertas Móviles'
+            img={'../Sharepoint.jpg'}
+            link='../sox/AUDITOR%C3%8DA%20OFERTAS%20M%C3%93VILES.pdf'
           />  
         </div>
       </div>
