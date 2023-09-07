@@ -335,12 +335,12 @@ const NavHome = () => {
           </FramerLink>
         </div>
       </main>
-      <div className="lg:-mt-[120px] 2xl:-mt-[175px] z-10 relative">
+      <div className="lg:-mt-[120px] 2xl:-mt-[175px] z-10 relative ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
           viewBox="0 0 1000 100"
-          fill="#CBD5E1"
+          fill="#CBD5E1" 
         >
           <path
             fill="#CBD5E1"
@@ -353,15 +353,15 @@ const NavHome = () => {
         href="http://intranet/Pages/default.aspx"
         target="_blank"
       >
-        <FramerImage
-          src="/logo-claro-giant.png"
-          width={300}
-          height={300}
-          className="absolute left-1/2 -ml-[150px] -mt-[175px] z-10"
-          alt="Logo Claro"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-        />
+      <FramerImage
+        src="/logo-claro-giant.png"
+        width={300}
+        height={300}
+        className="absolute left-1/2 -ml-[150px] -mt-[175px] z-10"
+        alt="Logo Claro"
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.3 }}
+      />
       </Link>
     </>
   );

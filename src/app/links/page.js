@@ -4,13 +4,14 @@ import NavHome from "@/components/NavHome";
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { ALinks } from "@/api/API";
 
 const FramerLink = motion(Link);
 
 const Links = ({ name, img, link }) => {
   return (
     <FramerLink
-      className="col-span-1 rounded-[2rem] select-none m-auto drop-shadow-md w-full h-full min-h-[240px] no-underline relative inline-flex items-center justify-start overflow-hidden transition-all group bg-cover"
+      className="col-span-1 rounded-[2rem] select-none m-auto drop-shadow-md w-full h-[240px] no-underline relative inline-flex items-center justify-start overflow-hidden transition-all group bg-cover"
       href={link}
       target="_blank"
       style={{ backgroundImage: `url(${img})` }}
@@ -34,6 +35,14 @@ const Links = ({ name, img, link }) => {
 };
 
 const Home = () => {
+  const [search, setSearch] = useState('')
+ 
+  let linkData = ALinks.filter((obj) => { 
+    if(obj['name'].includes(search)){ 
+      return obj;
+    }
+  });
+
   return (
     <div className="bg-slate-300 w-full">
       <TransitionEffect />
@@ -64,178 +73,23 @@ const Home = () => {
             </h1>
           </div>
         </motion.div>
-        <div className="grid 2xl:grid-cols-5 xl:grid-cols-3 md:grid-cols-1 min-h-screen gap-y-8 gap-x-16 mx-24 my-12">
-          <Links
-            name="PAW"
-            img={"../PWA.png"}
-            link="http://portalweb/userportal/Default.aspx"
-          />
-          <Links
-            name="ECMS"
-            img={"../Ericsson.png"}
-            link="https://172.18.167.74/custcare_cmax/login"
-          />
-          <Links
-            name="PPG"
-            img={"../PPG.png"}
-            link="http://portalprepago/PPG/cas/Home.jsp"
-          />
-          <Links
-            name="PAP"
-            img={"../PAP.png"}
-            link="http://adminprepago/PAP/app/Home.jsp"
-          />
-          <Links
-            name="PAF"
-            img={"../PAF.webp"}
-            link="http://172.27.4.133/age-web/index.xhtml"
-          />
-          <Links
-            name="PAF ADMIN"
-            img={"../ADMINPAF.jpg"}
-            link="http://172.27.4.133/age-web-admin/"
-          />
-          <Links
-            name="SAAM"
-            img={"../SAAM.png"}
-            link="http://portalweb/userportal/EntradaApp.aspx?idApp=SAAM-WEB-NEW"
-          />
-          <Links
-            name="HP SM"
-            img={"../SM%20Consulta.png"}
-            link="http://smweb:8080/smanager/index.do?"
-          />
-          <Links
-            name="SM Report"
-            img={"../SM%20Catalog.png"}
-            link="http://smcatalogo:8180/src/secure/main.jsp"
-          />
-          <Links
-            name="ZTE"
-            img={"../ZTE.png"}
-            link="http://172.18.247.82:8080/uniportal/frame/welcome.action"
-          />
-          <Links
-            name="Porta node"
-            img={"../Portanode.png"}
-            link="http://portalweb/userportal/EntradaApp.aspx?idApp=PORTANODE"
-          />
-          <Links
-            name="Mapa Digital"
-            img={"../Mapa%20digital.jpg"}
-            link="http://portalweb/userportal/EntradaApp.aspx?idApp=mapa-digital"
-          />
-          <Links
-            name="Serien"
-            img={"../SERIEN.png"}
-            link="http://portalweb/userportal/EntradaApp.aspx?idApp=SERNEGWEB"
-          />
-          <Links
-            name="VoLTE SIM"
-            img={"../VoLTE.jpg"}
-            link="http://nttappsweb0005/ClaroAyuda/A_Formularios/Frm_VoLTE.aspx"
-          />
-          <Links
-            name="OTA"
-            img={"../OTA.png"}
-            link="https://172.18.64.59:9080/SCI/login"
-          />
-          <Links
-            name="POC"
-            img={"../Claro.png"}
-            link="http://portalweb/userportal/EntradaApp.aspx?idApp=POC01"
-          />
-          <Links
-            name="Ens Dash"
-            img={"../EnsDash.jpg"}
-            link="http://172.27.17.32:7040/HerramientaAR/Switch_CheckQ3.jsp"
-          />
-          <Links
-            name="SMART CARE"
-            img={"../SmartCare.png"}
-            link="https://172.18.67.2:8443/cas/login"
-          />
-          <Links
-            name="Switch Backup"
-            img={"../TrxBackup.png"}
-            link="https://pawtest/userportal/EntradaApp.aspx?idApp=TRXBACKUP"
-          />
-          <Links
-            name="PSR"
-            img={"../SWAGGER.jpg"}
-            link="http://ntpappsweb0008/PSR/swagger/ui/index#!/MainService/MainService_UpdateProfileByPhoneNumber"
-          />
-          <Links
-            name="ENS API"
-            img={"../API.png"}
-            link="http://cwl-soaprod.corp.codetel.com.do/EJB-EnsembleServicesWrapper-context-root/EnWrapperServiceSoapHttpPort?wsdl"
-          />
-          <Links
-            name="HUB API"
-            img={"../API.png"}
-            link="http://osbprod.corp.codetel.com.do/services/ServiceGateway/ServiceGatewayPostActivationService?wsdl"
-          />
-          <Links
-            name="SMGR"
-            img={"../SMGR.avif"}
-            link="https://172.27.72.88/tools/Tabla-Offers/"
-          />
-          <Links
-            name="Offers"
-            img={"../SMGR.avif"}
-            link="https://172.27.72.88/portal/catalogo-de-offertas-red-prepago/"
-          />
-          <Links
-            name="MAPA CELDAS"
-            img={"../Mapa%20digital.jpg"}
-            link="http://portallmetricas/CorpoMovilSite/1CORNoDisponTest.aspx"
-          />
-          <Links
-            name="Claro Ayuda"
-            img={"../claroayuda.png"}
-            link="http://nttappsweb0005/claroayuda/"
-          />
-          <Links
-            name="Fripick"
-            img={"../Fripick.png"}
-            link="https://p.fripick.com/login/"
-          />
-          <Links
-            name="SOX"
-            img={"../Sharepoint.jpg"}
-            link="http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx"
-          />
-          <Links
-            name="PAC"
-            img={"../PAC.png"}
-            link="https://pac.corp.codetel.com.do/isf-web/login.xhtml"
-          />
-          <Links
-            name="QA22 PPG"
-            img={"../PPG.png"}
-            link="http://lxtwlcluts03:7010/PPG/cas/Home.jsp"
-          />
-          <Links
-            name="QA22 PAP"
-            img={"../PAP.png"}
-            link="http://lxtwlcluts04:7020/PAP/app/IccidStatus.jsp"
-          />
-          <Links
-            name="QA9 PPG"
-            img={"../PPG.png"}
-            link="http://lxtwlcluts04:7110/PPG/cas/Home.jsp"
-          />
-          <Links
-            name="QA9 PAP"
-            img={"../PAP.png"}
-            link="http://lxtwlcluts04:7120/PAP/app/IccidStatus.jsp"
-          />
-          <Links name="RHOL" img={"../Claro.png"} link="http://rhol" />
-          <Links
-            name="JIRA"
-            img={"../JIRA.png"}
-            link="https://monitortdtb.atlassian.net/servicedesk/customer/portal/1/user/login?destination=portal%2F1"
-          />
+        <input type='text' placeholder="Introduce el Link deseado" value={search} onChange={(e) => setSearch(e.target.value)} />
+        <div className="grid 2xl:grid-cols-5 xl:grid-cols-3 md:grid-cols-1 gap-y-8 gap-x-16 mx-24 my-12">
+          {search !== '' ? linkData.map(({name, img, link}) => ( 
+              <Links
+                key={name}
+                name={name}
+                img={img}
+                link={link}
+              />  
+            )) : ALinks.map(({name, img, link}) => ( 
+              <Links
+                key={name}
+                name={name}
+                img={img}
+                link={link}
+              />  
+            ))}
         </div>
       </div>
     </div>
