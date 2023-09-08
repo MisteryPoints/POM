@@ -316,14 +316,14 @@ const NavHome = () => {
           <h1 className="text-[64px] text-red-600 font-bold uppercase mx-auto">
             Portal de Operaciones Móviles
           </h1>
-          <h3 className="text-md text-white mx-auto">
+          <h3 className="text-md text-white mx-auto select-none">
             Página de documentación interna
           </h3>
           <div className="flex max-w-[800px] flex-wrap justify-center items-center m-auto gap-x-5">
             <FramerLink
               href="/estadisticas/provision"
                 className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
-                hover:!bg-white hover:!text-black no-underline"
+                hover:!bg-white hover:!text-black no-underline select-none"
               whileHover={{
                 y: [-5, -10, -12, -10, -5],
                 transition: {
@@ -337,7 +337,7 @@ const NavHome = () => {
             <FramerLink
               href="/estadisticas/ccm"
                 className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
-                hover:!bg-white hover:!text-black no-underline"
+                hover:!bg-white hover:!text-black no-underline select-none"
               whileHover={{
                 y: [-5, -10, -12, -10, -5],
                 transition: {
@@ -351,7 +351,7 @@ const NavHome = () => {
             <FramerLink
               href="/estadisticas/poc"
                 className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
-                hover:!bg-white hover:!text-black no-underline"
+                hover:!bg-white hover:!text-black no-underline select-none"
               whileHover={{
                 y: [-5, -10, -12, -10, -5],
                 transition: {
@@ -365,7 +365,7 @@ const NavHome = () => {
             <FramerLink
               href="/estadisticas/mor"
                 className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
-                hover:!bg-white hover:!text-black no-underline"
+                hover:!bg-white hover:!text-black no-underline select-none"
               whileHover={{
                 y: [-5, -10, -12, -10, -5],
                 transition: {
@@ -379,7 +379,7 @@ const NavHome = () => {
             <FramerLink
               href="/estadisticas/recargo"
                 className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
-                hover:!bg-white hover:!text-black no-underline"
+                hover:!bg-white hover:!text-black no-underline select-none"
               whileHover={{
                 y: [-5, -10, -12, -10, -5],
                 transition: {

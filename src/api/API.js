@@ -4,7 +4,8 @@ const ALinks = [
     name:"PAW",
     img:"../PAW.png",
     category: [
-      'favoritos'
+      'favoritos',
+      'portales'
     ],
     link:"http://portalweb/userportal/Default.aspx"
   },
@@ -20,7 +21,7 @@ const ALinks = [
     name:"PPG",
     img:"../PPG.png",
     category: [
-      'favoritos' 
+      'favoritos',
     ],
     link:"http://portalprepago/PPG/cas/Home.jsp"
   },
@@ -28,7 +29,7 @@ const ALinks = [
     name:"PAP",
     img:"../PAP.png",
     category: [
-      ''
+      'favoritos'
     ],
     link:"http://adminprepago/PAP/app/Home.jsp"
   },
@@ -36,7 +37,7 @@ const ALinks = [
     name:"PAF",
     img:"../PAF.webp",
     category: [
-      ''
+      'favoritos'
     ],
     link:"http://172.27.4.133/age-web/index.xhtml" 
   },
@@ -44,7 +45,7 @@ const ALinks = [
     name:"PAF ADMIN",
     img:"../ADMINPAF.jpg",
     category: [
-      ''
+      'favoritos'
     ],
     link:"http://172.27.4.133/age-web-admin/"
   },
@@ -52,7 +53,7 @@ const ALinks = [
     name:"SAAM",
     img:"../SAAM.png",
     category: [
-      ''
+      'favoritos'
     ],
     link:"http://portalweb/userportal/EntradaApp.aspx?idApp=SAAM-WEB-NEW" 
   },
@@ -60,7 +61,7 @@ const ALinks = [
     name:"HP SM",
     img:"../SM%20Consulta.png",
     category: [
-      ''
+      'reportes'
     ],
     link:"http://smweb:8080/smanager/index.do?"
   },
@@ -68,7 +69,7 @@ const ALinks = [
     name:"SM Report",
     img:"../SM%20Catalog.png",
     category: [
-      ''
+      'reportes'
     ],
     link:"http://smcatalogo:8180/src/secure/main.jsp"
   },
@@ -76,7 +77,7 @@ const ALinks = [
     name:"ZTE",
     img:"../ZTE.png",
     category: [
-      ''
+      'favoritos'
     ],
     link:"http://172.18.247.82:8080/uniportal/frame/welcome.action"
   },
@@ -84,7 +85,7 @@ const ALinks = [
     name:"Porta node",
     img:"../Portanode.png",
     category: [
-      ''
+      'favoritos'
     ],
     link:"http://portalweb/userportal/EntradaApp.aspx?idApp=PORTANODE"
   },
@@ -92,7 +93,8 @@ const ALinks = [
     name:"Mapa Digital",
     img:"../Mapa%20digital.jpg",
     category: [
-      ''
+      'favoritos',
+      'mapas'
     ],
     link:"http://portalweb/userportal/EntradaApp.aspx?idApp=mapa-digital"
   },
@@ -100,7 +102,7 @@ const ALinks = [
     name:"Serien",
     img:"../SERIEN.png",
     category: [
-      ''
+      'favoritos'
     ],
     link:"http://portalweb/userportal/EntradaApp.aspx?idApp=SERNEGWEB"
   },
@@ -108,7 +110,7 @@ const ALinks = [
     name:"VoLTE SIM",
     img:"../VoLTE.jpg",
     category: [
-      ''
+      'otros'
     ],
     link:"http://nttappsweb0005/ClaroAyuda/A_Formularios/Frm_VoLTE.aspx"
   },
@@ -116,7 +118,7 @@ const ALinks = [
     name:"OTA",
     img:"../OTA.png",
     category: [
-      ''
+      'favoritos'
     ],
     link:"https://172.18.64.59:9080/SCI/login"
   },
@@ -124,7 +126,7 @@ const ALinks = [
     name:"POC",
     img:"../Claro.png",
     category: [
-      ''
+      'portales'
     ],
     link:"http://portalweb/userportal/EntradaApp.aspx?idApp=POC01"
   },
@@ -132,7 +134,7 @@ const ALinks = [
     name:"Ens Dash",
     img:"../EnsDash.jpg",
     category: [
-      ''
+      'otros'
     ],
     link:"http://172.27.17.32:7040/HerramientaAR/Switch_CheckQ3.jsp"
   },
@@ -140,7 +142,7 @@ const ALinks = [
     name:"SMART CARE",
     img:"../SmartCare.png",
     category: [
-      ''
+      'otros'
     ],
     link:"https://172.18.67.2:8443/cas/login"
   },
@@ -148,7 +150,7 @@ const ALinks = [
     name:"Switch Backup",
     img:"../TrxBackup.png",
     category: [
-      ''
+      'otros'
     ],
     link:"https://pawtest/userportal/EntradaApp.aspx?idApp=TRXBACKUP"
   },
@@ -156,7 +158,7 @@ const ALinks = [
     name:"PSR",
     img:"../SWAGGER.jpg",
     category: [
-      ''
+      'otros'
     ],
     link:"http://ntpappsweb0008/PSR/swagger/ui/index#!/MainService/MainService_UpdateProfileByPhoneNumber"
   },
@@ -164,7 +166,7 @@ const ALinks = [
     name:"ENS API",
     img:"../API.png",
     category: [
-      ''
+      'otros'
     ],
     link:"http://cwl-soaprod.corp.codetel.com.do/EJB-EnsembleServicesWrapper-context-root/EnWrapperServiceSoapHttpPort?wsdl"
   },
@@ -172,7 +174,7 @@ const ALinks = [
     name:"HUB API",
     img:"../API.png",
     category: [
-      ''
+      'otros'
     ],
     link:"http://osbprod.corp.codetel.com.do/services/ServiceGateway/ServiceGatewayPostActivationService?wsdl"
   },
@@ -180,7 +182,7 @@ const ALinks = [
     name:"SMGR",
     img:"../SMGR.avif",
     category: [
-      ''
+      'otros'
     ],
     link:"https://172.27.72.88/tools/Tabla-Offers/"
   },
@@ -188,7 +190,7 @@ const ALinks = [
     name:"Offers",
     img:"../SMGR.avif",
     category: [
-      ''
+      'otros'
     ],
     link:"https://172.27.72.88/portal/catalogo-de-offertas-red-prepago/"
   },
@@ -196,7 +198,7 @@ const ALinks = [
     name:"MAPA CELDAS",
     img:"../Mapa%20digital.jpg",
     category: [
-      ''
+      'mapas'
     ],
     link:"http://portallmetricas/CorpoMovilSite/1CORNoDisponTest.aspx"
   },
@@ -204,15 +206,15 @@ const ALinks = [
     name:"Claro Ayuda",
     img:"../claroayuda.png",
     category: [
-      ''
+      'portales'
     ],
     link:"http://nttappsweb0005/claroayuda/"
   },
   {
     name:"Fripick",
     img:"../Fripick.png",
-    category: [
-      ''
+    category: [ 
+      'portales'
     ],
     link:"https://p.fripick.com/login/"
   },
@@ -220,7 +222,7 @@ const ALinks = [
     name:"SOX",
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'portales'
     ],
     link:"http://moss/docoficialv2/_layouts/15/start.aspx#/Documentos/Forms/OPERACIONES.aspx"
   },
@@ -228,7 +230,7 @@ const ALinks = [
     name:"PAC",
     img:"../PAC.png",
     category: [
-      ''
+      'portales'
     ],
     link:"https://pac.corp.codetel.com.do/isf-web/login.xhtml"
   },
@@ -236,7 +238,7 @@ const ALinks = [
     name:"QA22 PPG",
     img:"../PPG.png",
     category: [
-      ''
+      'QA'
     ],
     link:"http://lxtwlcluts03:7010/PPG/cas/Home.jsp"
   },
@@ -244,7 +246,7 @@ const ALinks = [
     name:"QA22 PAP",
     img:"../PAP.png",
     category: [
-      ''
+      'QA'
     ],
     link:"http://lxtwlcluts04:7020/PAP/app/IccidStatus.jsp"
   }, 
@@ -252,7 +254,7 @@ const ALinks = [
     name:"QA9 PPG",
     img:"../PPG.png",
     category: [
-      ''
+      'QA'
     ],
     link:"http://lxtwlcluts04:7110/PPG/cas/Home.jsp"
   },
@@ -260,7 +262,7 @@ const ALinks = [
     name:"QA9 PAP",
     img:"../PAP.png",
     category: [
-      ''
+      'QA'
     ],
     link:"http://lxtwlcluts04:7120/PAP/app/IccidStatus.jsp"
   },
@@ -268,7 +270,7 @@ const ALinks = [
     name:"RHOL",
     img:"../Claro.png",
     category: [
-      ''
+      'portales'
     ],
     link:"http://rhol"
   },
@@ -276,7 +278,7 @@ const ALinks = [
     name:"JIRA",
     img:"../JIRA.png",
     category: [
-      ''
+      'reportes'
     ],
     link:"https://monitortdtb.atlassian.net/servicedesk/customer/portal/1/user/login?destination=portal%2F1"
   }, 

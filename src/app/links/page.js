@@ -132,22 +132,28 @@ const Home = () => {
               Favoritos
             </NavDropdown.Item>
             <NavDropdown.Item
-              onClick={() => setCategory('Aprovisionamiento')}
+              onClick={() => setCategory('Reportes')}
               className="pr-2 pl-3 min-w-[200px]"
             >
-              Aprovisionamiento
+              Reportes
+            </NavDropdown.Item>
+            <NavDropdown.Item
+              onClick={() => setCategory('Portales')}
+              className="pr-2 pl-3 min-w-[200px]"
+            >
+              Portales
+            </NavDropdown.Item>
+            <NavDropdown.Item
+              onClick={() => setCategory('QA')}
+              className="pr-2 pl-3 min-w-[200px]"
+            >
+              Sistemas QA
             </NavDropdown.Item>
             <NavDropdown.Item
               onClick={() => setCategory('Mapas')}
               className="pr-2 pl-3 min-w-[200px]"
             >
               Mapas
-            </NavDropdown.Item>
-            <NavDropdown.Item
-              onClick={() => setCategory('Informativos')}
-              className="pr-2 pl-3 min-w-[200px]"
-            >
-              Informativos
             </NavDropdown.Item>
             <NavDropdown.Item
               onClick={() => setCategory('Otros')}
