@@ -319,20 +319,78 @@ const NavHome = () => {
           <h3 className="text-md text-white mx-auto">
             Página de documentación interna
           </h3>
-          <FramerLink
-            href="/dashboard"
-              className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
-              hover:!bg-white hover:!text-black no-underline"
-            whileHover={{
-              y: [-5, -10, -12, -10, -5],
-              transition: {
-                duration: 1.2,
-                repeat: Infinity,
-              },
-            }}
-          >
-            Ver Dashboard
-          </FramerLink>
+          <div className="flex max-w-[800px] flex-wrap justify-center items-center m-auto gap-x-5">
+            <FramerLink
+              href="/estadisticas/provision"
+                className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+                hover:!bg-white hover:!text-black no-underline"
+              whileHover={{
+                y: [-5, -10, -12, -10, -5],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                },
+              }}
+            >
+              Estadísticas Diarias
+            </FramerLink>
+            <FramerLink
+              href="/estadisticas/ccm"
+                className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+                hover:!bg-white hover:!text-black no-underline"
+              whileHover={{
+                y: [-5, -10, -12, -10, -5],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                },
+              }}
+            >
+              Dashboard CCM
+            </FramerLink>
+            <FramerLink
+              href="/estadisticas/poc"
+                className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+                hover:!bg-white hover:!text-black no-underline"
+              whileHover={{
+                y: [-5, -10, -12, -10, -5],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                },
+              }}
+            >
+              Dashboard POC
+            </FramerLink>
+            <FramerLink
+              href="/estadisticas/mor"
+                className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+                hover:!bg-white hover:!text-black no-underline"
+              whileHover={{
+                y: [-5, -10, -12, -10, -5],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                },
+              }}
+            >
+              Dashboard MOR
+            </FramerLink>
+            <FramerLink
+              href="/estadisticas/recargo"
+                className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+                hover:!bg-white hover:!text-black no-underline"
+              whileHover={{
+                y: [-5, -10, -12, -10, -5],
+                transition: {
+                  duration: 1.2,
+                  repeat: Infinity,
+                },
+              }}
+            >
+              Dashboard Medios de Recargo
+            </FramerLink>
+          </div>
         </div>
       </main>
       <div className="lg:-mt-[120px] 2xl:-mt-[175px] z-10 relative ">
@@ -353,15 +411,15 @@ const NavHome = () => {
         href="http://intranet/Pages/default.aspx"
         target="_blank"
       >
-      <FramerImage
-        src="/logo-claro-giant.png"
-        width={300}
-        height={300}
-        className="absolute left-1/2 -ml-[150px] -mt-[175px] z-10"
-        alt="Logo Claro"
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3 }}
-      />
+        <FramerImage
+          src="/logo-claro-giant.png"
+          width={300}
+          height={300}
+          className="absolute left-1/2 -ml-[150px] -mt-[175px] z-10"
+          alt="Logo Claro"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+        />
       </Link>
     </>
   );
