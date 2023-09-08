@@ -36,15 +36,37 @@ const NavHome = () => {
         }
       >
         <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/60 absolute -z-10 select-none">
-          <Image
+        </div>
+        <Link href='/'>
+          <FramerImage
             src="/logo-pom.png"
             priority="true"
             width="110"
             height="59"
             alt="Logo POM"
-            className="mx-auto mt-4"
+            className="mx-auto z-50"
+            initial={{ opacity: 0, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              y: 100,
+              transition: { 
+                delay: 0.6,
+                duration: 0.7 
+              },
+            }}
+            whileHover={{
+              scale: [1, 0.9, 1.1, 0.9, 1],
+              rotate: [0, -5, 0, 5, 0],
+              transition: {
+                duration: 3,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+              },
+            }}
+            viewport={{ once: true }}
           />
-        </div>
+        </Link>
         <div className="pt-36 mx-auto select-none">
           <Navbar expand="lg" className="bg-transparent mx-auto">
             <Container fluid>

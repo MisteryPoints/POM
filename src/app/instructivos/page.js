@@ -116,43 +116,37 @@ const Home = () => {
               className="pr-2 pl-3 min-w-[200px]"
             >
               Categorías
-            </NavDropdown.Item>
+            </NavDropdown.Item> 
             <NavDropdown.Item
-              onClick={() => setCategory('Favoritos')}
+              onClick={() => setCategory('Provisión')}
               className="pr-2 pl-3 min-w-[200px]"
             >
-              Favoritos
+              Provisión
             </NavDropdown.Item>
             <NavDropdown.Item
-              onClick={() => setCategory('Reportes')}
+              onClick={() => setCategory('Prevención')}
               className="pr-2 pl-3 min-w-[200px]"
             >
-              Reportes
+              Prevención
             </NavDropdown.Item>
             <NavDropdown.Item
-              onClick={() => setCategory('Portales')}
+              onClick={() => setCategory('Recargo')}
               className="pr-2 pl-3 min-w-[200px]"
             >
-              Portales
+              Medios de Recargo
             </NavDropdown.Item>
             <NavDropdown.Item
-              onClick={() => setCategory('QA')}
+              onClick={() => setCategory('NXX')}
               className="pr-2 pl-3 min-w-[200px]"
             >
-              Sistemas QA
+              Admin NXX
             </NavDropdown.Item>
             <NavDropdown.Item
-              onClick={() => setCategory('Mapas')}
+              onClick={() => setCategory('Estadísticas')}
               className="pr-2 pl-3 min-w-[200px]"
             >
-              Mapas
-            </NavDropdown.Item>
-            <NavDropdown.Item
-              onClick={() => setCategory('Otros')}
-              className="pr-2 pl-3 min-w-[200px]"
-            >
-              Otros
-            </NavDropdown.Item>
+              Estadísticas/ Procesos
+            </NavDropdown.Item> 
           </NavDropdown>
           <input type='text' placeholder="Introduce el Instructivo deseado"  
             value={search} onChange={(e) => setSearch(e.target.value)} 

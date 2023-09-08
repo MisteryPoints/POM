@@ -290,7 +290,7 @@ const AInstructivos = [
     name:'Diagnóstico Averías Móviles',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'prevención'
     ],
     link:'../sox/DIAGN%C3%93STICO%20AVER%C3%8DAS%20M%C3%93VILES.pdf' 
   },
@@ -298,7 +298,7 @@ const AInstructivos = [
     name:'Manejo Fallas Móviles Provisión',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/MANEJO%20DE%20FALLAS%20M%C3%93VILES%20EN%20SISTEMAS%20DE%20APROVISIONAMIENTO.pdf'
   },
@@ -306,7 +306,7 @@ const AInstructivos = [
     name:'Manejo Errores Rebotes',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/MANEJO%20DE%20ERRORES%20Y%20REBOTES.pdf'
   },
@@ -314,7 +314,7 @@ const AInstructivos = [
     name:'Manual Voucher Server',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'recargo'
     ],
     link:'../sox/MANUAL%20DE%20USUARIO%20VOUCHER%20SERVER.pdf'
   },
@@ -322,7 +322,7 @@ const AInstructivos = [
     name:'Reverso',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'recargo'
     ],
     link:'../sox/REVERSO.pdf' 
   },
@@ -330,7 +330,7 @@ const AInstructivos = [
     name:'Fallas Cancelación Servicios Móviles',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/GESTI%C3%93N%20DE%20FALLAS%20EN%20CANCELACI%C3%93N%20DE%20SERVICIOS%20M%C3%93VILES.pdf' 
   },
@@ -338,7 +338,7 @@ const AInstructivos = [
     name:'Reclamación Medios de Recarga',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'recargo'
     ],
     link:'../sox/CIERRE%20RECLAMACIONES%20MEDIOS%20DE%20RECARGA.pdf'
   },
@@ -346,7 +346,7 @@ const AInstructivos = [
     name:'Contingencia No Disp Ensamble',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/CONTINGENCIA%20ANTE%20NO%20DISPONIBILIDAD%20DE%20ENSEMBLE.pdf'
   },
@@ -354,7 +354,7 @@ const AInstructivos = [
     name:'Sistema Commplex',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/SISTEMA%20COMMPLEX.pdf'
   },
@@ -362,7 +362,10 @@ const AInstructivos = [
     name:'SAAM',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión',
+      'prevención',
+      'recargo',
+      'estadísticas',
     ],
     link:'../sox/SISTEMA%20DE%20ADMINISTRACI%C3%93N%20DE%20AVER%C3%8DAS%20M%C3%93VILES.pdf'
   },
@@ -370,7 +373,7 @@ const AInstructivos = [
     name:'Manual Bancatel',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'recargo'
     ],
     link:'../sox/MANUAL%20DE%20USUARIOS%20BANCATEL.pdf'
   },
@@ -378,7 +381,7 @@ const AInstructivos = [
     name:'Operacional CCM Móviles',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'estadísticas'
     ],
     link:'../sox/OPERACIONAL%20CCM%20M%C3%93VILES.pdf'
   },
@@ -386,7 +389,7 @@ const AInstructivos = [
     name:'Series Negadas',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/MANEJO%20DE%20SERIES%20NEGADAS.pdf'
   },
@@ -394,7 +397,7 @@ const AInstructivos = [
     name:'Reverso Carga Fácil',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'recargo'
     ],
     link:'../sox/REVERSO%20CARGA%20F%C3%81CIL.pdf'
   },
@@ -402,7 +405,7 @@ const AInstructivos = [
     name:'Compares Provisión',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/COMPARES%20DE%20APROVISIONAMIENTO.pdf'
   },
@@ -410,7 +413,7 @@ const AInstructivos = [
     name:'Contingencia Provisión Manejados OpeMov',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/CONTINGENCIA%20APROVISIONAMIENTO%20DE%20SERVICIOS%20MANEJADA%20POR%20OPERACIONES%20M%C3%93VILES.pdf'
   },
@@ -418,7 +421,7 @@ const AInstructivos = [
     name:'Averías Segmento EyF Automáticas',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'prevención'
     ],
     link:'../sox/AVER%C3%8DAS%20APLICACIONES%20M%C3%93VILES%20AUTOM%C3%81TICAS%20SEGMENTO%20E%20Y%20F.pdf'
   },
@@ -426,7 +429,7 @@ const AInstructivos = [
     name:'Averías Localización Vehicular',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/AVER%C3%8DAS%20DE%20LOCALIZACI%C3%93N%20VEHICULAR.pdf'
   },
@@ -434,7 +437,7 @@ const AInstructivos = [
     name:'Reclamación Norton Antivirus',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'prevención'
     ],
     link:'../sox/GESTI%C3%93N%20DE%20RECLAMACIONES%20Y%20AVER%C3%8DAS%20NORTON%20SEGURIDAD%20DIGITAL.pdf'
   },
@@ -442,7 +445,7 @@ const AInstructivos = [
     name:'Casos SWAT TEAM',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/ATENCI%C3%93N%20CASOS%20SWAT%20TEAM.pdf'
   },
@@ -450,7 +453,7 @@ const AInstructivos = [
     name:'Desbloqueo Equipos Móviles',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'recargo'
     ],
     link:'../sox/DESBLOQUEO%20EQUIPOS%20M%C3%93VILES.pdf'
   },
@@ -458,7 +461,7 @@ const AInstructivos = [
     name:'Validaciones CCM',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'estadísticas'
     ],
     link:'../sox/VALIDACI%C3%93N%20DE%20USUARIOS%20EN%20CALL%20CENTER%20M%C3%93VILES.pdf'
   },
@@ -466,7 +469,7 @@ const AInstructivos = [
     name:'Ajustes por Averías y Provisión',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'recargo'
     ],
     link:'../sox/AJUSTES%20POR%20APROVISIONAMIENTO%20M%C3%93VIL%20Y%20AVER%C3%8DAS.pdf'
   },
@@ -474,7 +477,7 @@ const AInstructivos = [
     name:'Ajustes Prepago',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'recargo'
     ],
     link:'../sox/AJUSTE%20PREPAGO.pdf'
   },
@@ -482,7 +485,8 @@ const AInstructivos = [
     name:'Excepción Límites Líneas Prepago',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión',
+      'prevención',
     ],
     link:'../sox/MANEJO%20DE%20EXCEPCI%C3%93N%20L%C3%8DMITE%20DE%20L%C3%8DNEAS%20PREPAGADAS.pdf'
   },
@@ -490,7 +494,7 @@ const AInstructivos = [
     name:'Fallas Provisión Datos Móviles',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/GESTI%C3%93N%20DE%20FALLAS%20APROVISIONAMIENTO%20SERVICIO%20DE%20DATOS%20M%C3%93VILES.pdf'
   },
@@ -498,7 +502,7 @@ const AInstructivos = [
     name:'Averías Móviles',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/AVER%C3%8DAS%20M%C3%93VILES.pdf'
   },
@@ -506,7 +510,7 @@ const AInstructivos = [
     name:'Admin Códigos NXX',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'nxx'
     ],
     link:'../sox/ADMINISTRACI%C3%93N%20DE%20C%C3%93DIGOS%20NXX.pdf'
   },
@@ -514,7 +518,7 @@ const AInstructivos = [
     name:'Acceso al 911',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'prevención'
     ],
     link:'../sox/BLOQUEO%20Y%20DESBLOQUEO%20ACCESO%20AL%20911.pdf'
   },
@@ -522,7 +526,7 @@ const AInstructivos = [
     name:'Averías Claro Sync',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'provisión'
     ],
     link:'../sox/AVER%C3%8DA%20SERVICIO%20CLARO%20SYNC.pdf'
   },
@@ -530,7 +534,7 @@ const AInstructivos = [
     name:'Auditorías Ofertas Móviles',
     img:'../Sharepoint.jpg',
     category: [
-      ''
+      'prevención'
     ],
     link:'../sox/AUDITOR%C3%8DA%20OFERTAS%20M%C3%93VILES.pdf'
   }, 
