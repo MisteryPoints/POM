@@ -9,13 +9,21 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { motion } from "framer-motion";
 import NavDrop from "./NavDrop";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const FramerLink = motion(Link);
 const FramerImage = motion(Image);
 
 const NavHome = () => {
+  const [showHome, setShowHome] = useState(false);
   const [showProcess, setShowProcess] = useState(false);
   const [showTech, setShowTech] = useState(false);
+  const showDropdownI = (e) => {
+    setShowHome(!showHome);
+  };
+  const hideDropdownI = (e) => {
+    setShowHome(false);
+  };
   const showDropdownP = (e) => {
     setShowProcess(!showProcess);
   };
@@ -28,6 +36,8 @@ const NavHome = () => {
   const hideDropdownT = (e) => {
     setShowTech(false);
   };
+
+  const router = useRouter();
   return (
     <>
       <main
@@ -35,9 +45,8 @@ const NavHome = () => {
           "bg-hero h-screen -mt-12 lg:min-h-[700px] 2xl:max-h-[800px] bg-cover bg-no-repeat relative -z-0 selection:bg-red-700 selection:text-white"
         }
       >
-        <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/60 absolute -z-10 select-none">
-        </div>
-        <Link href='/'>
+        <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/60 absolute -z-10 select-none"></div>
+        <Link href="/">
           <FramerImage
             src="/logo-pom.png"
             priority="true"
@@ -49,9 +58,9 @@ const NavHome = () => {
             whileInView={{
               opacity: 1,
               y: 100,
-              transition: { 
+              transition: {
                 delay: 0.6,
-                duration: 0.7 
+                duration: 0.7,
               },
             }}
             whileHover={{
@@ -77,12 +86,57 @@ const NavHome = () => {
                   style={{ maxHeight: "100px" }}
                   navbarScroll
                 >
-                  <Nav.Link
-                    href="/"
-                    className="mx-8 !font-bold !text-xl !text-slate-200 uppercase"
+                  <NavDropdown
+                    title={
+                      <span
+                        onClick={() => router.push("/")}
+                        className="mx-8 !font-bold !text-xl !text-slate-200 uppercase no-underline"
+                      >
+                        Inicio
+                      </span>
+                    }
+                    id="collasible-nav-dropdown"
+                    menuVariant="dark"
+                    show={showHome}
+                    onMouseEnter={showDropdownI}
+                    onMouseLeave={hideDropdownI}
+                    className="mx-8 !font-bold !text-xl !text-white no-underline"
                   >
-                    Inicio
-                  </Nav.Link>
+                    <NavDropdown.Item
+                      href="/estadisticas/provision"
+                      className="pr-2 pl-3"
+                    >
+                      Estadisticas Diarias
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item
+                      href="/estadisticas/ccm"
+                      className="pr-2 pl-3"
+                    >
+                      Dashboard CCM
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item
+                      href="/estadisticas/poc"
+                      className="pr-2 pl-3"
+                    >
+                      Dashboard POC
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item
+                      href="/estadisticas/mor"
+                      className="pr-2 pl-3"
+                    >
+                      Dashboard MOR
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item
+                      href="/estadisticas/recargo"
+                      className="pr-2 pl-3"
+                    >
+                      Dashboard Medios de Recargo
+                    </NavDropdown.Item>
+                  </NavDropdown>
                   <NavDropdown
                     title={
                       <span className="mx-8 !font-bold !text-xl !text-slate-200 uppercase">
@@ -202,9 +256,6 @@ const NavHome = () => {
                         </NavDropdown.Item>
                       </NavDrop>
                     </NavDrop>
-                    <NavDropdown.Item href="/dashboard" className="pr-2 pl-3">
-                      Dashboard Estadísticas
-                    </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="/links" className="pr-2 pl-3">
                       Links
@@ -344,7 +395,7 @@ const NavHome = () => {
           <div className="flex max-w-[800px] flex-wrap justify-center items-center m-auto gap-x-5">
             <FramerLink
               href="/estadisticas/provision"
-                className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+              className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
                 hover:!bg-white hover:!text-black no-underline select-none"
               whileHover={{
                 y: [-5, -10, -12, -10, -5],
@@ -358,7 +409,7 @@ const NavHome = () => {
             </FramerLink>
             <FramerLink
               href="/estadisticas/ccm"
-                className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+              className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
                 hover:!bg-white hover:!text-black no-underline select-none"
               whileHover={{
                 y: [-5, -10, -12, -10, -5],
@@ -372,7 +423,7 @@ const NavHome = () => {
             </FramerLink>
             <FramerLink
               href="/estadisticas/poc"
-                className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+              className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
                 hover:!bg-white hover:!text-black no-underline select-none"
               whileHover={{
                 y: [-5, -10, -12, -10, -5],
@@ -386,7 +437,7 @@ const NavHome = () => {
             </FramerLink>
             <FramerLink
               href="/estadisticas/mor"
-                className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+              className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
                 hover:!bg-white hover:!text-black no-underline select-none"
               whileHover={{
                 y: [-5, -10, -12, -10, -5],
@@ -400,7 +451,7 @@ const NavHome = () => {
             </FramerLink>
             <FramerLink
               href="/estadisticas/recargo"
-                className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
+              className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto
                 hover:!bg-white hover:!text-black no-underline select-none"
               whileHover={{
                 y: [-5, -10, -12, -10, -5],
@@ -420,7 +471,7 @@ const NavHome = () => {
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
           viewBox="0 0 1000 100"
-          fill="#CBD5E1" 
+          fill="#CBD5E1"
         >
           <path
             fill="#CBD5E1"
@@ -437,7 +488,7 @@ const NavHome = () => {
           src="/logo-claro-giant.png"
           width={300}
           height={300}
-          className="absolute left-1/2 -ml-[150px] -mt-[175px] z-10"
+          className="absolute left-1/2 xl:-ml-[120px] xl:-mt-[115px] 2xl:-ml-[150px] 2xl:-mt-[175px] z-10 xl:w-[200px] xl:h-[200px] 2xl:w-[300px] 2xl:h-[300px]"
           alt="Logo Claro"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}

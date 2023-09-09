@@ -4,7 +4,7 @@ import NavHome from "@/components/NavHome";
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ALinks } from "@/api/API"; 
+import { ALinks } from "@/api/API";
 import { NavDropdown } from "react-bootstrap";
 import { useOnOutsideClick } from "@/components/useOnOutsideClick";
 
@@ -28,7 +28,7 @@ const Links = ({ name, img, link }) => {
       }}
       viewport={{ once: true }}
     >
-      <span className="w-0 h-0 rounded-[2rem] bg-black absolute bottom-0 left-1/2 -translate-x-1/2 ease-out duration-500 transition-all w-full group-hover:h-full -z-1 opacity-50"></span>
+      <span className="h-0 rounded-[2rem] bg-black absolute bottom-0 left-1/2 -translate-x-1/2 ease-out duration-500 transition-all w-full group-hover:h-full -z-1 opacity-50"></span>
       <h1 className="absolute bottom-0 uppercase font-extrabold text-3xl text-[#800000] text-center left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out group-hover:text-white z-10 group-hover:-translate-y-[60px] group-hover:text-6xl group-hover:hyphens-auto">
         {name}
       </h1>
@@ -37,32 +37,34 @@ const Links = ({ name, img, link }) => {
 };
 
 const Home = () => {
-  const [search, setSearch] = useState('')
-  const [category, setCategory] = useState('')
-  const [showCategory, setShowCategory] = useState(false)
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("");
+  const [showCategory, setShowCategory] = useState(false);
   const { innerBorderRef } = useOnOutsideClick(() => setShowCategory(false));
 
-  let linkCatData = ALinks.sort().filter((obj) => {  
-    if(obj['category'].toString().toLowerCase().includes(category.toLowerCase())){    
-      return obj;
-    } 
-  });
- 
-  let linkData = linkCatData.sort(
-    function (a, b) {
-    if (a.name < b.name) {
-      return -1;
-    }
-    if (a.name > b.name) {
-      return 1;
-    }
-    return 0;
-  }).filter((obj) => {  
-    if(obj['name'].toLowerCase().includes(search.toLowerCase())){   
+  let linkCatData = ALinks.sort().filter((obj) => {
+    if (
+      obj["category"].toString().toLowerCase().includes(category.toLowerCase())
+    ) {
       return obj;
     }
   });
- 
+
+  let linkData = linkCatData
+    .sort(function (a, b) {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    })
+    .filter((obj) => {
+      if (obj["name"].toLowerCase().includes(search.toLowerCase())) {
+        return obj;
+      }
+    });
 
   return (
     <div className="bg-slate-300 w-full">
@@ -94,7 +96,8 @@ const Home = () => {
             </h1>
           </div>
         </motion.div>
-        <motion.div className="flex rounded-full w-full justify-center"
+        <motion.div
+          className="flex rounded-full w-full justify-center"
           initial={{ opacity: 0, y: 70 }}
           whileInView={{
             opacity: 1,
@@ -104,85 +107,84 @@ const Home = () => {
               duration: 0.4,
             },
           }}
-          viewport={{ once: true }}> 
+          viewport={{ once: true }}
+        >
           <NavDropdown
             ref={innerBorderRef}
             title={
               <p
-                className={`${showCategory ? "bg-[#343a40]/90" : '' } text-center bg-[#343a40] hover:bg-[#343a40]/90 min-w-[230px] xl:!py-[30px]  rounded-l-3xl text-2xl m-0 text-gray-300 font-bold translate-all duration-300 `}
+                className={`${
+                  showCategory ? "bg-[#343a40]/90" : ""
+                } text-center bg-[#343a40] hover:bg-[#343a40]/90 min-w-[230px] xl:!py-[30px]  rounded-l-3xl text-2xl m-0 text-gray-300 font-bold translate-all duration-300 `}
               >
-                {category ? category : 'Categorías'}
-              </p>}
-            variant="flat" 
-            drop='up-centered'
+                {category ? category : "Categorías"}
+              </p>
+            }
+            variant="flat"
+            drop="up-centered"
             menuVariant="dark"
-            show={showCategory} 
+            show={showCategory}
             onClick={() => setShowCategory(!showCategory)}
-            >
+          >
             <NavDropdown.Item
-              onClick={() => setCategory('')}
+              onClick={() => setCategory("")}
               className="pr-2 pl-3 min-w-[200px]"
             >
               Categorías
             </NavDropdown.Item>
             <NavDropdown.Item
-              onClick={() => setCategory('Favoritos')}
+              onClick={() => setCategory("Favoritos")}
               className="pr-2 pl-3 min-w-[200px]"
             >
               Favoritos
             </NavDropdown.Item>
             <NavDropdown.Item
-              onClick={() => setCategory('Reportes')}
+              onClick={() => setCategory("Reportes")}
               className="pr-2 pl-3 min-w-[200px]"
             >
               Reportes
             </NavDropdown.Item>
             <NavDropdown.Item
-              onClick={() => setCategory('Portales')}
+              onClick={() => setCategory("Portales")}
               className="pr-2 pl-3 min-w-[200px]"
             >
               Portales
             </NavDropdown.Item>
             <NavDropdown.Item
-              onClick={() => setCategory('QA')}
+              onClick={() => setCategory("QA")}
               className="pr-2 pl-3 min-w-[200px]"
             >
               Sistemas QA
             </NavDropdown.Item>
             <NavDropdown.Item
-              onClick={() => setCategory('Mapas')}
+              onClick={() => setCategory("Mapas")}
               className="pr-2 pl-3 min-w-[200px]"
             >
               Mapas
             </NavDropdown.Item>
             <NavDropdown.Item
-              onClick={() => setCategory('Otros')}
+              onClick={() => setCategory("Otros")}
               className="pr-2 pl-3 min-w-[200px]"
             >
               Otros
             </NavDropdown.Item>
           </NavDropdown>
-          <input type='text' placeholder="Introduce el Link deseado"  
-            value={search} onChange={(e) => setSearch(e.target.value)} 
-            className={`bg-[#343a40] hover:bg-[#343a40]/90 py-3 min-w-[600px] pl-6 xl:py-4 rounded-r-3xl text-3xl translate-all duration-300 text-gray-300 font-bold border-2 border-[#343a40] border-l-slate-500 focus:!border-2 active:!border-[#343a40] placeholder:italic`} />
-
+          <input
+            type="text"
+            placeholder="Introduce el Link deseado"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className={`bg-[#343a40] hover:bg-[#343a40]/90 py-3 min-w-[600px] pl-6 xl:py-4 rounded-r-3xl text-3xl translate-all duration-300 text-gray-300 font-bold border-2 border-[#343a40] border-l-slate-500 focus:!border-2 active:!border-[#343a40] placeholder:italic`}
+          />
         </motion.div>
         <div className="grid 2xl:grid-cols-5 xl:grid-cols-3 md:grid-cols-1 gap-y-8 gap-x-16 mx-24 my-12">
-          {(category !== '' || search !== '') ? linkData.map(({name, img, link}) => ( 
-              <Links
-                key={name}
-                name={name}
-                img={img}
-                link={link}
-              />  
-            )) : ALinks.map(({name, img, link}) => ( 
-              <Links
-                key={name}
-                name={name}
-                img={img}
-                link={link}
-              />  
-            ))}
+          {category !== "" || search !== ""
+            ? linkData.map(({ name, img, link }) => (
+                <Links key={name} name={name} img={img} link={link} />
+              ))
+            : ALinks.map(({ name, img, link }) => (
+                <Links key={name} name={name} img={img} link={link} />
+              ))}
         </div>
       </div>
     </div>
