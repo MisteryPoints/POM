@@ -9,33 +9,12 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { motion } from "framer-motion";
 import NavDrop from "./NavDrop";
 import Link from "next/link";
+import NavFather from "./NavFather";
 
 const FramerLink = motion(Link);
 const FramerImage = motion(Image);
 
 const NavHome = () => {
-  const [showHome, setShowHome] = useState(false);
-  const [showProcess, setShowProcess] = useState(false);
-  const [showTech, setShowTech] = useState(false);
-  const showDropdownI = (e) => {
-    setShowHome(!showHome);
-  };
-  const hideDropdownI = (e) => {
-    setShowHome(false);
-  };
-  const showDropdownP = (e) => {
-    setShowProcess(!showProcess);
-  };
-  const hideDropdownP = (e) => {
-    setShowProcess(false);
-  };
-  const showDropdownT = (e) => {
-    setShowTech(!showTech);
-  };
-  const hideDropdownT = (e) => {
-    setShowTech(false);
-  };
-
   return (
     <>
       <main
@@ -84,18 +63,13 @@ const NavHome = () => {
                   style={{ maxHeight: "100px" }}
                   navbarScroll
                 >
-                  <NavDropdown
-                    title={
+                  <NavFather
+                    name={
                       <span className="mx-8 !font-bold !text-xl !text-slate-200 uppercase no-underline">
                         Inicio
                       </span>
                     }
                     id="collasible-nav-dropdown"
-                    menuVariant="dark"
-                    show={showHome}
-                    onMouseEnter={showDropdownI}
-                    onMouseLeave={hideDropdownI}
-                    href="/"
                     className="mx-8 !font-bold !text-xl !text-white no-underline"
                   >
                     <NavDropdown.Item
@@ -132,18 +106,13 @@ const NavHome = () => {
                     >
                       Dashboard Medios de Recargo
                     </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown
-                    title={
+                  </NavFather>
+                  <NavFather
+                    name={
                       <span className="mx-8 !font-bold !text-xl !text-slate-200 uppercase">
                         Tecnologías
                       </span>
                     }
-                    id="collasible-nav-dropdown"
-                    menuVariant="dark"
-                    show={showTech}
-                    onMouseEnter={showDropdownT}
-                    onMouseLeave={hideDropdownT}
                     className="mx-8 !font-bold !text-xl !text-white"
                   >
                     <NavDrop
@@ -229,7 +198,10 @@ const NavHome = () => {
                           </Link>
                         }
                       >
-                        <NavDropdown.Item href="/saam" className="pr-2 pl-3">
+                        <NavDropdown.Item
+                          href="/sistemas/saam"
+                          className="pr-2 pl-3"
+                        >
                           SAAM
                         </NavDropdown.Item>
                         <NavDropdown.Item
@@ -263,18 +235,13 @@ const NavHome = () => {
                     >
                       Instructivos
                     </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown
-                    title={
+                  </NavFather>
+                  <NavFather
+                    name={
                       <span className="mx-8 !font-bold !text-xl !text-slate-200 uppercase">
                         Procesos
                       </span>
                     }
-                    id="collasible-nav-dropdown"
-                    menuVariant="dark"
-                    show={showProcess}
-                    onMouseEnter={showDropdownP}
-                    onMouseLeave={hideDropdownP}
                     className="mx-8 !font-bold !text-xl !text-white"
                   >
                     <NavDrop
@@ -369,7 +336,7 @@ const NavHome = () => {
                         Síntomas SIF
                       </NavDropdown.Item>
                     </NavDrop>
-                  </NavDropdown>
+                  </NavFather>
                   <Nav.Link
                     href="/nosotros"
                     className="mx-8 !font-bold !text-xl !text-slate-200 uppercase"

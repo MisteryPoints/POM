@@ -1,23 +1,27 @@
 "use client";
+import React from "react";
 import NavHome from "@/components/NavHome";
 import TransitionEffect from "@/components/TransitionEffect";
-import React from "react";
-import {motion } from 'framer-motion'
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+const FramerImage = motion(Image);
 
 const Home = () => {
   return (
-    <div className="bg-slate-200 w-full">
+    <div className="bg-slate-300 w-full">
       <TransitionEffect />
       <NavHome />
-      <motion.div
-          className="select-none m-auto duration-300"
+      <div className="grid grid-cols-12 mx-24 mt-0 justify-center gap-x-5 gap-y-6">
+        <motion.div
+          className="col-span-12 select-none m-auto duration-300"
           initial={{ opacity: 0, y: 70 }}
           whileInView={{
             opacity: 1,
             y: 0,
             transition: {
-              delay: 0.4,
-              duration: 0.6,
+              delay: 0.5,
+              duration: 0.5,
             },
           }}
           viewport={{ once: true }}
@@ -34,6 +38,42 @@ const Home = () => {
             </h1>
           </div>
         </motion.div>
+        <motion.div
+          className="col-span-12 select-none m-auto duration-300 pt-12"
+          initial={{ opacity: 0, y: -70 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 1,
+              duration: 0.4,
+            },
+          }}
+          viewport={{ once: true }}
+        >
+          <FramerImage
+            src="/mantenimiento.png"
+            priority="true"
+            width="600"
+            height="600"
+            alt="Mantenimiento"
+            className="mx-auto"
+            initial={{ opacity: 0, y: 70 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 1,
+                duration: 0.4,
+              },
+            }}
+            viewport={{ once: true }}
+          />
+          <h1 className="text-center text-7xl font-extrabold uppercase">
+            Mantenimiento
+          </h1>
+        </motion.div>
+      </div>
     </div>
   );
 };
