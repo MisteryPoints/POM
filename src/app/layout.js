@@ -26,12 +26,12 @@ export default function RootLayout({ children }) {
         }
       >
         {children}
-        <footer className="flex xl:flex-wrap 2xl:flex-nowrap w-full bg-slate-200 text-lg 2xl:text-2xl text-slate-700/80 shadow-[0px_-16px_25px_0px_rgba(241,245,249,0.65)] gap-x-5 px-20 translate-y-[80px] mt-[10px] select-none text-center">
-          <p className="2xl:mt-[10px] mb-0 w-full">
+        <footer className="flex justify-between xl:flex-wrap 2xl:flex-nowrap w-full bg-slate-200 text-lg 2xl:text-2xl text-slate-700/90 shadow-[0px_-18px_25px_0px_rgba(241,245,249,0.75)] gap-x-5 px-20 translate-y-[80px] mt-[10px] select-none text-center">
+          <p className="2xl:mt-[10px] mb-2 w-full">
             Copyright © 2023, Claro República Dominicana. Todos los derechos
             reservados
           </p>
-          <p className="2xl:mt-[10px] mb-0 w-full">
+          <p className="2xl:mt-[10px] mb-2 w-full">
             Desarrollado por equipo de Desarrollos Operativos, Operaciones
             Móviles.
           </p>

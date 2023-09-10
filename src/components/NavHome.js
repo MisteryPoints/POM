@@ -9,7 +9,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { motion } from "framer-motion";
 import NavDrop from "./NavDrop";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 const FramerLink = motion(Link);
 const FramerImage = motion(Image);
@@ -37,7 +36,6 @@ const NavHome = () => {
     setShowTech(false);
   };
 
-  const router = useRouter();
   return (
     <>
       <main
@@ -88,10 +86,7 @@ const NavHome = () => {
                 >
                   <NavDropdown
                     title={
-                      <span
-                        onClick={() => router.push("/")}
-                        className="mx-8 !font-bold !text-xl !text-slate-200 uppercase no-underline"
-                      >
+                      <span className="mx-8 !font-bold !text-xl !text-slate-200 uppercase no-underline">
                         Inicio
                       </span>
                     }
@@ -100,6 +95,7 @@ const NavHome = () => {
                     show={showHome}
                     onMouseEnter={showDropdownI}
                     onMouseLeave={hideDropdownI}
+                    href="/"
                     className="mx-8 !font-bold !text-xl !text-white no-underline"
                   >
                     <NavDropdown.Item
