@@ -98,7 +98,7 @@ const Prevencion = () => {
   }, [prev]);
 
   return (
-    <motion.div className="bg-slate-200 w-full">
+    <motion.div className="bg-slate-300 w-full">
       <div
         onClick={() => {
           setPrev(!prev);

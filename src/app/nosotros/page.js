@@ -7,7 +7,7 @@ import Prevencion from "@/components/Prevencion";
 
 const Home = () => {
   return (
-    <div className="bg-slate-200 w-full">
+    <div className="bg-slate-300 w-full">
       <TransitionEffect />
       <NavHome />
       <Provision />
