@@ -115,6 +115,14 @@ const ALinks = [
     link:"http://nttappsweb0005/ClaroAyuda/A_Formularios/Frm_VoLTE.aspx"
   },
   {
+    name:"Equipos VoLTE",
+    img:"../VoLTE.jpg",
+    category: [
+      'otros'
+    ],
+    link:"https://www.claro.com.ec/portal/ec/legal-regulatorio/pdf/1632871408965-Archivo.pdf"
+  },
+  {
     name:"OTA",
     img:"../OTA.png",
     category: [

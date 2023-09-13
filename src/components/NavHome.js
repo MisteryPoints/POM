@@ -19,10 +19,10 @@ const NavHome = () => {
     <>
       <main
         className={
-          "bg-hero h-screen -mt-12 lg:min-h-[700px] 2xl:max-h-[800px] bg-cover bg-no-repeat relative -z-0 selection:bg-red-700 selection:text-white"
+          "bg-hero h-screen -mt-12 lg:min-h-[900px] 2xl:max-h-[1200px] bg-cover bg-no-repeat relative -z-0 selection:bg-red-700 selection:text-white shadow-[0px_15px_25px_10px_rgba(17,20,26,0.65)]"
         }
       >
-        <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/60 absolute -z-10 select-none"></div>
+        <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/10 absolute -z-10 select-none"></div>
         <Link href="/">
           <FramerImage
             src="/logo-pom.png"
@@ -34,15 +34,14 @@ const NavHome = () => {
             initial={{ opacity: 0, y: 0 }}
             whileInView={{
               opacity: 1,
-              y: 100,
+              y: 70,
               transition: {
                 delay: 0.6,
                 duration: 0.7,
               },
             }}
             whileHover={{
-              scale: [1, 0.9, 1.1, 0.9, 1],
-              rotate: [0, -5, 0, 5, 0],
+              scale: [1.05, 0.85, 1.21, 0.85, 1.05], 
               transition: {
                 duration: 3,
                 ease: "easeInOut",
@@ -53,7 +52,7 @@ const NavHome = () => {
             viewport={{ once: true }}
           />
         </Link>
-        <div className="pt-36 mx-auto select-none">
+        <div className="pt-[92px] mx-auto select-none">
           <Navbar expand="lg" className="bg-transparent mx-auto">
             <Container fluid>
               <Navbar.Toggle aria-controls="navbarScroll" />
@@ -428,30 +427,17 @@ const NavHome = () => {
             </FramerLink>
           </div>
         </div>
-      </main>
-      <div className="lg:-mt-[120px] 2xl:-mt-[175px] z-10 relative ">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1000 100"
-          fill="#CBD5E1"
-        >
-          <path
-            fill="#CBD5E1"
-            d="M500 97C126.7 96.3.8 19.8 0 0v100h1000V1c0 18.4-126.7 96.8-500 96z"
-          />
-        </svg>
-      </div>
+      </main> 
       <Link
-        className="bg-slate-300 w-full flex pb-[125px]"
+        className="bg-slate-300 w-full flex"
         href="http://intranet/Pages/default.aspx"
         target="_blank"
       >
         <FramerImage
           src="/logo-claro-giant.png"
-          width={300}
-          height={300}
-          className="absolute left-1/2 xl:-ml-[120px] xl:-mt-[115px] 2xl:-ml-[150px] 2xl:-mt-[175px] z-10 xl:w-[200px] xl:h-[200px] 2xl:w-[300px] 2xl:h-[300px]"
+          width={150}
+          height={150}
+          className="absolute right-[50px] top-8 z-10 xl:w-[100px] xl:h-[100px] 2xl:w-[150px] 2xl:h-[150px]"
           alt="Logo Claro"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}

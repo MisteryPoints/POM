@@ -22,11 +22,11 @@ export default function RootLayout({ children }) {
       <body
         className={
           poppins.variable +
-          " bg-slate-300 scrollbar scrollbar-thumb-red-600 scrollbar-track-slate-300 scroll-smooth overflow-x-hidden pb-[80px]"
+          " bg-slate-300 scrollbar scrollbar-thumb-red-600 scrollbar-track-[#11141a] scroll-smooth overflow-x-hidden pb-[80px]"
         }
       >
         {children}
-        <footer className="flex justify-between xl:flex-wrap 2xl:flex-nowrap w-full bg-slate-200 text-lg 2xl:text-2xl text-slate-700/90 shadow-[0px_-18px_25px_0px_rgba(241,245,249,0.75)] gap-x-5 px-20 translate-y-[80px] mt-[10px] select-none text-center">
+        <footer className="flex justify-between xl:flex-wrap 2xl:flex-nowrap w-full bg-slate-200 text-lg 2xl:text-xl text-slate-700/90 shadow-[0px_-18px_25px_0px_rgba(241,245,249,0.75)] gap-x-5 px-20 translate-y-[80px] mt-[10px] select-none text-center">
           <p className="2xl:mt-[10px] mb-2 w-full">
             Copyright © 2023, Claro República Dominicana. Todos los derechos
             reservados
