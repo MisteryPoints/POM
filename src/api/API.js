@@ -306,6 +306,62 @@ const ALinks = [
     ],
     link:"http://ntpappsweb0006/requerimientos/requests.aspx"
   }, 
+  {
+    name:"Matriz REQ TI",
+    img:"../Excell.svg",
+    category: [
+      'otros'
+    ],
+    link:"https://clarocomdo-my.sharepoint.com/:x:/r/personal/jose_al_rodriguez_claro_com_do/_layouts/15/Doc.aspx?sourcedoc=%7B7b42fed7-4c17-430e-9b60-c18f769916c5%7D&action=edit&wdinitialsession=12cbbce1-c659-43f1-87e6-27bb0db82ca8&wdrldsc=7&wdrldc=2&wdrldr=BootTimeMismatch"
+  }, 
+  {
+    name:"Est. Diarias",
+    img:"../Excell.svg",
+    category: [
+      'otros'
+    ],
+    link:"https://clarocomdo-my.sharepoint.com/:x:/r/personal/jose_al_rodriguez_claro_com_do/_layouts/15/Doc.aspx?sourcedoc=%7B761b1618-fae1-487f-b16d-dee463f7812d%7D&action=edit&activeCell=%27Julio%202023%27!AH6&wdinitialsession=0b7c8a04-7d2c-458d-a762-17e175656da4&wdrldsc=3&wdrldc=1&wdrldr=AccessTokenExpiredWarning%2CRefreshingExpiredAccessT"
+  }, 
+  {
+    name:"Night Report",
+    img:"../Excell.svg",
+    category: [
+      'otros'
+    ],
+    link:"https://clarocomdo-my.sharepoint.com/:x:/r/personal/jose_al_rodriguez_claro_com_do/_layouts/15/Doc.aspx?sourcedoc=%7B87c5f36b-227d-4139-b4a4-65f43f40126c%7D&action=edit&wdinitialsession=f7148591-5094-4e2f-bce6-f82f196771ae&wdrldsc=17&wdrldc=1&wdrldr=UserInteraction%2CBootTimeMismatch"
+  }, 
+  {
+    name:"SWITCH Report",
+    img:"../Excell.svg",
+    category: [
+      'otros'
+    ],
+    link:"https://clarocomdo-my.sharepoint.com/:x:/g/personal/jose_al_rodriguez_claro_com_do/EUDRjfb_RzhIlPG8Ru4VW0QB7LbB4LOCfKmagNzc3MOykw?e=4%3A3tydnC&at=9&CID=5FCD3E77-306B-40BA-81D0-B272BBF53B1D"
+  }, 
+  {
+    name:"Commplex",
+    img:"../Commplex.png",
+    category: [
+      'favoritos'
+    ],
+    link:""
+  }, 
+  {
+    name:"Ensamble Switch",
+    img:"../Switch.png",
+    category: [
+      'favoritos'
+    ],
+    link:""
+  }, 
+  {
+    name:"SAS",
+    img:"../SAS.png",
+    category: [
+      'favoritos'
+    ],
+    link:""
+  }, 
 ]
 
 /** Arreglo de Instructivos -Estático- */
@@ -562,6 +618,86 @@ const AInstructivos = [
     ],
     link:'../sox/AUDITOR%C3%8DA%20OFERTAS%20M%C3%93VILES.pdf'
   }, 
+  {
+    name:'Manejo de Rebotes',
+    img:'../Excell.svg',
+    category: [
+      'provisión'
+    ],
+    link:'../sox/MANEJO%20DE%20REBOTES.xlsx'
+  }, 
 ]
 
-export { ALinks, AInstructivos };
+/** Arreglo de Cumpleaños -Estático- */
+const ABirthday = [
+   {
+    name: 'Lucero Ureña',
+    birthday: '2-01'
+   },
+   {
+    name: 'Ariangel Díaz',
+    birthday: '27-01'
+   },
+   {
+    name: 'Jorge Roque',
+    birthday: '01-02'
+   },
+   {
+    name: 'Jose Al. Rodríguez',
+    birthday: '04-04'
+   },
+   {
+    name: 'Mabeel Fernández',
+    birthday: '03-06'
+   },
+   {
+    name: 'Parisa Pastrano',
+    birthday: '22-06'
+   },
+   {
+    name: 'Wilson Brito',
+    birthday: '04-07'
+   },
+   {
+    name: 'Kelvin Ceballo',
+    birthday: '22-07'
+   },
+   {
+    name: 'Ruben Evertz',
+    birthday: '15-08'
+   },
+   {
+    name: 'Freddy Ortiz',
+    birthday: '26-08'
+   },
+   {
+    name: 'Willy Alcantara',
+    birthday: '16-09', 
+    img: "/WillyAlcantara.png",
+    mail: "mailto:willy_alcantara@claro.com.do" ,
+    movil: '8097217805',
+    station: 'X-4002'
+   },
+   {
+    name: 'Yael Segura',
+    birthday: '16-10'
+   },
+   {
+    name: 'Víctor Tejada',
+    birthday: '18-10'
+   },
+   {
+    name: 'Rafael Pichardo',
+    birthday: '25-10'
+   },
+   {
+    name: 'Cristian Melo',
+    birthday: '13-11'
+   },
+   {
+    name: 'Ginet Matos',
+    birthday: '20-11'
+   },
+]
+
+export { ALinks, AInstructivos, ABirthday };

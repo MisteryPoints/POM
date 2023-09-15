@@ -128,7 +128,7 @@ export default function Home() {
 
         <div className="col-span-12 flex w-full justify-center">
           <button className={`text-2xl ${!selector ? 'bg-red-800' : 'bg-red-600'} text-white font-bold uppercase px-6 py-4 rounded-l-2xl transition-all duration-400`} disabled={!selector} onClick={changeSelector}>Claro</button>
-          <button className={`text-2xl ${selector ? 'bg-blue-800' : 'bg-blue-500'} text-white font-bold uppercase px-6 py-4 rounded-r-2xl transition-all duration-400`} disabled={true} onClick={changeSelector}>Operaciones Móviles</button>
+          <button className={`text-2xl ${selector ? 'bg-blue-800' : 'bg-blue-500'} text-white font-bold uppercase px-6 py-4 rounded-r-2xl transition-all duration-400`} disabled={selector} onClick={changeSelector}>Operaciones Móviles</button>
         </div>
         { !selector ? (
         <motion.div 
@@ -173,8 +173,8 @@ export default function Home() {
           }}
           viewport={{ once: true }}
         >
-          <h1 className="justify-center text-center text-sky-700 font-bold text-6xl m-auto w-full">
-            MISION
+          <h1 className="justify-center text-center text-sky-700 font-bold text-6xl m-auto w-full uppercase">
+          Misión
           </h1>
         </motion.div>
         <motion.div
@@ -190,8 +190,8 @@ export default function Home() {
           }}
           viewport={{ once: true }}
         >
-          <h1 className="justify-center text-center text-blue-800 font-bold text-6xl m-auto w-full">
-            VISION
+          <h1 className="justify-center text-center text-blue-800 font-bold text-6xl m-auto w-full uppercase">
+            Visión
           </h1>
         </motion.div>
         <motion.div
@@ -327,8 +327,8 @@ export default function Home() {
           }}
           viewport={{ once: true }}
         >
-          <h1 className="justify-center text-center text-red-600 font-bold text-6xl m-auto w-full">
-            MISION
+          <h1 className="justify-center text-center text-red-600 font-bold text-6xl m-auto w-full uppercase">
+            Misión
           </h1>
         </motion.div>
         <motion.div
@@ -344,8 +344,8 @@ export default function Home() {
           }}
           viewport={{ once: true }}
         >
-          <h1 className="justify-center text-center text-red-600 font-bold text-6xl m-auto w-full">
-            VISION
+          <h1 className="justify-center text-center text-red-600 font-bold text-6xl m-auto w-full uppercase">
+            Visión
           </h1>
         </motion.div>
         <motion.div

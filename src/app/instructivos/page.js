@@ -13,7 +13,7 @@ const FramerLink = motion(Link);
 const Instructivos = ({ name, img, link }) => {
   return (
     <FramerLink
-      className="col-span-1 rounded-[2rem] select-none m-auto drop-shadow-md w-[240px] h-[240px] no-underline relative inline-flex items-center justify-start overflow-hidden transition-all group bg-cover"
+      className="col-span-1 rounded-[2rem] select-none m-auto bg-gray-100 drop-shadow-md w-[240px] h-[240px] no-underline relative inline-flex items-center justify-start overflow-hidden transition-all group bg-cover"
       href={link}
       target="_blank"
       style={{ backgroundImage: `url(${img})` }}

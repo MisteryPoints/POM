@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
@@ -10,11 +10,39 @@ import { motion } from "framer-motion";
 import NavDrop from "./NavDrop";
 import Link from "next/link";
 import NavFather from "./NavFather";
+import { ABirthday } from "@/api/API";
 
 const FramerLink = motion(Link);
 const FramerImage = motion(Image);
 
+const CheckDate = () => {
+  let cumple;
+  const date = new Date();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+
+  const fixedDate = day + '-' + month;
+
+
+  ABirthday.forEach(({name, birthday}) => {
+    if(birthday == fixedDate) {
+      cumple = {
+        name,
+        birthday
+      }
+    }
+  })
+
+  return cumple;
+} 
+
 const NavHome = () => {
+  const [cumple, setCumple] = useState({})
+
+  useEffect(() => {
+    setCumple(CheckDate())
+  }, [])
+
   return (
     <>
       <main
@@ -28,7 +56,7 @@ const NavHome = () => {
             src="/logo-pom.png"
             priority="true"
             width="110"
-            height="59"
+            height="50"
             alt="Logo POM"
             className="mx-auto z-50"
             initial={{ opacity: 0, y: 0 }}
@@ -52,7 +80,7 @@ const NavHome = () => {
             viewport={{ once: true }}
           />
         </Link>
-        <div className="pt-[92px] mx-auto select-none">
+        <div className="pt-[90px] mx-auto select-none">
           <Navbar expand="lg" className="bg-transparent mx-auto">
             <Container fluid>
               <Navbar.Toggle aria-controls="navbarScroll" />
@@ -454,7 +482,8 @@ const NavHome = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         />
-      </Link>
+      </Link> 
+
     </>
   );
 };

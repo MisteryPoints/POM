@@ -13,7 +13,7 @@ const FramerLink = motion(Link);
 const Links = ({ name, img, link }) => {
   return (
     <FramerLink
-      className="col-span-1 rounded-[2rem] select-none m-auto drop-shadow-md h-[240px] w-[240px] no-underline relative inline-flex items-center justify-start overflow-hidden transition-all group bg-cover"
+      className={`col-span-1 rounded-[2rem] select-none m-auto drop-shadow-md h-[240px] w-[240px] no-underline relative inline-flex items-center justify-start overflow-hidden transition-all group bg-cover bg-gray-100 ${link ? '' : 'pointer-events-none'} `}
       href={link}
       target="_blank"
       style={{ backgroundImage: `url(${img})` }}
