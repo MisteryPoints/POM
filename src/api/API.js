@@ -290,6 +290,22 @@ const ALinks = [
     ],
     link:"https://monitortdtb.atlassian.net/servicedesk/customer/portal/1/user/login?destination=portal%2F1"
   }, 
+  {
+    name:"VALID",
+    img:"../Valid.jpg",
+    category: [
+      'reportes'
+    ],
+    link:"https://validsolutions.atlassian.net/servicedesk/customer/portal/12/EREACH-5315"
+  }, 
+  {
+    name:"GESTI",
+    img:"../GESTI.jpg",
+    category: [
+      'reportes'
+    ],
+    link:"http://ntpappsweb0006/requerimientos/requests.aspx"
+  }, 
 ]
 
 /** Arreglo de Instructivos -Estático- */

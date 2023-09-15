@@ -335,6 +335,18 @@ const NavHome = () => {
                         Síntomas SIF
                       </NavDropdown.Item>
                     </NavDrop>
+                    <NavDropdown.Item
+                      href="/nxx"
+                      className="pr-2 pl-3"
+                    >
+                      Admin NXX
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      href="/estadisticas"
+                      className="pr-2 pl-3"
+                    >
+                      Procesos y Estadísticas
+                    </NavDropdown.Item>
                   </NavFather>
                   <Nav.Link
                     href="/nosotros"
@@ -354,7 +366,7 @@ const NavHome = () => {
           <h3 className="text-md text-white mx-auto select-none">
             Página de documentación interna
           </h3>
-          <div className="flex max-w-[800px] flex-wrap justify-center items-center m-auto gap-x-5">
+          <div className="flex max-w-[800px] flex-wrap justify-center items-center m-auto gap-x-5 pt-[50px]">
             <FramerLink
               href="/estadisticas/provision"
               className="bg-transparent mt-10 px-5 py-2 border-2 border-solid border-white rounded-lg cursor-pointer text-white font-bold text-center mx-auto

@@ -10,6 +10,7 @@ const Cards = ({
   nombre,
   puesto,  
   link,
+  desc,
   img,
   mail, 
   movil,
@@ -19,7 +20,7 @@ const Cards = ({
     const [movils, setMovils] = useState(false)
     const [stations, setStations] = useState(false)
     return (
-        <article className={`w-full max-w-[300px] max-h-[320px] top-0 h-full items-center justify-center border border-solid border-gray-900 bg-white shadow-gray-200 shadow-none hover:shadow-md p-6 relative transition-all duration-200 opacity-80 hover:opacity-100 self-center justify-self-center ${lider ? "rounded-t-2xl" : "rounded-2xl"} `}>  
+        <article className={`w-full max-w-[300px] max-h-[320px] top-0 h-full items-center justify-center border border-solid border-gray-900 ${ puesto.includes("Gerente") ? 'bg-sky-100' : puesto.includes("Líder") ? 'bg-yellow-800/60' : puesto.includes("Medios") ? 'bg-violet-200 shadow-md shadow-gray-600' : puesto.includes("Procesos") ? 'bg-green-200 shadow-md shadow-gray-600' : puesto.includes('Sr. Operaciones') ? 'bg-blue-200 shadow-md shadow-gray-600' : puesto.includes('Proyectos') ? 'bg-yellow-100 shadow-md shadow-gray-600' : 'bg-white shadow-md shadow-gray-600' }  p-6 relative transition-all duration-200 opacity-80 hover:opacity-100 self-center justify-self-center ${lider ? "rounded-t-2xl" : "rounded-2xl"} `}>  
             <FramerImage
                 src={img}
                 alt={nombre}
@@ -34,16 +35,16 @@ const Cards = ({
                     href={link}
                     className="hover:underline underline-offset-2 decoration-gray-900 hover:opacity-80 w-full"
                 >
-                    <h2 className="my-2 w-full text-center text-lg font-bold lg:text-base text-gray-900 ">
+                    <h2 className="my-2 w-full text-center text-base font-bold lg:text-lg text-gray-900 ">
                     {nombre}
                     </h2>
                 </Link> 
-                <h2 className="my-2 w-full text-center text-sm lg:text-xs select-none">
+                <h2 className="my-2 w-full text-center text-xs lg:text-sm select-none">
                     {puesto}
                 </h2>
                 <div className="mt-2 w-full flex justify-center flex-wrap">
                     <Link
-                        href={link}
+                        href={desc}
                         target='_blank'
                         className="text-red-700 hover:text-white border-1 border-red-700 hover:bg-red-800 focus:ring-4 no-underline rounded-lg text-xs px-2 py-1 text-center mr-2 mb-2 transition-all duration-200 font-semibold"
                     >
