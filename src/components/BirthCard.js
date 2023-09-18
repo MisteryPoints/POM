@@ -16,18 +16,21 @@ const BirthCard = ({
     const [movils, setMovils] = useState(false)
     const [stations, setStations] = useState(false)
     return (
-        <article className={`w-full max-w-[300px] max-h-[320px] top-0 h-full items-center justify-center border border-solid border-gray-900 bg-gray-200 rounded-3xl`}>  
+        <article className={`w-full max-w-[300px] max-h-[320px] top-0 h-full items-center justify-center border border-solid border-gray-900 bg-white/90 rounded-3xl overflow-hidden`}>  
             <FramerImage
                 src={img}
                 alt={nombre}
-                className="w-full h-auto rounded-lg" 
+                className="w-full h-auto rounded-lg opacity-90" 
                 whileHover={{ scale: 1.05  }}
                 transition={{ duration: 0.2 }}
                 width={800}
                 height={330}
             /> 
             <div className="w-full flex flex-col items-start justify-between mt-4"> 
-                <h2 className="my-2 w-full text-center text-base font-bold lg:text-lg text-gray-900 ">
+                <h1 className='text-red-600 font-extrabold text-3xl text-center w-full select-none'>
+                ¡Feliz Cumpleaños!
+                </h1>
+                <h2 className="my-2 w-full text-center text-base font-bold lg:text-lg text-gray-900  select-none">
                 {nombre}
                 </h2> 
                 <div className="mt-2 w-full flex justify-center flex-wrap">  

@@ -11,6 +11,7 @@ import NavDrop from "./NavDrop";
 import Link from "next/link";
 import NavFather from "./NavFather";
 import { ABirthday } from "@/api/API";
+import BirthCard from "./BirthCard";
 
 const FramerLink = motion(Link);
 const FramerImage = motion(Image);
@@ -21,27 +22,39 @@ const CheckDate = () => {
   const month = date.getMonth() + 1;
   const day = date.getDate();
 
-  const fixedDate = day + '-' + month;
+  const fixedDate = day.toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false
+  }) + '-' + month.toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false
+  });
 
 
-  ABirthday.forEach(({name, birthday}) => {
+  ABirthday.forEach(({nombre, birthday, img, mail, movil, station}) => {
     if(birthday == fixedDate) {
       cumple = {
-        name,
-        birthday
+        nombre,
+        birthday,
+        img,
+        mail,
+        movil,
+        station
       }
     }
   })
-
   return cumple;
 } 
 
 const NavHome = () => {
-  const [cumple, setCumple] = useState({})
+  const [cumple, setCumple] = useState(false)
+  const [not, setNot] = useState(false)
 
-  useEffect(() => {
-    setCumple(CheckDate())
-  }, [])
+  useEffect(() => { 
+    if(!cumple && !not) { 
+      setCumple(CheckDate()) 
+    }
+  }, [cumple])
 
   return (
     <>
@@ -482,7 +495,35 @@ const NavHome = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         />
-      </Link> 
+      </Link>  
+      { cumple ? (
+        <motion.div className='absolute right-[50px] top-[300px]' 
+          initial={{ opacity: 0, x: 120 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              delay: 0.6,
+              duration: 0.8,
+            },
+          }}
+          viewport={{ once: true }}
+        >
+          <button className="absolute -top-4 -right-4 px-3 py-2 bg-red-600 z-10 rounded-full font-bold text-white" onClick={() => {
+              setCumple(false)
+              setNot(true)
+            }}>X</button>
+
+          <BirthCard
+            nombre={cumple.nombre}
+            img={cumple.img}
+            mail={cumple.mail}
+            movil={cumple.movil}
+            station={cumple.station}
+            />
+        </motion.div>
+      ) : ''}
+      
 
     </>
   );

@@ -631,47 +631,87 @@ const AInstructivos = [
 /** Arreglo de Cumpleaños -Estático- */
 const ABirthday = [
    {
-    name: 'Lucero Ureña',
-    birthday: '2-01'
+    nombre: 'Lucero Ureña',
+    birthday: '2-01', 
+    img: "/WillyAlcantara.png",
+    mail: "mailto:lucero_urena@claro.com.do" ,
+    movil: '8092204095',
+    station: 'X-4095'
    },
    {
-    name: 'Ariangel Díaz',
-    birthday: '27-01'
+    nombre: 'Ariangel Díaz',
+    birthday: '27-01', 
+    img: "/AriangelDiaz.png",
+    mail: "mailto:ariangel_diaz@claro.com.do" ,
+    movil: '8295510127',
+    station: 'X-2847'
    },
    {
-    name: 'Jorge Roque',
-    birthday: '01-02'
+    nombre: 'Jorge Roque',
+    birthday: '01-02', 
+    img: "/JorgeRoque.png",
+    mail: "mailto:jorge_roque@claro.com.do" ,
+    movil: '8097984614',
+    station: 'X-2564'
    },
    {
-    name: 'Jose Al. Rodríguez',
-    birthday: '04-04'
+    nombre: 'Jose Al. Rodríguez',
+    birthday: '04-04', 
+    img: "/JoseRodriguez.png",
+    mail: "mailto:jose_al_rodriguez@claro.com.do" ,
+    movil: '8299657933',
+    station: 'X-2832'
    },
    {
-    name: 'Mabeel Fernández',
-    birthday: '03-06'
+    nombre: 'Mabeel Fernández',
+    birthday: '03-06', 
+    img: "/MabeelFernandez.png",
+    mail: "mailto:mabeel_fernandez@claro.com.do" ,
+    movil: '8292501445',
+    station: 'X-5735'
    },
    {
-    name: 'Parisa Pastrano',
-    birthday: '22-06'
+    nombre: 'Parisa Pastrano',
+    birthday: '22-06', 
+    img: "/ParisaPastrano.png",
+    mail: "mailto:parisa_pastrano@claro.com.do" ,
+    movil: '8097076704',
+    station: 'X-2859'
    },
    {
-    name: 'Wilson Brito',
-    birthday: '04-07'
+    nombre: 'Wilson Brito',
+    birthday: '04-07', 
+    img: "/WilsonBrito.png",
+    mail: "mailto:wilson_brito@claro.com.do" ,
+    movil: '8299865658',
+    station: 'X-7230'
    },
    {
-    name: 'Kelvin Ceballo',
-    birthday: '22-07'
+    nombre: 'Kelvin Ceballo',
+    birthday: '22-07', 
+    img: "/KelvinCeballos.png",
+    mail: "mailto:kelvin_ceballo@claro.com.do" ,
+    movil: '8298730217',
+    station: 'X-2031'
    },
    {
-    name: 'Ruben Evertz',
-    birthday: '15-08'
+    nombre: 'Ruben Evertz',
+    birthday: '15-08', 
+    img: "/RubenEvertz.png",
+    mail: "mailto:ruben_evertz@claro.com.do" ,
+    movil: '8097192380',
+    station: 'X-2591'
    },
    {
-    name: 'Freddy Ortiz',
-    birthday: '26-08'
+    nombre: 'Freddy Ortiz',
+    birthday: '26-08', 
+    img: "/FreddyOrtiz.png",
+    mail: "mailto:freddy_ortiz@claro.com.do" ,
+    movil: '8093508310',
+    station: 'X-2422'
    },
    {
-    name: 'Willy Alcantara',
+    nombre: 'Willy Alcantara',
     birthday: '16-09', 
     img: "/WillyAlcantara.png",
     mail: "mailto:willy_alcantara@claro.com.do" ,
@@ -679,25 +719,45 @@ const ABirthday = [
     station: 'X-4002'
    },
    {
-    name: 'Yael Segura',
-    birthday: '16-10'
+    nombre: 'Yael Segura',
+    birthday: '16-10', 
+    img: "/YaelSegura.png",
+    mail: "mailto:yael_segura@claro.com.do" ,
+    movil: '8293827000',
+    station: 'X-4776'
    },
    {
-    name: 'Víctor Tejada',
-    birthday: '18-10'
+    nombre: 'Víctor Tejada',
+    birthday: '18-10', 
+    img: "/VictorTejada.png",
+    mail: "mailto:victor_tejada@claro.com.do" ,
+    movil: '8097298392',
+    station: 'X-5118'
    },
    {
-    name: 'Rafael Pichardo',
-    birthday: '25-10'
+    nombre: 'Rafael Pichardo',
+    birthday: '25-10', 
+    img: "/RafaelPichardo.png",
+    mail: "mailto:rafael_pichardo@claro.com.do" ,
+    movil: '8494025052',
+    station: 'X-8112'
    },
    {
-    name: 'Cristian Melo',
-    birthday: '13-11'
+    nombre: 'Cristian Melo',
+    birthday: '13-11', 
+    img: "/CristianMelo.png",
+    mail: "mailto:cristian_melo@claro.com.do" ,
+    movil: '8292172547',
+    station: 'X-3230'
    },
    {
-    name: 'Ginet Matos',
-    birthday: '20-11'
-   },
+    nombre: 'Ginet Matos',
+    birthday: '20-11', 
+    img: "/GinetMatos.png",
+    mail: "mailto:ginet_matos@claro.com.do" ,
+    movil: '8096530242',
+    station: 'X-4797'
+   }, 
 ]
 
 export { ALinks, AInstructivos, ABirthday };

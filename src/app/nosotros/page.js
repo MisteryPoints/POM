@@ -216,7 +216,7 @@ const Home = () => {
                   desc='https://clarocomdo-my.sharepoint.com/:x:/g/personal/jose_al_rodriguez_claro_com_do/EVXxkdBgAHJGtS_g6GONk_MBsVp1zCpNIIoApZc7RQ6sLg?wdOrigin=TEAMS-ELECTRON.p2p.bim&wdExp=TEAMS-CONTROL&wdhostclicktime=1694725764152&web=1'
                   link="/prevencion/provision"
                   img="/YaelSegura.png"
-                  mail="mailto:yael_segura@claro.com.do" 
+                  mail="mailto:YaelSegura@claro.com.do" 
                   movil='8293827000'
                   station='X-4776'
                   lider={false}
