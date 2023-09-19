@@ -14,8 +14,7 @@ const AnimationCard = {
     scrollTo: { x: 100 },
     transition: {
       duration: 0.5,
-    },
-    display: "'grid",
+    }, 
   },
   exit: {
     opacity: 0,
@@ -97,7 +96,7 @@ const Home = () => {
         <Cards
           nombre="Freddy Ortiz"
           puesto="Gerente de Operaciones Móviles" 
-          desc='/'
+          desc='/puestos/Gerente Operaciones Móviles.pdf'
           link="/"
           img="/FreddyOrtiz.png"
           mail="mailto:freddy_ortiz@claro.com.do" 
@@ -120,7 +119,7 @@ const Home = () => {
             <Cards
               nombre="Jorge Roque"
               puesto="Analista Medios de Recargo" 
-              desc='/'
+              desc='/puestos/Analista Medio de Recarga.pdf'
               link="/casos/reclamacion"
               img="/JorgeRoque.png"
               mail="mailto:jorge_roque@claro.com.do" 
@@ -131,7 +130,7 @@ const Home = () => {
             <Cards
               nombre="Parisa Pastrano"
               puesto="Analista Medios de Recargo" 
-              desc='/'
+              desc='/puestos/Analista Medio de Recarga.pdf'
               link="/casos/reclamacion"
               img="/ParisaPastrano.png"
               mail="mailto:parisa_pastrano@claro.com.do" 
@@ -143,7 +142,7 @@ const Home = () => {
               <Cards
                 nombre="José Al. Rodríguez"
                 puesto="Líder de Operaciones Móviles" 
-                desc='/'
+                desc='/puestos/Lider Operaciones Moviles.pdf'
                 link="/"
                 img="/JoseRodriguez.png"
                 mail="mailto:jose_al_rodriguez@claro.com.do" 
@@ -158,7 +157,7 @@ const Home = () => {
             <Cards
               nombre="Ruben Evertz"
               puesto="Analista Sr. Operaciones Móviles" 
-              desc='/'
+              desc='/puestos/Analista Sr. Operaciones Moviles.pdf'
               link="/nxx"
               img="/RubenEvertz.png"
               mail="mailto:ruben_evertz@claro.com.do" 
@@ -171,7 +170,7 @@ const Home = () => {
             <Cards
               nombre="Wilson Brito"
               puesto="Analista Sr Procesos y Estadísticas" 
-              desc='/'
+              desc='/puestos/Analista Metricas y procesos Operaciones Moviles .pdf'
               link="/estadisticas"
               img="/WilsonBrito.png"
               mail="mailto:wilson_brito@claro.com.do" 
@@ -191,7 +190,7 @@ const Home = () => {
                 <Cards
                   nombre="Kelvin Ceballo"
                   puesto="Analista Operaciones Móviles" 
-                  desc='/'
+                  desc='/puestos/Analista Operaciones Moviles.pdf'
                   link="/casos"
                   img="/KelvinCeballos.png"
                   mail="mailto:kelvin_ceballo@claro.com.do" 
@@ -202,7 +201,7 @@ const Home = () => {
                 <Cards
                   nombre="Ginet Matos"
                   puesto="Analista Sr. Prevención y Proyectos" 
-                  desc='https://clarocomdo-my.sharepoint.com/:x:/g/personal/jose_al_rodriguez_claro_com_do/EfNrhLza2WJBkXYZtYoPK-oB_parhA8eOVbbsnazrOkmPg?wdOrigin=TEAMS-ELECTRON.p2p.bim&wdExp=TEAMS-CONTROL&wdhostclicktime=1694725608273&web=1'
+                  desc='/puestos/Analista Sr. Prevencion Averias Movil.pdf'
                   link="/prevencion/reclamacion"
                   img="/GinetMatos.png"
                   mail="mailto:ginet_matos@claro.com.do" 
@@ -213,7 +212,7 @@ const Home = () => {
                 <Cards
                   nombre="Yael Segura"
                   puesto="Analista Sr. Prevención y Proyectos" 
-                  desc='https://clarocomdo-my.sharepoint.com/:x:/g/personal/jose_al_rodriguez_claro_com_do/EVXxkdBgAHJGtS_g6GONk_MBsVp1zCpNIIoApZc7RQ6sLg?wdOrigin=TEAMS-ELECTRON.p2p.bim&wdExp=TEAMS-CONTROL&wdhostclicktime=1694725764152&web=1'
+                  desc='/puestos/Analista Sr. Proyectos aprovisionamiento.pdf'
                   link="/prevencion/provision"
                   img="/YaelSegura.png"
                   mail="mailto:YaelSegura@claro.com.do" 
@@ -224,7 +223,7 @@ const Home = () => {
                 <Cards
                   nombre="Rafael Pichardo"
                   puesto="Analista Sr. Prevención y Proyectos" 
-                  desc='https://clarocomdo-my.sharepoint.com/:x:/g/personal/jose_al_rodriguez_claro_com_do/EfNrhLza2WJBkXYZtYoPK-oB_parhA8eOVbbsnazrOkmPg?wdOrigin=TEAMS-ELECTRON.p2p.bim&wdExp=TEAMS-CONTROL&wdhostclicktime=1694725608273&web=1'
+                  desc='/puestos/Analista Sr. Prevencion Averias Movil.pdf'
                   link="/prevencion/averias"
                   img="/RafaelPichardo.png"
                   mail="mailto:rafael_pichardo@claro.com.do" 
@@ -235,7 +234,7 @@ const Home = () => {
                 <Cards
                   nombre="Cristian Melo"
                   puesto="Analista Operaciones Móviles"  
-                  desc='/'
+                  desc='/puestos/Analista Operaciones Moviles.pdf'
                   link="/casos"
                   img="/CristianMelo.png"
                   mail="mailto:cristian_melo@claro.com.do" 
@@ -247,7 +246,7 @@ const Home = () => {
                   <Cards
                     nombre="Willy Alcantara"
                     puesto="Analista Operaciones Móviles"  
-                    desc='/'
+                    desc='/puestos/Analista Operaciones Moviles.pdf'
                     link="/rebotes/prepago"
                     img="/WillyAlcantara.png"
                     mail="mailto:willy_alcantara@claro.com.do" 
@@ -258,7 +257,7 @@ const Home = () => {
                   <Cards
                     nombre="Ariangel Díaz"
                     puesto="Analista Operaciones Móviles" 
-                    desc='/'
+                    desc='/puestos/Analista Operaciones Moviles.pdf'
                     link="/compare"
                     img="/AriangelDiaz.png"
                     mail="mailto:ariangel_diaz@claro.com.do" 
@@ -269,7 +268,7 @@ const Home = () => {
                   <Cards
                     nombre="Mabeel Fernández"
                     puesto="Analista Operaciones Móviles" 
-                    desc='/'
+                    desc='/puestos/Analista Operaciones Moviles.pdf'
                     link="/rebotes/postpago"
                     img="/MabeelFernandez.png"
                     mail="mailto:mabeel_fernandez@claro.com.do" 
@@ -280,7 +279,7 @@ const Home = () => {
                   <Cards
                     nombre="Víctor Tejada"
                     puesto="Analista Operaciones Móviles" 
-                    desc='/'
+                    desc='/puestos/Analista Operaciones Moviles.pdf'
                     link="/casos"
                     img="/VictorTejada.png"
                     mail="mailto:victor_tejada@claro.com.do" 

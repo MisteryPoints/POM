@@ -626,6 +626,30 @@ const AInstructivos = [
     ],
     link:'../sox/MANEJO%20DE%20REBOTES.xlsx'
   }, 
+  {
+    name:'Lista de APN',
+    img:'../Excell.svg',
+    category: [
+      'provisión'
+    ],
+    link:'../sox/Lista%20de%20APN.xls'
+  }, 
+  {
+    name:'Lista de Service Class',
+    img:'../Excell.svg',
+    category: [
+      'provisión'
+    ],
+    link:'../sox/Lista%20de%20Service%20Class.xlsx'
+  }, 
+  {
+    name:'Respuestas del AIR',
+    img:'../Excell.svg',
+    category: [
+      'provisión'
+    ],
+    link:'../sox/Respuestas%20del%20AIR.xlsx'
+  }, 
 ]
 
 /** Arreglo de Cumpleaños -Estático- */
@@ -634,7 +658,7 @@ const ABirthday = [
     nombre: 'Lucero Ureña',
     birthday: '2-01', 
     img: "/WillyAlcantara.png",
-    mail: "mailto:lucero_urena@claro.com.do" ,
+    mail: "mailto:lucero_urena@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8092204095',
     station: 'X-4095'
    },
@@ -642,7 +666,7 @@ const ABirthday = [
     nombre: 'Ariangel Díaz',
     birthday: '27-01', 
     img: "/AriangelDiaz.png",
-    mail: "mailto:ariangel_diaz@claro.com.do" ,
+    mail: "mailto:ariangel_diaz@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8295510127',
     station: 'X-2847'
    },
@@ -650,7 +674,7 @@ const ABirthday = [
     nombre: 'Jorge Roque',
     birthday: '01-02', 
     img: "/JorgeRoque.png",
-    mail: "mailto:jorge_roque@claro.com.do" ,
+    mail: "mailto:jorge_roque@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8097984614',
     station: 'X-2564'
    },
@@ -658,7 +682,7 @@ const ABirthday = [
     nombre: 'Jose Al. Rodríguez',
     birthday: '04-04', 
     img: "/JoseRodriguez.png",
-    mail: "mailto:jose_al_rodriguez@claro.com.do" ,
+    mail: "mailto:jose_al_rodriguez@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8299657933',
     station: 'X-2832'
    },
@@ -666,7 +690,7 @@ const ABirthday = [
     nombre: 'Mabeel Fernández',
     birthday: '03-06', 
     img: "/MabeelFernandez.png",
-    mail: "mailto:mabeel_fernandez@claro.com.do" ,
+    mail: "mailto:mabeel_fernandez@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8292501445',
     station: 'X-5735'
    },
@@ -674,7 +698,7 @@ const ABirthday = [
     nombre: 'Parisa Pastrano',
     birthday: '22-06', 
     img: "/ParisaPastrano.png",
-    mail: "mailto:parisa_pastrano@claro.com.do" ,
+    mail: "mailto:parisa_pastrano@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8097076704',
     station: 'X-2859'
    },
@@ -682,7 +706,7 @@ const ABirthday = [
     nombre: 'Wilson Brito',
     birthday: '04-07', 
     img: "/WilsonBrito.png",
-    mail: "mailto:wilson_brito@claro.com.do" ,
+    mail: "mailto:wilson_brito@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8299865658',
     station: 'X-7230'
    },
@@ -690,7 +714,7 @@ const ABirthday = [
     nombre: 'Kelvin Ceballo',
     birthday: '22-07', 
     img: "/KelvinCeballos.png",
-    mail: "mailto:kelvin_ceballo@claro.com.do" ,
+    mail: "mailto:kelvin_ceballo@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8298730217',
     station: 'X-2031'
    },
@@ -698,7 +722,7 @@ const ABirthday = [
     nombre: 'Ruben Evertz',
     birthday: '15-08', 
     img: "/RubenEvertz.png",
-    mail: "mailto:ruben_evertz@claro.com.do" ,
+    mail: "mailto:ruben_evertz@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8097192380',
     station: 'X-2591'
    },
@@ -706,7 +730,7 @@ const ABirthday = [
     nombre: 'Freddy Ortiz',
     birthday: '26-08', 
     img: "/FreddyOrtiz.png",
-    mail: "mailto:freddy_ortiz@claro.com.do" ,
+    mail: "mailto:freddy_ortiz@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8093508310',
     station: 'X-2422'
    },
@@ -714,7 +738,7 @@ const ABirthday = [
     nombre: 'Willy Alcantara',
     birthday: '16-09', 
     img: "/WillyAlcantara.png",
-    mail: "mailto:willy_alcantara@claro.com.do" ,
+    mail: "mailto:willy_alcantara@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8097217805',
     station: 'X-4002'
    },
@@ -722,7 +746,7 @@ const ABirthday = [
     nombre: 'Yael Segura',
     birthday: '16-10', 
     img: "/YaelSegura.png",
-    mail: "mailto:yael_segura@claro.com.do" ,
+    mail: "mailto:yael_segura@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8293827000',
     station: 'X-4776'
    },
@@ -730,7 +754,7 @@ const ABirthday = [
     nombre: 'Víctor Tejada',
     birthday: '18-10', 
     img: "/VictorTejada.png",
-    mail: "mailto:victor_tejada@claro.com.do" ,
+    mail: "mailto:victor_tejada@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8097298392',
     station: 'X-5118'
    },
@@ -738,7 +762,7 @@ const ABirthday = [
     nombre: 'Rafael Pichardo',
     birthday: '25-10', 
     img: "/RafaelPichardo.png",
-    mail: "mailto:rafael_pichardo@claro.com.do" ,
+    mail: "mailto:rafael_pichardo@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8494025052',
     station: 'X-8112'
    },
@@ -746,15 +770,15 @@ const ABirthday = [
     nombre: 'Cristian Melo',
     birthday: '13-11', 
     img: "/CristianMelo.png",
-    mail: "mailto:cristian_melo@claro.com.do" ,
+    mail: "mailto:cristian_melo@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8292172547',
     station: 'X-3230'
    },
    {
     nombre: 'Ginet Matos',
-    birthday: '20-11', 
+    birthday: '19-09', 
     img: "/GinetMatos.png",
-    mail: "mailto:ginet_matos@claro.com.do" ,
+    mail: "mailto:ginet_matos@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8096530242',
     station: 'X-4797'
    }, 

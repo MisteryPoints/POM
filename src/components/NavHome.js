@@ -16,6 +16,29 @@ import BirthCard from "./BirthCard";
 const FramerLink = motion(Link);
 const FramerImage = motion(Image);
 
+const AnimationCard = { 
+  enter: {
+    opacity: 1, 
+    x: 0, 
+    transition: {
+      delay: 0.1,
+      duration: 0.9, 
+    }, 
+    display: "block",
+  },
+  exit: {
+    opacity: 0, 
+    x: 700,
+    transition: {
+      duration: 0.9,
+      delay: 0.1,
+    },
+    transitionEnd: {
+      display: "none",
+    },
+  },
+};
+
 const CheckDate = () => {
   let cumple;
   const date = new Date();
@@ -54,7 +77,12 @@ const NavHome = () => {
     if(!cumple && !not) { 
       setCumple(CheckDate()) 
     }
-  }, [cumple])
+    if(not){
+      setTimeout(() => { 
+        setCumple(false)
+      },[500])
+    }
+  }, [cumple, not])
 
   return (
     <>
@@ -497,22 +525,21 @@ const NavHome = () => {
         />
       </Link>  
       { cumple ? (
-        <motion.div className='absolute right-[50px] top-[300px]' 
-          initial={{ opacity: 0, x: 120 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              delay: 0.6,
-              duration: 0.8,
-            },
-          }}
+        <motion.div className='absolute right-[50px] top-[300px]'   
+          initial={{ 
+            x: 700,
+            opacity: 0 }}
+          animate={!not ? "enter" : "exit"}
+          variants={AnimationCard}
           viewport={{ once: true }}
         >
-          <button className="absolute -top-4 -right-4 px-3 py-2 bg-red-600 z-10 rounded-full font-bold text-white" onClick={() => {
-              setCumple(false)
+          <button className="absolute -top-4 -right-4 px-3 py-2 bg-red-600 hover:bg-red-500 z-10 rounded-full font-bold text-white transition-all duration-300" onClick={() => {
               setNot(true)
             }}>X</button>
+            
+          <p className="absolute -top-4 left-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 -rotate-45 select-none">🥳🎉</p>
+          <p className="absolute -bottom-4 left-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 rotate-45 select-none">🎊🎉</p>
+          <p className="absolute -bottom-4 right-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 -rotate-45 select-none">🥳🎊</p>
 
           <BirthCard
             nombre={cumple.nombre}

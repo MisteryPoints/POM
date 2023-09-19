@@ -16,7 +16,7 @@ const BirthCard = ({
     const [movils, setMovils] = useState(false)
     const [stations, setStations] = useState(false)
     return (
-        <article className={`w-full max-w-[300px] max-h-[320px] top-0 h-full items-center justify-center border border-solid border-gray-900 bg-white/90 rounded-3xl overflow-hidden`}>  
+        <article className={`w-full max-w-[300px] max-h-[340px] top-0 h-full items-center justify-center bg-gradient-to-b from-white from-60% via-slate-200 via-70% to-slate-500 to-95% rounded-3xl opacity-90 hover:opacity-100 overflow-hidden transition-all duration-400`}>  
             <FramerImage
                 src={img}
                 alt={nombre}
@@ -33,6 +33,13 @@ const BirthCard = ({
                 <h2 className="my-2 w-full text-center text-base font-bold lg:text-lg text-gray-900  select-none">
                 {nombre}
                 </h2> 
+                <div className='text-red-600 font-extrabold text-3xl text-center w-full select-none flex justify-center'  >
+                <motion.p 
+                animate={{ y: [-5, -10, -5, 0], }}
+                transition={{ duration: 1, repeat: Infinity }}>👇🏼</motion.p> Felicítame <motion.p 
+                animate={{ y: [-5, -10, -5, 0], }}
+                transition={{ duration: 1, repeat: Infinity }}>👇🏼</motion.p>
+                </div>
                 <div className="mt-2 w-full flex justify-center flex-wrap">  
                     <p
                         onClick={() => setStations(!stations)}  
