@@ -101,7 +101,7 @@ const Home = () => {
           img="/FreddyOrtiz.png"
           mail="mailto:freddy_ortiz@claro.com.do" 
           movil='8093508310'
-          station='X-2422'
+          station='X-2422' 
           lider={true}
         />
         <button className="w-full max-w-[299px] h-full flex items-center justify-center text-3xl text-black bg-sky-100 -mt-[1px] opacity-80 rounded-b-2xl" onClick={() =>{ 
@@ -164,9 +164,7 @@ const Home = () => {
               movil='8097192380'
               station='X-2591'
               lider={false}
-            />
-            
-            
+            /> 
             <Cards
               nombre="Wilson Brito"
               puesto="Analista Sr Procesos y Estadísticas" 

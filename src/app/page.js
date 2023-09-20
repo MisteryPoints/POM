@@ -195,7 +195,7 @@ export default function Home() {
           </h1>
         </motion.div>
         <motion.div
-          className="col-span-6 rounded-3xl bg-white/30 text-sky-700  hover:bg-white/60 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5"
+          className="col-start-2 col-end-6 xl:col-span-6 rounded-3xl bg-white/30 text-sky-700  hover:bg-white/60 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5 mx-6"
           initial={{ opacity: 0, x: 70 }}
           whileInView={{
             opacity: 1,
@@ -212,7 +212,7 @@ export default function Home() {
           </p>
         </motion.div>
         <motion.div
-          className="col-span-6 rounded-3xl bg-white/30 text-blue-600 hover:bg-white/60 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5"
+          className="col-start-8 col-end-12 xl:col-span-6 rounded-3xl bg-white/30 text-blue-600 hover:bg-white/60 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5 mx-6"
           initial={{ opacity: 0, x: 70 }}
           whileInView={{
             opacity: 1,
@@ -244,7 +244,7 @@ export default function Home() {
           <h1 className="justify-center text-center text-teal-600 font-bold text-6xl m-auto w-full mb-3">
             VALORES
           </h1>
-          <motion.ul className="list-disc  mx-20 rounded-3xl bg-white/30 hover:bg-white/60 text-teal-700 2xl:py-5 2xl:px-20 xl:py-3 xl:px-12 transition-all duration-600">
+          <motion.ul className="list-disc mx-12 xl:mx-20 rounded-3xl bg-white/30 hover:bg-white/60 text-teal-700 2xl:py-5 2xl:px-20 py-3 px-12 transition-all duration-600">
             <Valor
               nombre="Sustentabilidad"
               descripcion="Usar nuestros recursos apoyando el desarrollo económico a largo plazo de nuestro país, protegiendo al mismo tiempo los elementos medioambientales, sociales y culturales."

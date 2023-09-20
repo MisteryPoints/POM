@@ -679,8 +679,8 @@ const ABirthday = [
     station: 'X-2564'
    },
    {
-    nombre: 'Jose Al. Rodríguez',
-    birthday: '04-04', 
+    nombre: 'José Al. Rodríguez',
+    birthday: '20-09', 
     img: "/JoseRodriguez.png",
     mail: "mailto:jose_al_rodriguez@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8299657933',
@@ -776,7 +776,7 @@ const ABirthday = [
    },
    {
     nombre: 'Ginet Matos',
-    birthday: '19-09', 
+    birthday: '20-11', 
     img: "/GinetMatos.png",
     mail: "mailto:ginet_matos@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!" ,
     movil: '8096530242',

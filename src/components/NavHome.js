@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
@@ -70,6 +70,7 @@ const CheckDate = () => {
 } 
 
 const NavHome = () => {
+  const refD = useRef(null);
   const [cumple, setCumple] = useState(false)
   const [not, setNot] = useState(false)
 
@@ -80,10 +81,21 @@ const NavHome = () => {
     if(not){
       setTimeout(() => { 
         setCumple(false)
-      },[500])
+      },[400])
     }
   }, [cumple, not])
 
+  const handleDragEnd = () => {
+    const modalElement = refD?.current;
+    if (modalElement) {
+      const coords = modalElement.style.transform.match(
+        /^translateX\((.+)px\) translateY\((.+)px\) translateZ/
+      ); 
+      if(coords[1] > 200) { 
+        setNot(true)
+      }
+    }
+  }; 
   return (
     <>
       <main
@@ -131,10 +143,17 @@ const NavHome = () => {
                   style={{ maxHeight: "100px" }}
                   navbarScroll
                 >
+                  
+                  <Nav.Link
+                    href="/"
+                    className="mx-8 !font-bold !text-xl !text-slate-200 uppercase"
+                  >
+                    Inicio
+                  </Nav.Link>
                   <NavFather
                     name={
                       <span className="mx-8 !font-bold !text-xl !text-slate-200 uppercase no-underline">
-                        Inicio
+                        Estadísticas
                       </span>
                     }
                     id="collasible-nav-dropdown"
@@ -525,7 +544,14 @@ const NavHome = () => {
         />
       </Link>  
       { cumple ? (
-        <motion.div className='absolute right-[50px] top-[300px]'   
+        <motion.div className='absolute right-[50px] top-[300px]'  
+          ref={refD}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }} 
+          whileTap={{ boxShadow: "0px 0px 15px rgba(0,0,0,0.2)" }}
+          dragElastic = {{left: 0, right: 0.8}}
+          onDragEnd={handleDragEnd} 
           initial={{ 
             x: 700,
             opacity: 0 }}

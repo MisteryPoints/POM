@@ -1,9 +1,15 @@
+import { ABirthday } from '@/api/API';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { FaCakeCandles } from 'react-icons/fa6';
 
 const FramerImage = motion(Image);
+const monthNames = [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+    "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+  ];
  
 
 const Cards = ({
@@ -19,8 +25,12 @@ const Cards = ({
 }) => {
     const [movils, setMovils] = useState(false)
     const [stations, setStations] = useState(false)
+    const [birth, setBirth] = useState(false)
+    const Api =  ABirthday?.find((element) => element.nombre == nombre); 
+    const cumple = Api?.birthday?.split("-")[0] + " de " +  monthNames[Api?.birthday?.split("-")[1]-1]
+
     return (
-        <article className={`w-full max-w-[300px] max-h-[320px] top-0 h-full items-center justify-center border border-solid border-gray-900 ${ puesto.includes("Gerente") ? 'bg-sky-100' : puesto.includes("Líder") ? 'bg-yellow-800/60' : puesto.includes("Medios") ? 'bg-violet-200 shadow-md shadow-gray-600' : puesto.includes("Procesos") ? 'bg-green-200 shadow-md shadow-gray-600' : puesto.includes('Sr. Operaciones') ? 'bg-blue-200 shadow-md shadow-gray-600' : puesto.includes('Proyectos') ? 'bg-yellow-100 shadow-md shadow-gray-600' : 'bg-white shadow-md shadow-gray-600' }  p-6 relative transition-all duration-200 opacity-80 hover:opacity-100 self-center justify-self-center ${lider ? "rounded-t-2xl" : "rounded-2xl"} `}>  
+        <article className={`w-full max-w-[300px] max-h-[350px] top-0 h-full items-center justify-center border border-solid border-gray-900 ${ puesto.includes("Gerente") ? 'bg-sky-100' : puesto.includes("Líder") ? 'bg-yellow-800/60' : puesto.includes("Medios") ? 'bg-violet-200 shadow-md shadow-gray-600' : puesto.includes("Procesos") ? 'bg-green-200 shadow-md shadow-gray-600' : puesto.includes('Sr. Operaciones') ? 'bg-blue-200 shadow-md shadow-gray-600' : puesto.includes('Proyectos') ? 'bg-yellow-100 shadow-md shadow-gray-600' : 'bg-white shadow-md shadow-gray-600' }  p-6 relative transition-all duration-200 opacity-80 hover:opacity-100 self-center justify-self-center ${lider ? "rounded-t-2xl" : "rounded-2xl"} `}>  
             <FramerImage
                 src={img}
                 alt={nombre}
@@ -75,6 +85,12 @@ const Cards = ({
                     className={`border-blue-500 border-2 focus:ring-4 no-underline rounded-lg text-xs px-2 py-1 text-center mr-2 mb-2 transition-all duration-400 cursor-pointer font-semibold hover:!border-blue-200 ${movils ? 'bg-white text-blue-500 ' : 'bg-blue-500  text-white'}`}
                     >
                     {movils ? movil : 'Celular'}
+                    </p>
+                    <p
+                        onClick={() => setBirth(!birth)}  
+                    className={`border-red-500 flex gap-2 border-2 focus:ring-4 no-underline rounded-lg text-xs px-2 py-1 text-center mr-2 mb-2 transition-all duration-400 cursor-pointer font-semibold hover:!border-blue-200 ${movils ? 'bg-white text-red-500 ' : 'bg-red-500  text-white'}`}
+                    >
+                      <span className='text-lg'><FaCakeCandles/></span> {birth ? cumple : 'Cumpleaños'}
                     </p>
                 </div>
             </div>
