@@ -8,10 +8,10 @@ import { NavDropdown } from "react-bootstrap";
 import { useOnOutsideClick } from "@/components/useOnOutsideClick";
  
 
-const Offers = ({ name }) => {
+const Offers = ({ offer, name, type, cat, priority, rollover, services, mb }) => {
   return (
     <motion.div
-      className={`col-span-1 rounded-[2rem] select-none m-auto drop-shadow-md h-[450px] w-[450px] no-underline relative inline-flex items-center justify-start overflow-hidden transition-all group bg-cover bg-gray-100 `}
+      className={`col-span-1 rounded-[2rem] select-none m-auto drop-shadow-md h-[330px] w-[330px] overflow-hidden transition-all relative bg-cover bg-gray-100 `}
       initial={{ opacity: 0, y: 70 }}
       whileInView={{
         opacity: 1,
@@ -23,23 +23,26 @@ const Offers = ({ name }) => {
       }}
       viewport={{ once: true }}
     >
-      {name}
+      <h1 className="text-xl font-bold text-center w-full mt-[10px]">Offer ID: {offer}</h1> 
+      <h2 className="text-sm font-semibold text-center w-full mt-[10px]">{name}</h2> 
     </motion.div>
   );
 };
 
 const Home = () => {
   const [search, setSearch] = useState("");
+  const [searchID, setSearchID] = useState("");
   const [category, setCategory] = useState("");
   const [showCategory, setShowCategory] = useState(false);
   const { innerBorderRef } = useOnOutsideClick(() => setShowCategory(false));
 
   let offerCatData = AOffers.sort().filter((obj) => {
     if (
-      obj["offerType"].toString().toLowerCase().includes(category.toLowerCase()) || 
-      obj["subsCategory"].toString().toLowerCase().includes(category.toLowerCase())
-    ) {
-      return obj;
+      (obj["offerType"].toString().toLowerCase().includes(category.toLowerCase()) || 
+      obj["subsCategory"].toString().toLowerCase().includes(category.toLowerCase()))  &&
+      obj["offerId"].toString().includes(searchID)
+    ) {  
+      return obj; 
     }
   });
 
@@ -55,7 +58,6 @@ const Home = () => {
     })
     .filter((obj) => {
       if (
-        obj["offerId"] == search ||
         obj["offerName"].toLowerCase().includes(search.toLowerCase()) ||
         obj["services"].toLowerCase().includes(search.toLowerCase())
         ) {
@@ -89,9 +91,26 @@ const Home = () => {
             className="m-20"
           >
             <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
-              SUSCRIPTION MANAGER
+              SUBSCRIPTION MANAGER
             </h1>
           </div>
+        </motion.div>
+        <motion.div
+          className="select-none m-auto bg-gradient-to-br from-sky-700 via-blue-800 to-teal-600 mb-4"
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              delay: 0.6,
+              duration: 0.4,
+            },
+          }}
+          viewport={{ once: true }}
+        >
+          <h1 className="justify-center text-center mix-blend-lighten font-extrabold text-6xl bg-slate-300 m-auto w-full uppercase">
+            Consulta de Offers
+          </h1>
         </motion.div>
         <motion.div
           className="flex rounded-full w-full justify-center"
@@ -168,19 +187,26 @@ const Home = () => {
           </NavDropdown>
           <input
             type="text"
-            placeholder="Introduce el Link deseado"
+            placeholder="Offer ID"
+            value={searchID}
+            onChange={(e) => setSearchID(e.target.value)}
+            className={`bg-[#343a40] hover:bg-[#343a40]/90 py-3 min-w-[250px] max-w-[250px] pl-6 xl:py-4 text-3xl translate-all duration-300 text-gray-300 font-bold border-2 border-[#343a40] border-l-slate-500 focus:!border-2 active:!border-[#343a40] placeholder:italic`}
+          />
+          <input
+            type="text"
+            placeholder="Detalles"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className={`bg-[#343a40] hover:bg-[#343a40]/90 py-3 min-w-[600px] pl-6 xl:py-4 rounded-r-3xl text-3xl translate-all duration-300 text-gray-300 font-bold border-2 border-[#343a40] border-l-slate-500 focus:!border-2 active:!border-[#343a40] placeholder:italic`}
           />
         </motion.div>
-        <div className="grid 2xl:grid-cols-5 xl:grid-cols-3 md:grid-cols-1 gap-y-8 gap-x-16 mx-24 my-12">
-          {category !== "" || search !== ""
-            ? offerData.map(({ offerId, offerName }) => (
-                <Offers key={offerId} name={offerName}/>
+        <div className="grid 2xl:grid-cols-4 xl:grid-cols-2 md:grid-cols-1 gap-y-8 gap-x-16 mx-24 my-12">
+          {category !== "" || search !== "" || searchID !== ""
+            ? offerData.map(({ offerId, offerName, offerType, subsCategory, priority, maxRollover, services, sizeMB }) => (
+                <Offers key={offerId} offer={offerId} name={offerName} type={offerType} cat={subsCategory} priority={priority} rollover={maxRollover} services={services} mb={sizeMB}/>
               ))
-            : AOffers.map(({ offerId, offerName }) => (
-                <Offers key={offerId} name={offerName}/>
+            : AOffers.map(({ offerId, offerName, offerType, subsCategory, priority, maxRollover, services, sizeMB }) => (
+                <Offers key={offerId+ " " + priority} offer={offerId} name={offerName} type={offerType} cat={subsCategory} priority={priority} rollover={maxRollover} services={services} mb={sizeMB}/>
               ))}
         </div>
       </div>

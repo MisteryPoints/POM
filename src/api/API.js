@@ -10360,44 +10360,8 @@ const AOffers = [
     "price": 0,
     "balanceType": "UNIQUE_BALANCE",
     "services": "NA",
-    "sizeMB": 60000
-  },
-  {
-    "offerId": 10798,
-    "offerName": "IM LIBRE 90GB POS CONS PLAN HOME RSF",
-    "offerType": "PLAN",
-    "subsCategory": "POSTPAID",
-    "priority": 5010,
-    "maxRollover": "NA",
-    "price": 0,
-    "balanceType": "UNIQUE_BALANCE",
-    "services": "NA",
-    "sizeMB": 30000
-  },
-  {
-    "offerId": 10798,
-    "offerName": "IM LIBRE 90GB POS CONS PLAN HOME RSF",
-    "offerType": "PLAN",
-    "subsCategory": "POSTPAID",
-    "priority": 5020,
-    "maxRollover": "NA",
-    "price": 0,
-    "balanceType": "UNIQUE_BALANCE",
-    "services": "NA",
-    "sizeMB": 1
-  },
-  {
-    "offerId": 10798,
-    "offerName": "IM LIBRE 90GB POS CONS PLAN HOME RSF",
-    "offerType": "PLAN",
-    "subsCategory": "POSTPAID",
-    "priority": 5021,
-    "maxRollover": "NA",
-    "price": 0,
-    "balanceType": "UNIQUE_BALANCE",
-    "services": "NA",
-    "sizeMB": 1
-  },
+    "sizeMB": 90000
+  }, 
   {
     "offerId": 10799,
     "offerName": "IM LIBRE 60GB POS CONS PLAN HOME RSF",
@@ -10408,44 +10372,8 @@ const AOffers = [
     "price": 0,
     "balanceType": "UNIQUE_BALANCE",
     "services": "NA",
-    "sizeMB": 40000
-  },
-  {
-    "offerId": 10799,
-    "offerName": "IM LIBRE 60GB POS CONS PLAN HOME RSF",
-    "offerType": "PLAN",
-    "subsCategory": "POSTPAID",
-    "priority": 5010,
-    "maxRollover": "NA",
-    "price": 0,
-    "balanceType": "UNIQUE_BALANCE",
-    "services": "NA",
-    "sizeMB": 20000
-  },
-  {
-    "offerId": 10799,
-    "offerName": "IM LIBRE 60GB POS CONS PLAN HOME RSF",
-    "offerType": "PLAN",
-    "subsCategory": "POSTPAID",
-    "priority": 5020,
-    "maxRollover": "NA",
-    "price": 0,
-    "balanceType": "UNIQUE_BALANCE",
-    "services": "NA",
-    "sizeMB": 1
-  },
-  {
-    "offerId": 10799,
-    "offerName": "IM LIBRE 60GB POS CONS PLAN HOME RSF",
-    "offerType": "PLAN",
-    "subsCategory": "POSTPAID",
-    "priority": 5021,
-    "maxRollover": "NA",
-    "price": 0,
-    "balanceType": "UNIQUE_BALANCE",
-    "services": "NA",
-    "sizeMB": 1
-  },
+    "sizeMB": 60000
+  }, 
   {
     "offerId": 10800,
     "offerName": "10800_IM LIBRE 90GB POS CONS PLAN HOME RSF",
@@ -16972,44 +16900,8 @@ const AOffers = [
     "price": 0,
     "balanceType": "UNIQUE_BALANCE",
     "services": "NA",
-    "sizeMB": 170000
-  },
-  {
-    "offerId": 11343,
-    "offerName": "11343_IM 200GB CONS CEL POS FLAT",
-    "offerType": "PLAN",
-    "subsCategory": "POSTPAID",
-    "priority": 5010,
-    "maxRollover": "NA",
-    "price": 0,
-    "balanceType": "UNIQUE_BALANCE",
-    "services": "NA",
-    "sizeMB": 30000
-  },
-  {
-    "offerId": 11343,
-    "offerName": "11343_IM 200GB CONS CEL POS FLAT",
-    "offerType": "PLAN",
-    "subsCategory": "POSTPAID",
-    "priority": 5020,
-    "maxRollover": "NA",
-    "price": 0,
-    "balanceType": "UNIQUE_BALANCE",
-    "services": "NA",
-    "sizeMB": 1
-  },
-  {
-    "offerId": 11343,
-    "offerName": "11343_IM 200GB CONS CEL POS FLAT",
-    "offerType": "PLAN",
-    "subsCategory": "POSTPAID",
-    "priority": 5021,
-    "maxRollover": "NA",
-    "price": 0,
-    "balanceType": "UNIQUE_BALANCE",
-    "services": "NA",
-    "sizeMB": 1
-  },
+    "sizeMB": 200000
+  }, 
   {
     "offerId": 11344,
     "offerName": "11344_IF 40GB CTRL CONS BONO SIF FLAT HOME 3Mbps/1Mbps",
