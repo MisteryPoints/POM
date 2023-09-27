@@ -78,7 +78,7 @@ const Offers = ({
           {mb / 1000 >= 1 ? mb / 1000 : mb} {mb / 1000 >= 1 ? "GB" : "MB"}
         </h2>
         <h2 className="text-sm font-semibold text-end w-full mt-[10px]">
-          {(mb / 1000) * 1024 * 1024 * 1024} Bytes
+          {Math.round((mb / 1000) * 1024 * 1024 * 1024)} Bytes
         </h2>
       </div>
       <h2 className="text-sm font-semibold text-start w-full mt-[10px] ">
@@ -231,7 +231,7 @@ const Home = () => {
             }}
           >
             <h2 className="text-2xl font-bold px-3 m-0">
-              {calculo !== "" ? calculo * 1024 * 1024 : ""}
+              {calculo !== "" ? Math.round(calculo * 1024 * 1024) : ""}
             </h2>
           </motion.div>
         </motion.div>
@@ -366,7 +366,7 @@ const Home = () => {
                   />
                 )
               )
-            : AOffers.map(
+            : AOffers.slice(0, 20).map(
                 ({
                   offerId,
                   offerName,
