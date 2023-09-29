@@ -16,18 +16,18 @@ import BirthCard from "./BirthCard";
 const FramerLink = motion(Link);
 const FramerImage = motion(Image);
 
-const AnimationCard = { 
+const AnimationCard = {
   enter: {
-    opacity: 1, 
-    x: 0, 
+    opacity: 1,
+    x: 0,
     transition: {
       delay: 0.1,
-      duration: 0.9, 
-    }, 
+      duration: 0.9,
+    },
     display: "block",
   },
   exit: {
-    opacity: 0, 
+    opacity: 0,
     x: 700,
     transition: {
       duration: 0.9,
@@ -45,57 +45,59 @@ const CheckDate = () => {
   const month = date.getMonth() + 1;
   const day = date.getDate();
 
-  const fixedDate = day.toLocaleString('en-US', {
-    minimumIntegerDigits: 2,
-    useGrouping: false
-  }) + '-' + month.toLocaleString('en-US', {
-    minimumIntegerDigits: 2,
-    useGrouping: false
-  });
+  const fixedDate =
+    day.toLocaleString("en-US", {
+      minimumIntegerDigits: 2,
+      useGrouping: false,
+    }) +
+    "-" +
+    month.toLocaleString("en-US", {
+      minimumIntegerDigits: 2,
+      useGrouping: false,
+    });
 
-
-  ABirthday.forEach(({nombre, birthday, img, mail, movil, station}) => {
-    if(birthday == fixedDate) {
+  ABirthday.forEach(({ nombre, birthday, img, mail, movil, station }) => {
+    if (birthday == fixedDate) {
       cumple = {
         nombre,
         birthday,
         img,
         mail,
         movil,
-        station
-      }
+        station,
+      };
     }
-  })
+  });
   return cumple;
-} 
+};
 
 const NavHome = () => {
   const refD = useRef(null);
-  const [cumple, setCumple] = useState(false)
-  const [not, setNot] = useState(false)
+  const [cumple, setCumple] = useState(false);
+  const [not, setNot] = useState(false);
 
-  useEffect(() => { 
-    if(!cumple && !not) { 
-      setCumple(CheckDate()) 
+  useEffect(() => {
+    if (!cumple && !not) {
+      setCumple(CheckDate());
     }
-    if(not){
-      setTimeout(() => { 
-        setCumple(false)
-      },[400])
+    if (not) {
+      setTimeout(() => {
+        setCumple(false);
+      }, [400]);
     }
-  }, [cumple, not])
+  }, [cumple, not]);
 
   const handleDragEnd = () => {
     const modalElement = refD?.current;
     if (modalElement) {
       const coords = modalElement.style.transform.match(
         /^translateX\((.+)px\) translateY\((.+)px\) translateZ/
-      ); 
-      if(coords[1] > 200) { 
-        setNot(true)
+      );
+      if (coords[1] > 200) {
+        setNot(true);
       }
     }
-  }; 
+  };
   return (
     <>
       <main
@@ -122,7 +124,7 @@ const NavHome = () => {
               },
             }}
             whileHover={{
-              scale: [1.05, 0.85, 1.21, 0.85, 1.05], 
+              scale: [1.05, 0.85, 1.21, 0.85, 1.05],
               transition: {
                 duration: 3,
                 ease: "easeInOut",
@@ -143,7 +145,6 @@ const NavHome = () => {
                   style={{ maxHeight: "100px" }}
                   navbarScroll
                 >
-                  
                   <Nav.Link
                     href="/"
                     className="mx-8 !font-bold !text-xl !text-slate-200 uppercase"
@@ -423,10 +424,7 @@ const NavHome = () => {
                         Síntomas SIF
                       </NavDropdown.Item>
                     </NavDrop>
-                    <NavDropdown.Item
-                      href="/nxx"
-                      className="pr-2 pl-3"
-                    >
+                    <NavDropdown.Item href="/nxx" className="pr-2 pl-3">
                       Admin NXX
                     </NavDropdown.Item>
                     <NavDropdown.Item
@@ -527,7 +525,7 @@ const NavHome = () => {
             </FramerLink>
           </div>
         </div>
-      </main> 
+      </main>
       <Link
         className="bg-slate-300 w-full flex"
         href="http://intranet/Pages/default.aspx"
@@ -542,30 +540,43 @@ const NavHome = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         />
-      </Link>  
-      { cumple ? (
-        <motion.div className='absolute right-[50px] top-[300px]'  
+      </Link>
+      {cumple ? (
+        <motion.div
+          className="absolute right-[50px] top-[300px]"
           ref={refD}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
-          dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }} 
+          dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
           whileTap={{ boxShadow: "0px 0px 15px rgba(0,0,0,0.2)" }}
-          dragElastic = {{left: 0, right: 0.8}}
-          onDragEnd={handleDragEnd} 
-          initial={{ 
+          dragElastic={{ left: 0, right: 0.8 }}
+          onDragEnd={handleDragEnd}
+          initial={{
             x: 700,
-            opacity: 0 }}
+            opacity: 0,
+          }}
           animate={!not ? "enter" : "exit"}
           variants={AnimationCard}
           viewport={{ once: true }}
         >
-          <button className="absolute -top-4 -right-4 px-3 py-2 bg-red-600 hover:bg-red-500 z-10 rounded-full font-bold text-white transition-all duration-300" onClick={() => {
-              setNot(true)
-            }}>X</button>
-            
-          <p className="absolute -top-4 left-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 -rotate-45 select-none">🥳🎉</p>
-          <p className="absolute -bottom-4 left-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 rotate-45 select-none">🎊🎉</p>
-          <p className="absolute -bottom-4 right-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 -rotate-45 select-none">🥳🎊</p>
+          <button
+            className="absolute -top-4 -right-4 px-3 py-2 bg-red-600 hover:bg-red-500 z-10 rounded-full font-bold text-white transition-all duration-300"
+            onClick={() => {
+              setNot(true);
+            }}
+          >
+            X
+          </button>
+
+          <p className="absolute -top-4 left-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 -rotate-45 select-none">
+            🥳🎉
+          </p>
+          <p className="absolute -bottom-4 left-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 rotate-45 select-none">
+            🎊🎉
+          </p>
+          <p className="absolute -bottom-4 right-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 -rotate-45 select-none">
+            🥳🎊
+          </p>
 
           <BirthCard
             nombre={cumple.nombre}
@@ -573,11 +584,11 @@ const NavHome = () => {
             mail={cumple.mail}
             movil={cumple.movil}
             station={cumple.station}
-            />
+          />
         </motion.div>
-      ) : ''}
-      
-
+      ) : (
+        ""
+      )}
     </>
   );
 };
