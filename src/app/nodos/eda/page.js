@@ -5,6 +5,7 @@ import TransitionEffect from "@/components/TransitionEffect";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SlArrowRightCircle } from "react-icons/sl";
 import Slideshow from "@/components/SlideShow";
+import Link from "next/link";
 
 const Home = () => {
   const [glosario, setGlosario] = useState(false);
@@ -106,12 +107,10 @@ const Home = () => {
           <Slideshow
             bg={"bg-gradient-to-b from-green-500 via-teal-500 to-green-700"}
             images={[
-              "/ecms/ECMS1.png",
-              "/ecms/ECMS2.png",
-              "/ecms/ECMS3.png",
-              "/ecms/ECMS4.png",
-              "/ecms/ECMS5.png",
-              "/ecms/ECMS6.png",
+              "/ema/EMA1.png",
+              "/ema/EMA2.png",
+              "/ema/EMA3.png",
+              "/ema/EMA4.png",
             ]}
           />
         </motion.div>
@@ -148,111 +147,44 @@ const Home = () => {
                   <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
                     EMA:
                   </span>{" "}
-                  Ericsson Multi - Activation.
+                  Ericsson Multi - Activation. Multi Activador.
                 </li>
                 <li>
                   <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    Contract overview:
+                    EDA:
                   </span>{" "}
-                  Visualización de Contrato o Servicio.
+                  Ericsson Dynamic Activation. Activador Dinámico.
                 </li>
                 <li>
                   <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    Service Fee Expiration:
+                    Service Class:
                   </span>{" "}
-                  Expiración del Servicio (Suspensión ZB2).
+                  Es la identificación denominada a través de EMA/EDA que posee
+                  la configuración del Plan y su descripción en ECMS.
                 </li>
                 <li>
                   <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    Supervision Fee Expiration:
+                    Rebote:
                   </span>{" "}
-                  Expiración de la supervisión (Suspensión ZB1).
+                  Es provocado cuando una transacción no completa
+                  satisfactoriamente y retorna un error.
                 </li>
                 <li>
                   <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    Charging Services:
+                    FL1:
                   </span>{" "}
-                  Servicios del Plan Cargado.
+                  Es el Puerto Flota Gateway que utiliza el Switch para activar
+                  servicios mixtos. Estos se comunican con PPG dejando logs a
+                  través de mixto y luego son enviados a EMA/EDA por el módulo
+                  de rebotes.
                 </li>
                 <li>
                   <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    VPN Hybrid:
+                    MST1:
                   </span>{" "}
-                  Activación de Habla Gratis Flota.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    Pending Validation:
-                  </span>{" "}
-                  Validación de Cliente Pendiente, para clientes preactivos.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    USSD EOCN:
-                  </span>{" "}
-                  End of Call Notification, Notificación al finalizar llamada,
-                  este permite ver su balance al completar una llamada.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    Account overview:
-                  </span>{" "}
-                  Visualización de Cuenta del Cliente.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    Service Removal:
-                  </span>{" "}
-                  Cancelación por ZB2.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    Credit clearance:
-                  </span>{" "}
-                  Vigencia de Balance.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    Main account:
-                  </span>{" "}
-                  Cuenta Principal.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    Dedicated Accounts:
-                  </span>{" "}
-                  Cuentas Dedicadas o Secundarias.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    InitialAmt:
-                  </span>{" "}
-                  Cuenta de Plan Control.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    MonthlySms:
-                  </span>{" "}
-                  Cuenta de Plan Control SMS.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    PAM:
-                  </span>{" "}
-                  Period Account Manager, Manejador de Corte de Cuentas.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    SIM:
-                  </span>{" "}
-                  Suscriber Identity Module, Tarjeta SIM del Cliente.
-                </li>
-                <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
-                    MSISDN:
-                  </span>{" "}
-                  Mobile Station Integrated Services Digital Network, Teléfono
-                  del Cliente.
+                  Es el Puerto MINSAT OLM que utiliza el Switch para activar o
+                  modificar el Perfil del cliente en PPG, suele ser utilizado
+                  para servicios Postpago (No Mixtos).
                 </li>
               </ul>
               <div
@@ -274,6 +206,20 @@ const Home = () => {
             Glosario
           </button>
         )}
+        <Link
+          className="-rotate-90 text-2xl font-bold p-3 bg-green-900 text-white rounded-t-3xl text-center absolute bottom-[-420px] -right-28 hover:bg-green-950 transition-all duration-400 hover:cursor-pointer no-underline"
+          href="../sox/Lista%20de%20Service%20Class.xlsx"
+          target="_blank"
+        >
+          Lista de Service Class
+        </Link>
+        <Link
+          className="-rotate-90 text-2xl font-bold p-3 bg-teal-900 text-white rounded-t-3xl text-center absolute bottom-[-700px] -right-24 hover:bg-teal-950 transition-all duration-400 hover:cursor-pointer no-underline"
+          href="../sox/Respuestas%20del%20AIR.xlsx"
+          target="_blank"
+        >
+          Respuestas del AIR
+        </Link>
       </div>
     </div>
   );
