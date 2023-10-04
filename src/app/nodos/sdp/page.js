@@ -59,7 +59,7 @@ const Home = () => {
             className="m-20"
           >
             <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
-              EMA / EDA
+              SDP
             </h1>
           </div>
         </motion.div>
