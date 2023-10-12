@@ -3,9 +3,7 @@ import React from "react";
 import NavHome from "@/components/NavHome";
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion } from "framer-motion";
-import Image from "next/image";
-
-const FramerImage = motion(Image);
+import Slideshow from "@/components/SlideShow";
 
 const Home = () => {
   return (
@@ -34,44 +32,54 @@ const Home = () => {
             className="m-20"
           >
             <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
-              ZTE
+              SMSC
             </h1>
           </div>
         </motion.div>
         <motion.div
-          className="col-span-12 select-none m-auto duration-300 pt-12"
-          initial={{ opacity: 0, y: -70 }}
+          className="col-span-6 select-none m-auto duration-300"
+          initial={{ opacity: 0, y: 70 }}
           whileInView={{
             opacity: 1,
             y: 0,
             transition: {
-              delay: 1,
-              duration: 0.4,
+              delay: 0.5,
+              duration: 0.5,
             },
           }}
           viewport={{ once: true }}
         >
-          <FramerImage
-            src="/mantenimiento.png"
-            priority="true"
-            width="600"
-            height="600"
-            alt="Mantenimiento"
-            className="mx-auto"
-            initial={{ opacity: 0, y: 70 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                delay: 1,
-                duration: 0.4,
-              },
-            }}
-            viewport={{ once: true }}
+          <h3 className="bg-gradient-to-b from-green-400 via-teal-500 to-teal-600 py-12 px-16 rounded-3xl text-white font-bold mx-12 text-4xl">
+            SMSC es la plataforma de <span className="text-red-600">Claro</span>{" "}
+            que permite el manejo de servicio de minimensajes cortos.
+            <br />
+            <br />
+            Cuando los usuarios envían un mensaje de texto SMS a través de una
+            red móvil, este llega primero a un SMSC para posteriormente
+            reenviarse al destinatario seleccionado.
+            <br />
+            <br />
+            ZTE es nuestro proveedor traducido como Zhongxing Telecommunications
+            Equipment Corporation.
+          </h3>
+        </motion.div>
+        <motion.div
+          className="col-span-6 select-none m-auto duration-300"
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 0.5,
+              duration: 0.5,
+            },
+          }}
+          viewport={{ once: true }}
+        >
+          <Slideshow
+            bg={"bg-gradient-to-b from-green-400 via-teal-500 to-teal-600"}
+            images={["/zte/ZTE1.png", "/zte/ZTE2.png", "/zte/ZTE3.png"]}
           />
-          <h1 className="text-center text-7xl font-extrabold uppercase">
-            Mantenimiento
-          </h1>
         </motion.div>
       </div>
     </div>

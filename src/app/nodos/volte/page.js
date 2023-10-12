@@ -3,9 +3,7 @@ import React from "react";
 import NavHome from "@/components/NavHome";
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion } from "framer-motion";
-import Image from "next/image";
-
-const FramerImage = motion(Image);
+import Slideshow from "@/components/SlideShow";
 
 const Home = () => {
   return (
@@ -34,44 +32,62 @@ const Home = () => {
             className="m-20"
           >
             <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
-              Voz sobre LTE
+              VOLTE
             </h1>
           </div>
         </motion.div>
         <motion.div
-          className="col-span-12 select-none m-auto duration-300 pt-12"
-          initial={{ opacity: 0, y: -70 }}
+          className="col-span-6 select-none m-auto duration-300"
+          initial={{ opacity: 0, y: 70 }}
           whileInView={{
             opacity: 1,
             y: 0,
             transition: {
-              delay: 1,
-              duration: 0.4,
+              delay: 0.5,
+              duration: 0.5,
             },
           }}
           viewport={{ once: true }}
         >
-          <FramerImage
-            src="/mantenimiento.png"
-            priority="true"
-            width="600"
-            height="600"
-            alt="Mantenimiento"
-            className="mx-auto"
-            initial={{ opacity: 0, y: 70 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                delay: 1,
-                duration: 0.4,
-              },
-            }}
-            viewport={{ once: true }}
+          <h3 className="bg-gradient-to-b from-gray-700 via-slate-800 to-slate-900 py-12 px-16 rounded-3xl text-white font-bold mx-12 text-4xl">
+            VoLTE significa Voz sobre LTE, ofrece la posibilidad de realizar
+            llamadas de voz a través de la red móvil LTE/4G
+            <br />
+            <br />
+            SPG siginfica Service Provisioning Gateway, que es el nodo que nos
+            permite el aprovisionamiento del servicio VoLTE en el IMS.
+            <br />
+            <br />
+            IMS significa IP Multimedia Subsystem, define un marco de trabajo y
+            arquitectura base para tráfico de voz, datos, video, servicios e
+            imágenes conjuntamente a través de infraestructura basada en el
+            enrutamiento de paquetes a través de direcciones IP.
+          </h3>
+        </motion.div>
+        <motion.div
+          className="col-span-6 select-none m-auto duration-300"
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 0.5,
+              duration: 0.5,
+            },
+          }}
+          viewport={{ once: true }}
+        >
+          <Slideshow
+            bg={"bg-gradient-to-b from-gray-700 via-slate-800 to-slate-900"}
+            images={[
+              "/ecms/ECMS1.png",
+              "/ecms/ECMS2.png",
+              "/ecms/ECMS3.png",
+              "/ecms/ECMS4.png",
+              "/ecms/ECMS5.png",
+              "/ecms/ECMS6.png",
+            ]}
           />
-          <h1 className="text-center text-7xl font-extrabold uppercase">
-            Mantenimiento
-          </h1>
         </motion.div>
       </div>
     </div>

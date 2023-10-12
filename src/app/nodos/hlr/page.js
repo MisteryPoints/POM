@@ -5,6 +5,7 @@ import TransitionEffect from "@/components/TransitionEffect";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SlArrowRightCircle } from "react-icons/sl";
 import Slideshow from "@/components/SlideShow";
+import Link from "next/link";
 
 const Home = () => {
   const [glosario, setGlosario] = useState(false);
@@ -108,12 +109,10 @@ const Home = () => {
           <Slideshow
             bg={"bg-gradient-to-b from-gray-500 via-yellow-500 to-yellow-300"}
             images={[
-              "/ecms/ECMS1.png",
-              "/ecms/ECMS2.png",
-              "/ecms/ECMS3.png",
-              "/ecms/ECMS4.png",
-              "/ecms/ECMS5.png",
-              "/ecms/ECMS6.png",
+              "/hlr/HLR1.png",
+              "/hlr/HLR2.png",
+              "/hlr/HLR3.png",
+              "/hlr/HLR4.png",
             ]}
           />
         </motion.div>
@@ -372,6 +371,13 @@ const Home = () => {
             Glosario
           </button>
         )}
+        <Link
+          className="-rotate-90 text-2xl font-bold p-3 bg-green-900 text-white rounded-t-3xl text-center absolute bottom-[-390px] -right-20 hover:bg-green-950 transition-all duration-400 hover:cursor-pointer no-underline"
+          href="../sox/Template%20Profile%20SDB.xlsx"
+          target="_blank"
+        >
+          Lista de Profiles
+        </Link>
       </div>
     </div>
   );
