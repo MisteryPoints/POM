@@ -110,8 +110,8 @@ const NavHome = () => {
           <FramerImage
             src="/logo-pom.png"
             priority="true"
-            width="110"
-            height="50"
+            width="120"
+            height="60"
             alt="Logo POM"
             className="mx-auto z-50"
             initial={{ opacity: 0, y: 0 }}
@@ -127,7 +127,7 @@ const NavHome = () => {
               scale: [1.05, 0.85, 1.21, 0.85, 1.05],
               transition: {
                 duration: 3,
-                ease: "easeInOut",
+                ease: "easeOut",
                 times: [0, 0.2, 0.5, 0.8, 1],
                 repeat: Infinity,
               },
@@ -450,7 +450,7 @@ const NavHome = () => {
             Portal de Operaciones Móviles
           </h1>
           <h3 className="text-md text-white mx-auto select-none">
-            Página de documentación interna
+            Página de Documentación Interna.
           </h3>
           <div className="flex max-w-[800px] flex-wrap justify-center items-center m-auto gap-x-5 pt-[50px]">
             <FramerLink
