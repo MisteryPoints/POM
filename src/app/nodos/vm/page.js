@@ -78,12 +78,8 @@ const Home = () => {
           <Slideshow
             bg={"bg-gradient-to-b from-orange-400 via-yellow-500 to-orange-600"}
             images={[
-              "/ecms/ECMS1.png",
-              "/ecms/ECMS2.png",
-              "/ecms/ECMS3.png",
-              "/ecms/ECMS4.png",
-              "/ecms/ECMS5.png",
-              "/ecms/ECMS6.png",
+              "/vm/VM1.png",
+              "/vm/VM2.png", 
             ]}
           />
         </motion.div>

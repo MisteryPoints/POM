@@ -141,7 +141,7 @@ const NavHome = () => {
               <Navbar.Toggle aria-controls="navbarScroll" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav
-                  className="me-auto my-2 my-lg-0 mx-auto"
+                  className="-mt-1 mx-auto"
                   style={{ maxHeight: "100px" }}
                   navbarScroll
                 >
