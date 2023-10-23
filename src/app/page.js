@@ -57,6 +57,7 @@ export default function Home() {
       setSelector(!selector)
     }, 400);
   }
+ 
   return (
     <div className="bg-slate-300 w-full">
       <TransitionEffect />
@@ -436,3 +437,4 @@ export default function Home() {
     </div>
   );
 }
+

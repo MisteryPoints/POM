@@ -11,7 +11,8 @@ import NavDrop from "./NavDrop";
 import Link from "next/link";
 import NavFather from "./NavFather";
 import { ABirthday } from "@/api/API";
-import BirthCard from "./BirthCard";
+import BirthCard from "./BirthCard";  
+
 
 const FramerLink = motion(Link);
 const FramerImage = motion(Image);
@@ -98,6 +99,7 @@ const NavHome = () => {
       }
     }
   };
+  
   return (
     <>
       <main
@@ -593,4 +595,5 @@ const NavHome = () => {
   );
 };
 
+ 
 export default NavHome;
