@@ -46,7 +46,7 @@ const Cards = ({
 
   return (
     <article
-      className={`w-full max-w-[300px] max-h-[375px] top-0 h-full items-center justify-center border border-solid border-gray-900 ${
+      className={`w-full max-w-[300px] max-h-[445px] top-0 h-full items-center justify-center border border-solid border-gray-900 ${
         puesto.includes("Gerente")
           ? "bg-sky-100"
           : puesto.includes("Líder")
@@ -64,16 +64,20 @@ const Cards = ({
         lider ? "rounded-t-2xl" : "rounded-2xl"
       } `}
     >
-      <FramerImage
-        src={img}
-        alt={nombre}
-        className="w-full h-auto rounded-lg"
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.2 }}
-        width={800}
-        height={330}
-      />
-      <div className="w-full flex flex-col items-start justify-between mt-4">
+      <div className='rounded-full max-w-[220px] max-h-[220px] flex justify-center items-center mx-auto'>
+        <div className='bg-gradient-to-b from-red-500 via-red-900 to-black w-[230px] h-[230px] z-30 absolute rounded-full'></div>
+        <FramerImage
+            src={img}
+            alt={nombre}
+            className="w-full h-auto max-w-[225px] rounded-full z-50 relative" 
+            initial={{ y:-35 }}
+            whileHover={{ scaleY: 1.05, y: -42.5 }}
+            transition={{ duration: 0.2 }}
+            width={750}
+            height={1000}
+          /> 
+      </div>
+      <div className="w-full flex flex-col items-start justify-between">
         <Link
           href={link}
           className="hover:underline underline-offset-2 decoration-gray-900 hover:opacity-80 w-full"

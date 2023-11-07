@@ -223,7 +223,7 @@ const Home = () => {
                   puesto="Analista Sr. Prevención y Proyectos" 
                   desc='/puestos/Analista Sr. Prevencion Averias Movil.pdf'
                   link="/prevencion/averias"
-                  img="/RafaelPichardo.jpg"
+                  img="/RafaelPichardo.png"
                   mail="mailto:rafael_pichardo@claro.com.do" 
                   movil='8494025052'
                   station='X-8112'

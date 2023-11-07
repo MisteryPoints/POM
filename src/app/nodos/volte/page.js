@@ -84,8 +84,7 @@ const Home = () => {
               "/volte/VOLTE2.png",
               "/volte/VOLTE3.png",
               "/volte/VOLTE4.png",
-              "/volte/VOLTE5.png",
-              "/volte/VOLTE6.png",
+              "/volte/VOLTE5.png", 
             ]}
           />
         </motion.div>

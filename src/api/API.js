@@ -491,7 +491,7 @@ const ABirthday = [
   {
     nombre: "Lucero Ureña",
     birthday: "02-01",
-    img: "/LuceroUrena.jpg",
+    img: "/LuceroUrena.png",
     mail: "mailto:lucero_urena@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!",
     movil: "8092204095",
     station: "X-4095",
@@ -578,7 +578,7 @@ const ABirthday = [
   },
   {
     nombre: "Yael Segura",
-    birthday: "16-10",
+    birthday: "07-11",
     img: "/YaelSegura.png",
     mail: "mailto:yael_segura@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!",
     movil: "8293827000",
@@ -595,7 +595,7 @@ const ABirthday = [
   {
     nombre: "Rafael Pichardo",
     birthday: "25-10",
-    img: "/RafaelPichardo.jpg",
+    img: "/RafaelPichardo.png",
     mail: "mailto:rafael_pichardo@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!",
     movil: "8494025052",
     station: "X-8112",

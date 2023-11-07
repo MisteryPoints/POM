@@ -17,14 +17,15 @@ const BirthCard = ({
     const [movils, setMovils] = useState(false)
     const [stations, setStations] = useState(false)
     return (
-        <article className={`w-full w-[350px] h-[350px] top-0 h-full items-center justify-center bg-birthday bg-cover rounded-3xl opacity-90 hover:opacity-100 overflow-hidden transition-all duration-400`}>  
-            <div className='rounded-full overflow-hidden max-w-[120px] max-h-[120px] flex justify-center items-center mx-auto mt-[90px]'>
+        <article className={`w-[350px] h-[350px] top-0 items-center justify-center bg-birthday bg-cover rounded-3xl opacity-90 hover:opacity-100 overflow-hidden transition-all duration-400`}>  
+            <div className='rounded-full max-w-[120px] max-h-[120px] flex justify-center items-center mx-auto mt-[90px]'>
                 <div className='bg-gradient-to-b from-red-500 via-red-900 to-black w-[130px] h-[130px] z-30 absolute rounded-full'></div>
                 <FramerImage
                     src={img}
                     alt={nombre}
-                    className="w-full h-auto rounded-full opacity-90 z-50 relative" 
-                    whileHover={{ scale: 1.05  }}
+                    className="w-full h-auto max-w-[225px] rounded-full z-50 relative" 
+                    initial={{ y:-20 }}
+                    whileHover={{ scaleY: 1.05, y: -25 }}
                     transition={{ duration: 0.2 }}
                     width={750}
                     height={1000}
