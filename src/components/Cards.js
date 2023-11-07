@@ -65,7 +65,21 @@ const Cards = ({
       } `}
     >
       <div className='rounded-full max-w-[220px] max-h-[220px] flex justify-center items-center mx-auto'>
-        <div className='bg-gradient-to-b from-red-500 via-red-900 to-black w-[230px] h-[230px] z-30 absolute rounded-full'></div>
+        <div className={`bg-gradient-to-b ${
+        puesto.includes("Gerente")
+          ? "from-sky-100"
+          : puesto.includes("Líder")
+          ? "from-yellow-800/60"
+          : puesto.includes("Medios")
+          ? "from-violet-200"
+          : puesto.includes("Procesos")
+          ? "from-green-200"
+          : puesto.includes("Sr. Operaciones")
+          ? "from-blue-200"
+          : puesto.includes("Proyectos")
+          ? "from-yellow-100"
+          : "from-white"
+      } to-black w-[230px] h-[230px] z-30 absolute rounded-full`}></div>
         <FramerImage
             src={img}
             alt={nombre}
