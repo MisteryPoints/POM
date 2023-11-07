@@ -12,6 +12,7 @@ import Link from "next/link";
 import NavFather from "./NavFather";
 import { ABirthday } from "@/api/API";
 import BirthCard from "./BirthCard";  
+import { ImCross } from 'react-icons/im'
 
 
 const FramerLink = motion(Link);
@@ -562,24 +563,14 @@ const NavHome = () => {
           viewport={{ once: true }}
         >
           <button
-            className="absolute -top-4 -right-4 px-3 py-2 bg-red-600 hover:bg-red-500 z-10 rounded-full font-bold text-white transition-all duration-300"
+            className="absolute -top-4 -right-4 px-[10px] py-[10px] bg-red-700 hover:bg-red-600 z-10 rounded-full font-bold text-white transition-all duration-300"
             onClick={() => {
               setNot(true);
             }}
           >
-            X
+            <ImCross/>
           </button>
-
-          <p className="absolute -top-4 left-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 -rotate-45 select-none">
-            🥳🎉
-          </p>
-          <p className="absolute -bottom-4 left-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 rotate-45 select-none">
-            🎊🎉
-          </p>
-          <p className="absolute -bottom-4 right-[-50px] px-3 py-2  z-10 rounded-full font-bold text-white text-3xl transition-all duration-300 -rotate-45 select-none">
-            🥳🎊
-          </p>
-
+  
           <BirthCard
             nombre={cumple.nombre}
             img={cumple.img}

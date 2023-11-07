@@ -144,7 +144,7 @@ const Home = () => {
                 puesto="Líder de Operaciones Móviles" 
                 desc='/puestos/Lider Operaciones Moviles.pdf'
                 link="/"
-                img="/JoseRodriguez.png"
+                img="/JoseAlRodriguez.png"
                 mail="mailto:jose_al_rodriguez@claro.com.do" 
                 movil='8299657933'
                 station='X-2832'
@@ -190,7 +190,7 @@ const Home = () => {
                   puesto="Analista Operaciones Móviles" 
                   desc='/puestos/Analista Operaciones Moviles.pdf'
                   link="/casos"
-                  img="/KelvinCeballos.png"
+                  img="/KelvinCeballo.png"
                   mail="mailto:kelvin_ceballo@claro.com.do" 
                   movil='8298730217'
                   station='X-2031'
@@ -223,7 +223,7 @@ const Home = () => {
                   puesto="Analista Sr. Prevención y Proyectos" 
                   desc='/puestos/Analista Sr. Prevencion Averias Movil.pdf'
                   link="/prevencion/averias"
-                  img="/RafaelPichardo.png"
+                  img="/RafaelPichardo.jpg"
                   mail="mailto:rafael_pichardo@claro.com.do" 
                   movil='8494025052'
                   station='X-8112'
