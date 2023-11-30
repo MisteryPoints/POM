@@ -578,7 +578,7 @@ const ABirthday = [
   },
   {
     nombre: "Yael Segura",
-    birthday: "07-11",
+    birthday: "16-10",
     img: "/YaelSegura.png",
     mail: "mailto:yael_segura@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!",
     movil: "8293827000",
