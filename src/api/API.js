@@ -557,7 +557,7 @@ const ABirthday = [
     birthday: "15-08",
     img: "/RubenEvertz.png",
     mail: "mailto:ruben_evertz@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!",
-    movil: "8097192380",
+    movil: "8092243476",
     station: "X-2591",
   },
   {
