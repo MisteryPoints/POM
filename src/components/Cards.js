@@ -55,9 +55,9 @@ const Cards = ({
           ? "bg-violet-200 shadow-md shadow-gray-600"
           : puesto.includes("Procesos")
           ? "bg-green-200 shadow-md shadow-gray-600"
-          : puesto.includes("Sr. Operaciones")
+          : puesto.includes("ING III")
           ? "bg-blue-200 shadow-md shadow-gray-600"
-          : puesto.includes("Proyectos")
+          : puesto.includes("ING IV")
           ? "bg-yellow-100 shadow-md shadow-gray-600"
           : "bg-white shadow-md shadow-gray-600"
       }  p-6 relative transition-all duration-200 opacity-80 hover:opacity-100 self-center justify-self-center ${
@@ -74,9 +74,9 @@ const Cards = ({
           ? "from-violet-200"
           : puesto.includes("Procesos")
           ? "from-green-200"
-          : puesto.includes("Sr. Operaciones")
+          : puesto.includes("ING III")
           ? "from-blue-200"
-          : puesto.includes("Proyectos")
+          : puesto.includes("ING IV")
           ? "from-yellow-100"
           : "from-white"
       } to-black w-[230px] h-[230px] z-30 absolute rounded-full`}></div>

@@ -117,14 +117,14 @@ const Home = () => {
           variants={AnimationCard}
         > 
             <Cards
-              nombre="Jorge Roque"
+              nombre="Hilda Núñez"
               puesto="Analista Medios de Recargo" 
               desc='/puestos/Analista Medio de Recarga.pdf'
               link="/casos/reclamacion"
-              img="/JorgeRoque.png"
-              mail="mailto:jorge_roque@claro.com.do" 
-              movil='8097984614'
-              station='X-2564'
+              img="/HildaNunez.png"
+              mail="mailto:hilda_nunez@claro.com.do" 
+              movil='8296194157'
+              station='x-4957'
               lider={false}
             />
             <Cards
@@ -155,17 +155,6 @@ const Home = () => {
                 }}><BsFillArrowDownSquareFill/></button> 
             </div>
             <Cards
-              nombre="Ruben Evertz"
-              puesto="Analista Sr. Operaciones Móviles" 
-              desc='/puestos/Analista Sr. Operaciones Moviles.pdf'
-              link="/nxx"
-              img="/RubenEvertz.png"
-              mail="mailto:ruben_evertz@claro.com.do" 
-              movil='8097192380'
-              station='X-2591'
-              lider={false}
-            /> 
-            <Cards
               nombre="Wilson Brito"
               puesto="Analista Sr Procesos y Estadísticas" 
               desc='/puestos/Analista Metricas y procesos Operaciones Moviles .pdf'
@@ -176,6 +165,17 @@ const Home = () => {
               station='X-7230'
               lider={false}
             />
+            <Cards
+              nombre="Ariangel Díaz"
+              puesto="ING III Operaciones Móviles" 
+              desc='/puestos/Analista Sr. Prevencion Averias Movil.pdf'
+              link="/prevencion/reclamacion"
+              img="/AriangelDiaz.png"
+              mail="mailto:ariangel_diaz@claro.com.do" 
+              movil='8096530242'
+              station='X-2847'
+              lider={false}
+            /> 
           </motion.div>
           
         ) : ''}
@@ -186,41 +186,19 @@ const Home = () => {
               animate={supervisor ? "enter" : "exit"}
               variants={AnimationCard}>  
                 <Cards
-                  nombre="Kelvin Ceballo"
-                  puesto="Analista Operaciones Móviles" 
+                  nombre="Víctor Tejada"
+                  puesto="ING II Operaciones Móviles" 
                   desc='/puestos/Analista Operaciones Moviles.pdf'
                   link="/casos"
-                  img="/KelvinCeballo.png"
-                  mail="mailto:kelvin_ceballo@claro.com.do" 
-                  movil='8298730217'
-                  station='X-2031'
+                  img="/VictorTejada.png"
+                  mail="mailto:victor_tejada@claro.com.do" 
+                  movil='8097298392'
+                  station='X-5118'
                   lider={false}
-                /> 
-                <Cards
-                  nombre="Ginet Matos"
-                  puesto="Analista Sr. Prevención y Proyectos" 
-                  desc='/puestos/Analista Sr. Prevencion Averias Movil.pdf'
-                  link="/prevencion/reclamacion"
-                  img="/GinetMatos.png"
-                  mail="mailto:ginet_matos@claro.com.do" 
-                  movil='8096530242'
-                  station='X-4797'
-                  lider={false}
-                /> 
-                <Cards
-                  nombre="Yael Segura"
-                  puesto="Analista Sr. Prevención y Proyectos" 
-                  desc='/puestos/Analista Sr. Proyectos aprovisionamiento.pdf'
-                  link="/prevencion/provision"
-                  img="/YaelSegura.png"
-                  mail="mailto:YaelSegura@claro.com.do" 
-                  movil='8293827000'
-                  station='X-4776'
-                  lider={false}
-                /> 
+                />    
                 <Cards
                   nombre="Rafael Pichardo"
-                  puesto="Analista Sr. Prevención y Proyectos" 
+                  puesto="ING IV Prevención y Proyectos" 
                   desc='/puestos/Analista Sr. Prevencion Averias Movil.pdf'
                   link="/prevencion/averias"
                   img="/RafaelPichardo.png"
@@ -230,8 +208,30 @@ const Home = () => {
                   lider={false}
                 /> 
                 <Cards
+                  nombre="Yael Segura"
+                  puesto="ING IV Prevención y Proyectos" 
+                  desc='/puestos/Analista Sr. Proyectos aprovisionamiento.pdf'
+                  link="/prevencion/provision"
+                  img="/YaelSegura.png"
+                  mail="mailto:YaelSegura@claro.com.do" 
+                  movil='8293827000'
+                  station='X-4776'
+                  lider={false}
+                /> 
+                <Cards
+                  nombre="Ruben Evertz"
+                  puesto="ING IV Prevención y Proyectos" 
+                  desc='/puestos/Analista Sr. Operaciones Moviles.pdf'
+                  link="/nxx"
+                  img="/RubenEvertz.png"
+                  mail="mailto:ruben_evertz@claro.com.do" 
+                  movil='8097192380'
+                  station='X-2591'
+                  lider={false}
+                /> 
+                <Cards
                   nombre="Cristian Melo"
-                  puesto="Analista Operaciones Móviles"  
+                  puesto="ING II Operaciones Móviles"  
                   desc='/puestos/Analista Operaciones Moviles.pdf'
                   link="/casos"
                   img="/CristianMelo.png"
@@ -243,7 +243,7 @@ const Home = () => {
                 <div className='col-span-5 w-full flex gap-5 justify-center'>
                   <Cards
                     nombre="Willy Alcantara"
-                    puesto="Analista Operaciones Móviles"  
+                    puesto="ING II Operaciones Móviles"  
                     desc='/puestos/Analista Operaciones Moviles.pdf'
                     link="/rebotes/prepago"
                     img="/WillyAlcantara.png"
@@ -253,19 +253,19 @@ const Home = () => {
                     lider={false}
                   /> 
                   <Cards
-                    nombre="Ariangel Díaz"
-                    puesto="Analista Operaciones Móviles" 
+                    nombre="Jorge Roque"
+                    puesto="ING II Operaciones Móviles" 
                     desc='/puestos/Analista Operaciones Moviles.pdf'
                     link="/compare"
-                    img="/AriangelDiaz.png"
-                    mail="mailto:ariangel_diaz@claro.com.do" 
-                    movil='8295510127'
-                    station='X-2847'
+                    img="/JorgeRoque.png"
+                    mail="mailto:jorge_roque@claro.com.do" 
+                    movil='8097984614'
+                    station='X-2564'
                     lider={false}
                   /> 
                   <Cards
                     nombre="Mabeel Fernández"
-                    puesto="Analista Operaciones Móviles" 
+                    puesto="ING II Operaciones Móviles" 
                     desc='/puestos/Analista Operaciones Moviles.pdf'
                     link="/rebotes/postpago"
                     img="/MabeelFernandez.png"
@@ -275,16 +275,16 @@ const Home = () => {
                     lider={false}
                   /> 
                   <Cards
-                    nombre="Víctor Tejada"
-                    puesto="Analista Operaciones Móviles" 
+                    nombre="Kelvin Ceballo"
+                    puesto="ING II Operaciones Móviles" 
                     desc='/puestos/Analista Operaciones Moviles.pdf'
                     link="/casos"
-                    img="/VictorTejada.png"
-                    mail="mailto:victor_tejada@claro.com.do" 
-                    movil='8097298392'
-                    station='X-5118'
+                    img="/KelvinCeballo.png"
+                    mail="mailto:kelvin_ceballo@claro.com.do" 
+                    movil='8298730217'
+                    station='X-2031'
                     lider={false}
-                  />    
+                  /> 
                 </div>
             </motion.div> 
         ) : ''}
