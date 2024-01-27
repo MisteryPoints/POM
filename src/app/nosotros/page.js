@@ -104,7 +104,7 @@ const Home = () => {
           station='X-2422' 
           lider={true}
         />
-        <button className="w-full max-w-[299px] h-full flex items-center justify-center text-3xl text-black bg-sky-100 -mt-[1px] opacity-80 rounded-b-2xl" onClick={() =>{ 
+        <button className="w-full max-w-[299px] h-full flex items-center justify-center text-3xl text-black bg-white -mt-[1px] opacity-80 rounded-b-2xl" onClick={() =>{ 
           setGerencia(!gerencia)
           setSupervisor(false)
         }} style={{
@@ -150,7 +150,7 @@ const Home = () => {
                 station='X-2832'
                 lider={true}
               />
-              <button className="w-full max-w-[298px] h-full flex items-center justify-center self-center justify-self-center text-3xl text-black bg-yellow-800/60 -mt-[1px] opacity-80 rounded-b-2xl" onClick={() => setSupervisor(!supervisor)} style={{
+              <button className="w-full max-w-[298px] h-full flex items-center justify-center self-center justify-self-center text-3xl text-black bg-white -mt-[1px] opacity-80 rounded-b-2xl" onClick={() => setSupervisor(!supervisor)} style={{
                   y: yPosAnim,
                 }}><BsFillArrowDownSquareFill/></button> 
             </div>

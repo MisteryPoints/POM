@@ -48,9 +48,9 @@ const Cards = ({
     <article
       className={`w-full max-w-[300px] max-h-[445px] top-0 h-full items-center justify-center border border-solid border-gray-900 ${
         puesto.includes("Gerente")
-          ? "bg-sky-100"
+          ? "bg-gradient-to-b from-sky-300 from-20% to-white"
           : puesto.includes("Líder")
-          ? "bg-yellow-800/60"
+          ? "bg-gradient-to-b from-yellow-500 from-20% to-white"
           : puesto.includes("Medios")
           ? "bg-violet-200 shadow-md shadow-gray-600"
           : puesto.includes("Procesos")
@@ -58,7 +58,7 @@ const Cards = ({
           : puesto.includes("ING III")
           ? "bg-blue-200 shadow-md shadow-gray-600"
           : puesto.includes("ING IV")
-          ? "bg-yellow-100 shadow-md shadow-gray-600"
+          ? "bg-gradient-to-b from-black from-5% via-yellow-300 to-80% to-white shadow-md shadow-gray-600"
           : "bg-white shadow-md shadow-gray-600"
       }  p-6 relative transition-all duration-200 opacity-80 hover:opacity-100 self-center justify-self-center ${
         lider ? "rounded-t-2xl" : "rounded-2xl"
@@ -67,9 +67,9 @@ const Cards = ({
       <div className='rounded-full max-w-[220px] max-h-[220px] flex justify-center items-center mx-auto'>
         <div className={`bg-gradient-to-b ${
         puesto.includes("Gerente")
-          ? "from-sky-100"
+          ? "from-blue-300"
           : puesto.includes("Líder")
-          ? "from-yellow-800/60"
+          ? "from-yellow-300"
           : puesto.includes("Medios")
           ? "from-violet-200"
           : puesto.includes("Procesos")
@@ -77,7 +77,7 @@ const Cards = ({
           : puesto.includes("ING III")
           ? "from-blue-200"
           : puesto.includes("ING IV")
-          ? "from-yellow-100"
+          ? "from-yellow-200"
           : "from-white"
       } to-black w-[230px] h-[230px] z-30 absolute rounded-full`}></div>
         <FramerImage
