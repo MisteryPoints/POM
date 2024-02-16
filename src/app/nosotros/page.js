@@ -153,23 +153,23 @@ const Home = () => {
               <button className="w-full max-w-[298px] h-full flex items-center justify-center self-center justify-self-center text-3xl text-black bg-white -mt-[1px] opacity-80 rounded-b-2xl" onClick={() => setSupervisor(!supervisor)} style={{
                   y: yPosAnim,
                 }}><BsFillArrowDownSquareFill/></button> 
-            </div>
+            </div> 
             <Cards
-              nombre="Wilson Brito"
+              nombre="Jorge Roque"
               puesto="Analista Sr Procesos y Estadísticas" 
               desc='/puestos/Analista Metricas y procesos Operaciones Moviles .pdf'
               link="/estadisticas"
-              img="/WilsonBrito.png"
-              mail="mailto:wilson_brito@claro.com.do" 
-              movil='8299865658'
-              station='X-7230'
+              img="/JorgeRoque.png"
+              mail="mailto:jorge_roque@claro.com.do" 
+              movil='8097984614'
+              station='X-2564'
               lider={false}
-            />
+            /> 
             <Cards
               nombre="Ariangel Díaz"
               puesto="ING III Operaciones Móviles" 
               desc='/puestos/Analista Sr. Prevencion Averias Movil.pdf'
-              link="/prevencion/reclamacion"
+              link="/casos"
               img="/AriangelDiaz.png"
               mail="mailto:ariangel_diaz@claro.com.do" 
               movil='8096530242'
@@ -189,7 +189,7 @@ const Home = () => {
                   nombre="Víctor Tejada"
                   puesto="ING II Operaciones Móviles" 
                   desc='/puestos/Analista Operaciones Moviles.pdf'
-                  link="/casos"
+                  link="/rebotes/postpago"
                   img="/VictorTejada.png"
                   mail="mailto:victor_tejada@claro.com.do" 
                   movil='8097298392'
@@ -233,7 +233,7 @@ const Home = () => {
                   nombre="Cristian Melo"
                   puesto="ING II Operaciones Móviles"  
                   desc='/puestos/Analista Operaciones Moviles.pdf'
-                  link="/casos"
+                  link="/rebotes/prepago"
                   img="/CristianMelo.png"
                   mail="mailto:cristian_melo@claro.com.do" 
                   movil='8292172547'
@@ -245,7 +245,7 @@ const Home = () => {
                     nombre="Willy Alcantara"
                     puesto="ING II Operaciones Móviles"  
                     desc='/puestos/Analista Operaciones Moviles.pdf'
-                    link="/rebotes/prepago"
+                    link="/compare"
                     img="/WillyAlcantara.png"
                     mail="mailto:willy_alcantara@claro.com.do" 
                     movil='8097217805'
@@ -253,12 +253,12 @@ const Home = () => {
                     lider={false}
                   /> 
                   <Cards
-                    nombre="Jorge Roque"
+                    nombre="Tharsis López"
                     puesto="ING II Operaciones Móviles" 
                     desc='/puestos/Analista Operaciones Moviles.pdf'
-                    link="/compare"
-                    img="/JorgeRoque.png"
-                    mail="mailto:jorge_roque@claro.com.do" 
+                    link="/casos"
+                    img="/TharsisLopez.png"
+                    mail="mailto:tharsis_g_lopez@claro.com.do" 
                     movil='8097984614'
                     station='X-2564'
                     lider={false}
@@ -267,7 +267,7 @@ const Home = () => {
                     nombre="Mabeel Fernández"
                     puesto="ING II Operaciones Móviles" 
                     desc='/puestos/Analista Operaciones Moviles.pdf'
-                    link="/rebotes/postpago"
+                    link="/casos"
                     img="/MabeelFernandez.png"
                     mail="mailto:mabeel_fernandez@claro.com.do" 
                     movil='8292501445'

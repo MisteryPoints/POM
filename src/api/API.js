@@ -13,6 +13,12 @@ const ALinks = [
     link: "https://172.18.167.74/custcare_cmax/login",
   },
   {
+    name: "ECMS 2",
+    img: "../Ericsson.png",
+    category: ["favoritos"],
+    link: "https://172.18.167.106/custcare_cmax/login",
+  },
+  {
     name: "PPG",
     img: "../PPG.png",
     category: ["favoritos"],
@@ -46,7 +52,7 @@ const ALinks = [
     name: "HP SM",
     img: "../SM%20Consulta.png",
     category: ["reportes"],
-    link: "http://smweb:8080/smanager/index.do?",
+    link: "http://dweb:8080/smanager/index.do?",
   },
   {
     name: "SM Report",
