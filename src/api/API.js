@@ -31,16 +31,16 @@ const ALinks = [
     link: "http://adminprepago/PAP/app/Home.jsp",
   },
   {
-    name: "PAF",
-    img: "../PAF.webp",
+    name: "NEW PAF",
+    img: "../NEW%20PAF.png",
     category: ["favoritos"],
-    link: "http://172.27.4.133/age-web/index.xhtml",
+    link: "https://flota.claro.com.do/config/subs",
   },
   {
-    name: "PAF ADMIN",
-    img: "../ADMINPAF.jpg",
+    name: "WEB BOUNCE",
+    img: "../Bounce.png",
     category: ["favoritos"],
-    link: "http://172.27.4.133/age-web-admin/",
+    link: "https://bounces-web-prod-bounces-app-prod.apps.newprod.prod.cloudapps.claro.com.do/dashboard",
   },
   {
     name: "SAAM",
@@ -59,6 +59,12 @@ const ALinks = [
     img: "../SM%20Catalog.png",
     category: ["reportes"],
     link: "http://smcatalogo:8180/src/secure/main.jsp",
+  },
+  {
+    name: "SM 2",
+    img: "../SM%20Catalog.png",
+    category: ["reportes"],
+    link: "http://ntpsmsrc0001:8280/src/secure/main.jsp",
   },
   {
     name: "ZTE",
@@ -630,6 +636,14 @@ const ABirthday = [
     movil: "8096530242",
     station: "X-4797",
   },
+  {
+    nombre: "Tharsis G López",
+    birthday: "02-06",
+    img: "/TharsisGLopez.png",
+    mail: "mailto:tharsis_g_lopez@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!",
+    movil: "8497546930",
+    station: "X-7230",
+  }
 ];
 
 /** Arreglo de Offers -Estático- */

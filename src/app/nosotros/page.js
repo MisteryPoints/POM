@@ -253,14 +253,14 @@ const Home = () => {
                     lider={false}
                   /> 
                   <Cards
-                    nombre="Tharsis López"
+                    nombre="Tharsis G López"
                     puesto="ING II Operaciones Móviles" 
                     desc='/puestos/Analista Operaciones Moviles.pdf'
                     link="/casos"
-                    img="/TharsisLopez.png"
+                    img="/TharsisGLopez.png"
                     mail="mailto:tharsis_g_lopez@claro.com.do" 
-                    movil='8097984614'
-                    station='X-2564'
+                    movil='8497546593'
+                    station='X-7230'
                     lider={false}
                   /> 
                   <Cards
