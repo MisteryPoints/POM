@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
+import { Navigation } from "./Navigation";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -139,7 +140,8 @@ const NavHome = () => {
           />
         </Link>
         <div className="pt-[90px] mx-auto select-none">
-          <Navbar expand="lg" className="bg-transparent mx-auto">
+            
+          {/* <Navbar expand="lg" className="bg-transparent mx-auto">
             <Container fluid>
               <Navbar.Toggle aria-controls="navbarScroll" />
               <Navbar.Collapse id="responsive-navbar-nav">
@@ -446,7 +448,7 @@ const NavHome = () => {
                 </Nav>
               </Navbar.Collapse>
             </Container>
-          </Navbar>
+          </Navbar> */}
         </div>
         <div className="w-full flex flex-col mt-10">
           <h1 className="text-[64px] text-red-600 font-bold uppercase mx-auto">

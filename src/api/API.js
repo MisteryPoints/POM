@@ -525,7 +525,7 @@ const ABirthday = [
     station: "X-2564",
   },
   {
-    nombre: "José Al. Rodríguez",
+    nombre: "José Rodríguez",
     birthday: "04-04",
     img: "/JoseAlRodriguez.png",
     mail: "mailto:jose_al_rodriguez@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!",
