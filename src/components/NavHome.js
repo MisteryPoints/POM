@@ -139,8 +139,10 @@ const NavHome = () => {
             viewport={{ once: true }}
           />
         </Link>
-        <div className="pt-[90px] mx-auto select-none">
-            
+        <div className="pt-[89px] mx-auto select-none">
+            <div className="flex justify-center py-1 px-1">
+              <Navigation />
+            </div>
           {/* <Navbar expand="lg" className="bg-transparent mx-auto">
             <Container fluid>
               <Navbar.Toggle aria-controls="navbarScroll" />
