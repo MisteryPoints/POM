@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import { useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { cn } from "@/lib/utils" 
 import {
@@ -10,8 +11,9 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  NavigationMenuViewport,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu" 
  
 const statistics = [
   {
@@ -47,65 +49,83 @@ const statistics = [
 
 const tools = [
   {
-    title: "Estadísticas Diarias",
-    href: "/estadisticas/provision",
+    title: "ECMS",
+    href: "/nodos/ecms",
     description:
-      "Datos informativos de las estadísticas diarias (daily).",
+      "Sección de documentación sobre el nodo ECMS.",
   },
   {
-    title: "Dashboard CCM",
-    href: "/estadisticas/ccm",
+    title: "EDA",
+    href: "/nodos/eda",
     description:
-      "Dashboards y estadísticas del equipo de CCM.",
+      "Sección de documentación sobre el nodo EDA.",
   },
   {
-    title: "Dashboard MOR",
-    href: "/estadisticas/mor",
-    description: "Datos informativos de las estadísticas mensuales (monthly).",
+    title: "SDP",
+    href: "/nodos/sdp",
+    description: "Sección de documentación sobre el nodo SDP.",
   },
   {
-    title: "Dashboard POC",
-    href: "/estadisticas/poc",
+    title: "AIR",
+    href: "/nodos/air",
     description:
-      "Estadísticas del Portal POC.",
+      "Sección de documentación sobre los nodos de los AIR.",
   },
   {
-    title: "Dashboard Medios de Recargo",
-    href: "/estadisticas/recargo",
+    title: "Centrales",
+    href: "/nodos/hlr",
     description:
-      "Dashboards y estadísticas del equipo de Medios de Recargo.",
+      "Sección de documentación sobre el nodo HLR.",
+  }, 
+  {
+    title: "Minimensajes",
+    href: "/nodos/zte",
+    description:
+      "Sección de documentación sobre el nodo ZTE.",
+  }, 
+  {
+    title: "Subscription Manager",
+    href: "/nodos/sm",
+    description:
+      "Documentación SM.",
+  }, 
+  {
+    title: "Voice Mail",
+    href: "/nodos/vm",
+    description:
+      "Sección de documentación sobre el nodo del Voice Mail.",
+  }, 
+  {
+    title: "VoLTE",
+    href: "/nodos/volte",
+    description:
+      "Sección de documentación sobre el nodo SPG e IMS.",
   }, 
 ]
 
 const systems = [
   {
-    title: "Estadísticas Diarias",
-    href: "/estadisticas/provision",
+    title: "SAAM",
+    href: "/sistemas/saam",
     description:
-      "Datos informativos de las estadísticas diarias (daily).",
+      "Sección de documentación sobre el sistema SAAM.",
   },
   {
-    title: "Dashboard CCM",
-    href: "/estadisticas/ccm",
+    title: "Commplex",
+    href: "/sistemas/commplex",
     description:
-      "Dashboards y estadísticas del equipo de CCM.",
+      "Sección de documentación sobre el sistema Commplex.",
   },
   {
-    title: "Dashboard MOR",
-    href: "/estadisticas/mor",
-    description: "Datos informativos de las estadísticas mensuales (monthly).",
+    title: "PPG",
+    href: "/sistemas/ppg",
+    description: "Sección de documentación sobre el sistema PPG.",
   },
   {
-    title: "Dashboard POC",
-    href: "/estadisticas/poc",
+    title: "Ensemble",
+    href: "/sistemas/ensemble",
     description:
-      "Estadísticas del Portal POC.",
-  },
-  {
-    title: "Dashboard Medios de Recargo",
-    href: "/estadisticas/recargo",
-    description:
-      "Dashboards y estadísticas del equipo de Medios de Recargo.",
+      "Sección de documentación sobre el sistema Ensamble.",
   }, 
 ]
 
@@ -120,15 +140,26 @@ const techs = [
     title: "Instructivos",
     href: "/instructivos",
     description:
-      "Acceso a los instructivos del área.",
+      "Acceso a los instructivos del área de Operaciones Móviles.",
   }, 
 ]
 
 
 
 export function Navigation() {
+  const [reference, setReference] = useState('')
+  const refE = useRef(null);
+  const refH = useRef(null);
+  const refT = useRef(null);
+  const refS = useRef(null);
+  const refP = useRef(null); 
+
+  useEffect(() => {
+    console.log(reference?.current?.offsetLeft)
+  }, [reference])
+ 
   return (
-    <NavigationMenu>
+    <NavigationMenu position={reference?.current?.offsetLeft}> l
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
@@ -138,14 +169,15 @@ export function Navigation() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'>Estadísticas</NavigationMenuTrigger>
+          <NavigationMenuTrigger ref={refE} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={()=> setReference(refE)}
+          >Estadísticas</NavigationMenuTrigger> 
           <NavigationMenuContent className='bg-gradient-to-r from-[-20%] to-60% from-red-900 to-black'>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
+                    href="/estadisticas"
                   > 
                     <div className="mb-2 mt-4 text-lg font-medium text-red-700">
                       Estadísticas
@@ -169,7 +201,69 @@ export function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'>Tecnologías</NavigationMenuTrigger>
+          <NavigationMenuTrigger ref={refH} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={() => setReference(refH)}>Herramientas</NavigationMenuTrigger> 
+          <NavigationMenuContent className='bg-gradient-to-r from-[-20%] to-60% from-red-900 to-black'>
+            <ul className="grid gap-3 p-4 md:w-[600px] lg:w-[700px] lg:grid-cols-[.75fr_1fr_1fr]">
+              <li className="row-span-3">
+                <NavigationMenuLink asChild>
+                  <a
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    href="/"
+                  > 
+                    <div className="mb-2 mt-4 text-lg font-medium text-red-700">
+                      Herramientas
+                    </div>
+                    <p className="text-sm leading-tight text-muted-foreground">
+                      Sección de Herramientas y nodos del área de Operaciones Móviles.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              {tools.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))} 
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger ref={refS} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={() => setReference(refS)}>Sistemas</NavigationMenuTrigger> 
+          <NavigationMenuContent className='bg-gradient-to-r from-[-20%] to-60% from-red-900 to-black'>
+            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <li className="row-span-4">
+                <NavigationMenuLink asChild>
+                  <a
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    href="/"
+                  > 
+                    <div className="mb-2 mt-4 text-lg font-medium text-red-700">
+                      Sistemas
+                    </div>
+                    <p className="text-sm leading-tight text-muted-foreground">
+                      Sección de Sistemas del área de Operaciones Móviles.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              {systems.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))} 
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger ref={refT} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'  onMouseOver={() => setReference(refT)}>Tecnologías</NavigationMenuTrigger> 
           <NavigationMenuContent className='bg-gradient-to-r from-[-20%] to-60% from-red-900 to-black'>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -182,7 +276,7 @@ export function Navigation() {
                       Tecnologías
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Sección de Tecnologías
+                      Sección de Tecnologías del área de Operaciones Móviles.
                     </p>
                   </a>
                 </NavigationMenuLink>
@@ -200,8 +294,8 @@ export function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'>Procesos</NavigationMenuTrigger>
-          <NavigationMenuContent className='bg-gradient-to-r from-[-20%] to-60% from-red-900 to-black'>
+          <NavigationMenuTrigger ref={refP} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'  onMouseOver={() => setReference(refP)}>Procesos</NavigationMenuTrigger> 
+          <NavigationMenuContent className='bg-gradient-to-r from-[-20%] to-60% from-red-900 to-black justify-center'>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {statistics.map((component) => (
                 <ListItem

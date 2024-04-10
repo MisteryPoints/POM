@@ -1,16 +1,10 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Container from "react-bootstrap/Container";
-import { Navigation } from "./Navigation";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import { motion } from "framer-motion";
-import NavDrop from "./NavDrop";
-import Link from "next/link";
-import NavFather from "./NavFather";
+import "bootstrap/dist/css/bootstrap.min.css"; 
+import { Navigation } from "./Navigation"; 
+import { motion } from "framer-motion"; 
+import Link from "next/link"; 
 import { ABirthday } from "@/api/API";
 import BirthCard from "./BirthCard";  
 import { ImCross } from 'react-icons/im'
