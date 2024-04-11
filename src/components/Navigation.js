@@ -10,8 +10,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
+  NavigationMenuTrigger, 
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu" 
  
@@ -144,22 +143,102 @@ const techs = [
   }, 
 ]
 
+const process = [
+  {
+    title: "Admin NXX",
+    href: "/nxx",
+    description:
+      "Sección de NXX.",
+  },
+  {
+    title: "Compare",
+    href: "/compare",
+    description:
+      "Sección de compare.",
+  }, 
+  {
+    title: "Procesos y Estadísticas",
+    href: "/estadisticas",
+    description:
+      "Sección de Procesos y Estadísticas.",
+  }, 
+]
+
+const bounce = [
+  {
+    title: "Rebotes Prepago",
+    href: "/rebotes/prepago",
+    description:
+      "Documentación sobre los Rebotes Prepago.",
+  },
+  {
+    title: "Rebotes Postpago",
+    href: "/rebotes/postpago",
+    description:
+      "Documentación sobre los Rebotes Postpago.",
+  },
+]
+
+const cases = [
+  {
+    title: "Averías",
+    href: "/casos/averias",
+    description:
+      "Sección de Casos de Averías.",
+  },
+  {
+    title: "Aprovisionamiento",
+    href: "/casos/provision",
+    description:
+      "Sección de Casos de Aprovisionamiento.",
+  },
+  {
+    title: "Reclamación",
+    href: "/casos/reclamacion",
+    description:
+      "Sección de Casos de Reclamación.",
+  },
+]
+
+const prevention = [
+  {
+    title: "Averías",
+    href: "/prevencion/averias",
+    description:
+      "Sección Prevención de Averías.",
+  },
+  {
+    title: "Aprovisionamiento",
+    href: "/prevencion/provision",
+    description:
+      "Sección Prevención de Aprovisión.",
+  },
+  {
+    title: "Reclamación",
+    href: "/prevencion/reclamacion",
+    description:
+      "Sección Prevención de Reclamación.",
+  },
+]
+
 
 
 export function Navigation() {
   const [reference, setReference] = useState('')
+  const [isLoaded, setIsLoaded] = useState(false)
   const refE = useRef(null);
   const refH = useRef(null);
   const refT = useRef(null);
   const refS = useRef(null);
   const refP = useRef(null); 
 
-  useEffect(() => {
-    console.log(reference?.current?.offsetLeft)
+  useEffect(() => { 
+    setIsLoaded(true)
   }, [reference])
- 
+  
+  if(!isLoaded) return;
   return (
-    <NavigationMenu position={reference?.current?.offsetLeft}> l
+    <NavigationMenu position={reference ? reference?.current?.offsetLeft : '' }> 
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
@@ -239,7 +318,7 @@ export function Navigation() {
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
+                    href="/sistemas"
                   > 
                     <div className="mb-2 mt-4 text-lg font-medium text-red-700">
                       Sistemas
@@ -270,7 +349,7 @@ export function Navigation() {
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
+                    href="/nodos"
                   > 
                     <div className="mb-2 mt-4 text-lg font-medium text-red-700">
                       Tecnologías
@@ -296,8 +375,60 @@ export function Navigation() {
         <NavigationMenuItem>
           <NavigationMenuTrigger ref={refP} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'  onMouseOver={() => setReference(refP)}>Procesos</NavigationMenuTrigger> 
           <NavigationMenuContent className='bg-gradient-to-r from-[-20%] to-60% from-red-900 to-black justify-center'>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {statistics.map((component) => (
+            <ul className="grid gap-3 p-4 max-h-[600px] md:w-[600px] lg:w-[700px] lg:grid-cols-[.75fr_.75fr_1fr_1fr] grid-rows-6">
+              <li className="row-span-6">
+                <NavigationMenuLink asChild>
+                  <div
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md" 
+                  > 
+                    <div className="mb-2 mt-4 text-lg font-medium text-red-700">
+                      Procesos
+                    </div>
+                    <p className="text-sm leading-tight text-muted-foreground">
+                      Sección de Procesos del área de Operaciones Móviles.
+                    </p>
+                  </div>
+                </NavigationMenuLink>
+              </li>
+              <li className="row-span-1">
+                <NavigationMenuLink asChild>
+                  <a
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-4 no-underline outline-none focus:shadow-md"
+                    href="/rebotes"
+                  > 
+                    <div className="mt-4 mb-0 text-lg font-medium text-red-700">
+                      Rebotes
+                    </div> 
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              
+              {bounce.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href} 
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+              <li className="row-span-2">
+                <NavigationMenuLink asChild>
+                  <a
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    href="/casos"
+                  > 
+                    <div className="mb-2 mt-4 text-lg font-medium text-red-700">
+                      Casos
+                    </div>
+                    <div className="text-sm leading-tight text-muted-foreground">
+                      Sección de Procesos de casos del área de Operaciones Móviles.
+                    </div>
+                  </a>
+                </NavigationMenuLink>
+              </li> 
+              
+              {cases.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}
@@ -305,12 +436,47 @@ export function Navigation() {
                 >
                   {component.description}
                 </ListItem>
-              ))}
+              ))} 
+              <li className='row-span-1'></li>
+              <li className="row-span-2">
+                <NavigationMenuLink asChild>
+                  <a
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    href="/prevencion"
+                  > 
+                    <div className="mb-2 mt-4 text-lg font-medium text-red-700">
+                      Prevención
+                    </div>
+                    <div className="text-sm leading-tight text-muted-foreground">
+                      Sección de Procesos de Prevención del área de Operaciones Móviles.
+                    </div>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              {prevention.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))} 
+              <li className='row-span-1'></li>
+              {process.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))} 
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/nosotros" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle() + ' bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'}>
               Nosotros
             </NavigationMenuLink>
@@ -321,9 +487,9 @@ export function Navigation() {
   )
 }
  
-const ListItem = React.forwardRef(({ className, title, children, ...props }, ref) => {
+const ListItem = React.forwardRef(({ className, title, children, classNameLi, ...props }, ref) => {
   return (
-    <li>
+    <li className={classNameLi ? classNameLi : ''}>
       <NavigationMenuLink asChild>
         <a
           ref={ref}
