@@ -366,7 +366,7 @@ export function Navigation() {
                   title={component.title}
                   href={component.href}
                 >
-                  {component.description}
+                  {component.description} 
                 </ListItem>
               ))} 
             </ul>
