@@ -140,7 +140,7 @@ const Home = () => {
             /> 
             <div className="flex flex-col justify-center col-span-1">  
               <Cards
-                nombre="José Al. Rodríguez"
+                nombre="José Rodríguez"
                 puesto="Líder de Operaciones Móviles" 
                 desc='/puestos/Lider Operaciones Moviles.pdf'
                 link="/"
