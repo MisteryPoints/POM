@@ -102,11 +102,11 @@ const NavHome = () => {
   const {theme, setTheme} = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-    setTheme('light');
-    console.log(theme)
-  }, [theme]);
+  useEffect(() => { 
+    setMounted(true); 
+  }, []);
+
+  console.log(theme)
 
   if(!mounted) return null; //Evitar problemas de rehidratación.
 
@@ -150,13 +150,13 @@ const NavHome = () => {
         <div className="pt-[89px] mx-auto select-none">
             <div className="flex justify-center py-1 px-1 gap-x-6">
               <Navigation />
-              <Tabs defaultValue={theme}>
+              <Tabs defaultValue={theme} className="mt-1">
                   <TabsList className='border'>
                       <TabsTrigger value='light' onClick={() => setTheme('light')}>
-                          <SunIcon className='h-[1.2rem] w-[1.2rem] rotate-0  transition-all dark:rotate-180' />
+                          <SunIcon className='h-[1.2rem] w-[1.2rem] rotate-0  transition-all dark:rotate-180 duration-400' />
                       </TabsTrigger>
                       <TabsTrigger value='dark' onClick={() => setTheme('dark')}>
-                          <MoonIcon className='h-[1.2rem] w-[1.2rem] rotate-90 transition-all dark:rotate-0' />
+                          <MoonIcon className='h-[1.2rem] w-[1.2rem] rotate-90 transition-all dark:rotate-0 duration-400' />
                       </TabsTrigger>
                       <TabsTrigger value='system' onClick={() => setTheme('system')}>
                           <DesktopIcon className='h-[1.2rem] w-[1.2rem]' />

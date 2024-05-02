@@ -64,6 +64,7 @@
 html{
   scroll-behavior: smooth;
 }
+
 .dropdown-toggle::after {
   display: none !important; 
 }
