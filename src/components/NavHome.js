@@ -8,6 +8,9 @@ import Link from "next/link";
 import { ABirthday } from "@/api/API";
 import BirthCard from "./BirthCard";  
 import { ImCross } from 'react-icons/im'
+import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
+import { DesktopIcon, MoonIcon, SunIcon } from '@radix-ui/react-icons';
+import { useTheme } from 'next-themes';
 
 
 const FramerLink = motion(Link);
@@ -96,6 +99,17 @@ const NavHome = () => {
     }
   };
   
+  const {theme, setTheme} = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    setTheme('light');
+    console.log(theme)
+  }, [theme]);
+
+  if(!mounted) return null; //Evitar problemas de rehidratación.
+
   return (
     <>
       <main
@@ -134,8 +148,21 @@ const NavHome = () => {
           />
         </Link>
         <div className="pt-[89px] mx-auto select-none">
-            <div className="flex justify-center py-1 px-1">
+            <div className="flex justify-center py-1 px-1 gap-x-6">
               <Navigation />
+              <Tabs defaultValue={theme}>
+                  <TabsList className='border'>
+                      <TabsTrigger value='light' onClick={() => setTheme('light')}>
+                          <SunIcon className='h-[1.2rem] w-[1.2rem] rotate-0  transition-all dark:rotate-180' />
+                      </TabsTrigger>
+                      <TabsTrigger value='dark' onClick={() => setTheme('dark')}>
+                          <MoonIcon className='h-[1.2rem] w-[1.2rem] rotate-90 transition-all dark:rotate-0' />
+                      </TabsTrigger>
+                      <TabsTrigger value='system' onClick={() => setTheme('system')}>
+                          <DesktopIcon className='h-[1.2rem] w-[1.2rem]' />
+                      </TabsTrigger>
+                  </TabsList>
+              </Tabs>
             </div>
           {/* <Navbar expand="lg" className="bg-transparent mx-auto">
             <Container fluid>

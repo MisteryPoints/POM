@@ -250,7 +250,7 @@ export function Navigation() {
         <NavigationMenuItem>
           <NavigationMenuTrigger ref={refE} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={()=> setReference(refE)}
           >Estadísticas</NavigationMenuTrigger> 
-          <NavigationMenuContent className='bg-gradient-to-br from-[30%] via-[50%] to-[100%] from-red-900 via-gray-500 to-gray-300 justify-center'>
+          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-500 to-gray-300 justify-center'>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
@@ -281,7 +281,7 @@ export function Navigation() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger ref={refH} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={() => setReference(refH)}>Herramientas</NavigationMenuTrigger> 
-          <NavigationMenuContent className='bg-gradient-to-br from-[30%] via-[50%] to-[100%] from-red-900 via-gray-500 to-gray-300 justify-center'>
+          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-500 to-gray-300 justify-center'>
             <ul className="grid gap-3 p-4 md:w-[600px] lg:w-[700px] lg:grid-cols-[.75fr_1fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
@@ -312,7 +312,7 @@ export function Navigation() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger ref={refS} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={() => setReference(refS)}>Sistemas</NavigationMenuTrigger> 
-          <NavigationMenuContent className='bg-gradient-to-br from-[30%] via-[50%] to-[100%] from-red-900 via-gray-500 to-gray-300 justify-center'>
+          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-500 to-gray-300 justify-center'>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-4">
                 <NavigationMenuLink asChild>
@@ -343,7 +343,7 @@ export function Navigation() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger ref={refT} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'  onMouseOver={() => setReference(refT)}>Tecnologías</NavigationMenuTrigger> 
-          <NavigationMenuContent className='bg-gradient-to-br from-[30%] via-[50%] to-[100%] from-red-900 via-gray-500 to-gray-300 justify-center'>
+          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-500 to-gray-300 justify-center'>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
@@ -351,7 +351,7 @@ export function Navigation() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/nodos"
                   > 
-                    <div className="mb-2 mt-4 text-lg leading-thin font-medium text-red-700 bg-gray-100 rounded-md">
+                    <div className="mb-2 mt-4 text-lg leading-thin font-medium text-red-700 ">
                       Tecnologías
                     </div>
                     <p className="text-sm text-muted-foreground">
@@ -374,14 +374,14 @@ export function Navigation() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger ref={refP} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'  onMouseOver={() => setReference(refP)}>Procesos</NavigationMenuTrigger> 
-          <NavigationMenuContent className='bg-gradient-to-br from-[30%] via-[50%] to-[100%] from-red-900 via-gray-500 to-gray-300 justify-center'>
+          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-500 to-gray-300 justify-center'>
             <ul className="grid gap-3 p-4 max-h-[600px] md:w-[600px] lg:w-[700px] lg:grid-cols-[.75fr_.75fr_1fr_1fr] grid-rows-6">
               <li className="row-span-6">
                 <NavigationMenuLink asChild>
                   <div
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md" 
                   > 
-                    <div className="mb-2 mt-4 text-lg leading-thin font-medium text-red-700 bg-gray-100 rounded-md">
+                    <div className="mb-2 mt-4 text-lg leading-thin font-medium text-red-700 ">
                       Procesos
                     </div>
                     <div className="text-sm text-muted-foreground">
@@ -396,7 +396,7 @@ export function Navigation() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-4 no-underline outline-none focus:shadow-md"
                     href="/rebotes"
                   > 
-                    <div className="mt-4 mb-0 text-lg font-medium text-red-700 bg-gray-100 rounded-md">
+                    <div className="mt-4 mb-0 text-lg font-medium text-red-700 ">
                       Rebotes
                     </div> 
                   </a>
@@ -418,7 +418,7 @@ export function Navigation() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/casos"
                   > 
-                    <div className="mt-4 text-lg leading-thin font-medium text-red-700 bg-gray-100 rounded-md">
+                    <div className="mt-4 text-lg leading-thin font-medium text-red-700 ">
                       Casos
                     </div>
                     <div className="text-sm text-muted-foreground">
@@ -444,7 +444,7 @@ export function Navigation() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/prevencion"
                   > 
-                    <div className="mt-4 text-lg font-semibold leading-loose text-red-700 bg-gray-100 rounded-md">
+                    <div className="mt-4 text-lg font-semibold leading-loose text-red-700 ">
                       Prevención
                     </div>
                     <div className="text-sm font-medium leading-snug text-muted-foreground">
@@ -499,7 +499,7 @@ const ListItem = React.forwardRef(({ className, title, children, classNameLi, ..
           )}
           {...props}
         >
-          <div className="text-md font-semibold leading-loose text-red-700 bg-gray-900 rounded-md">{title}</div>
+          <div className="text-md font-semibold leading-loose text-red-700 ">{title}</div>
           <p className="line-clamp-2 text-sm font-medium leading-snug text-gray-900 group-hover:text-muted-foreground drop-shadow-sm">
             {children}
           </p>

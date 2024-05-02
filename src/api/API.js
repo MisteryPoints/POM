@@ -643,6 +643,14 @@ const ABirthday = [
     mail: "mailto:tharsis_g_lopez@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!",
     movil: "8497546930",
     station: "X-7230",
+  },
+  {
+    nombre: "Génesis Meléndez",
+    birthday: "25-11",
+    img: "/GenesisMelendez.png",
+    mail: "mailto:genesis_melendez@claro.com.do?subject=¡Feliz Cumpleaños!&body=¡Felicidades en tu día!",
+    movil: "8299673336",
+    station: "X-5735",
   }
 ];
 

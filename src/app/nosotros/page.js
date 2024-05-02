@@ -264,13 +264,13 @@ const Home = () => {
                     lider={false}
                   /> 
                   <Cards
-                    nombre="Genesis Melendez"
+                    nombre="Génesis Meléndez"
                     puesto="ING II Operaciones Móviles" 
                     desc='/puestos/Analista Operaciones Moviles.pdf'
-                    link="/casos"
-                    img="/MabeelFernandez.png"
+                    link="/rebotes/postpago"
+                    img="/GenesisMelendez.png"
                     mail="mailto:genesis_melendez@claro.com.do" 
-                    movil='8292501445'
+                    movil='8299673336'
                     station='X-5735'
                     lider={false}
                   /> 
