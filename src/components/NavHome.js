@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css"; 
@@ -104,9 +105,7 @@ const NavHome = () => {
 
   useEffect(() => { 
     setMounted(true); 
-  }, []);
-
-  console.log(theme)
+  }, []); 
 
   if(!mounted) return null; //Evitar problemas de rehidratación.
 
@@ -151,12 +150,12 @@ const NavHome = () => {
             <div className="flex justify-center py-1 px-1 gap-x-6">
               <Navigation />
               <Tabs defaultValue={theme} className="mt-1">
-                  <TabsList className='border'>
+                  <TabsList className='border duration-400'>
                       <TabsTrigger value='light' onClick={() => setTheme('light')}>
-                          <SunIcon className='h-[1.2rem] w-[1.2rem] rotate-0  transition-all dark:rotate-180 duration-400' />
+                          <SunIcon className='!transition-all h-[1.2rem] w-[1.2rem] rotate-0 duration-500 dark:rotate-180' />
                       </TabsTrigger>
                       <TabsTrigger value='dark' onClick={() => setTheme('dark')}>
-                          <MoonIcon className='h-[1.2rem] w-[1.2rem] rotate-90 transition-all dark:rotate-0 duration-400' />
+                          <MoonIcon className='!transition-all h-[1.2rem] w-[1.2rem] rotate-90 duration-500 dark:rotate-0' />
                       </TabsTrigger>
                       <TabsTrigger value='system' onClick={() => setTheme('system')}>
                           <DesktopIcon className='h-[1.2rem] w-[1.2rem]' />
