@@ -21,7 +21,8 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))', 
-        hero: "url('/Fondo.jpg')",
+        hero: "url('/BG.png')",
+        darkHero: "url('/DarkBG.png')",
         birthday: "url('/Bg-Bday.png')"
       },
       colors: {

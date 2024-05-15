@@ -242,15 +242,15 @@ export function Navigation() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle() + ' bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'}>
+            <NavigationMenuLink className={navigationMenuTriggerStyle() + ' bg-transparent border-2  dark:border-red-900 border-red-600 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'}>
               Inicio
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger ref={refE} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={()=> setReference(refE)}
+          <NavigationMenuTrigger ref={refE} className='bg-transparent border-2  dark:border-red-900 border-red-600 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={()=> setReference(refE)}
           >Estadísticas</NavigationMenuTrigger> 
-          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-500 dark:via-black to-gray-300 dark:to-gray-800 justify-center'>
+          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-400 dark:via-black to-gray-300 dark:to-gray-800 justify-center'>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
@@ -280,8 +280,8 @@ export function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger ref={refH} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={() => setReference(refH)}>Herramientas</NavigationMenuTrigger> 
-          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-500 dark:via-black to-gray-300 dark:to-gray-800 justify-center'>
+          <NavigationMenuTrigger ref={refH} className='bg-transparent border-2  dark:border-red-900 border-red-600 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={() => setReference(refH)}>Herramientas</NavigationMenuTrigger> 
+          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-400 dark:via-black to-gray-300 dark:to-gray-800 justify-center'>
             <ul className="grid gap-3 p-4 md:w-[600px] lg:w-[700px] lg:grid-cols-[.75fr_1fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
@@ -311,8 +311,8 @@ export function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger ref={refS} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={() => setReference(refS)}>Sistemas</NavigationMenuTrigger> 
-          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-500 dark:via-black to-gray-300 dark:to-gray-800 justify-center'>
+          <NavigationMenuTrigger ref={refS} className='bg-transparent border-2 dark:border-red-900 border-red-600 border-red-600 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]' onMouseOver={() => setReference(refS)}>Sistemas</NavigationMenuTrigger> 
+          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-400 dark:via-black to-gray-300 dark:to-gray-800 justify-center'>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-4">
                 <NavigationMenuLink asChild>
@@ -342,8 +342,8 @@ export function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger ref={refT} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'  onMouseOver={() => setReference(refT)}>Tecnologías</NavigationMenuTrigger> 
-          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-500 dark:via-black to-gray-300 dark:to-gray-800 justify-center'>
+          <NavigationMenuTrigger ref={refT} className='bg-transparent border-2  dark:border-red-900 border-red-600 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'  onMouseOver={() => setReference(refT)}>Tecnologías</NavigationMenuTrigger> 
+          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-400 dark:via-black to-gray-300 dark:to-gray-800 justify-center'>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
@@ -373,8 +373,8 @@ export function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger ref={refP} className='bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'  onMouseOver={() => setReference(refP)}>Procesos</NavigationMenuTrigger> 
-          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-500 dark:via-black to-gray-300 dark:to-gray-800 justify-center'>
+          <NavigationMenuTrigger ref={refP} className='bg-transparent border-2  dark:border-red-900 border-red-600 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'  onMouseOver={() => setReference(refP)}>Procesos</NavigationMenuTrigger> 
+          <NavigationMenuContent className='bg-gradient-to-br from-[10%] via-[30%] to-[100%] from-red-900 via-gray-400 dark:via-black to-gray-300 dark:to-gray-800 justify-center'>
             <ul className="grid gap-3 p-4 max-h-[600px] md:w-[600px] lg:w-[700px] lg:grid-cols-[.75fr_.75fr_1fr_1fr] grid-rows-6">
               <li className="row-span-6">
                 <NavigationMenuLink asChild>
@@ -477,7 +477,7 @@ export function Navigation() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/nosotros" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle() + ' bg-transparent border-2 border-red-900 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'}>
+            <NavigationMenuLink className={navigationMenuTriggerStyle() + ' bg-transparent border-2  dark:border-red-900 border-red-600 !font-bold !text-lg !text-gray-100 no-underline hover:!bg-gray-100 hover:!text-black !transition-all !duration-200 h-[38px]'}>
               Nosotros
             </NavigationMenuLink>
           </Link>

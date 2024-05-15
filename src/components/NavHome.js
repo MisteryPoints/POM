@@ -113,7 +113,7 @@ const NavHome = () => {
     <>
       <main
         className={
-          "bg-hero h-screen -mt-12 lg:min-h-[900px] 2xl:max-h-[1200px] bg-cover bg-no-repeat relative -z-0 selection:bg-red-700 selection:text-white shadow-[0px_15px_25px_10px_rgba(17,20,26,0.65)]"
+          "bg-hero dark:bg-darkHero h-screen -mt-12 lg:min-h-[900px] 2xl:max-h-[1200px] bg-cover bg-no-repeat relative -z-0 selection:bg-red-700 selection:text-white shadow-[0px_15px_25px_10px_rgba(17,20,26,0.65)]"
         }
       >
         <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/10 absolute -z-10 select-none"></div>
@@ -125,7 +125,7 @@ const NavHome = () => {
             height="60"
             alt="Logo POM"
             className="mx-auto z-50"
-            initial={{ opacity: 0, y: 0 }}
+            initial={{ opacity: 0, y: 0, scale: 1.0 }}
             whileInView={{
               opacity: 1,
               y: 70,
@@ -149,7 +149,7 @@ const NavHome = () => {
         <div className="pt-[89px] mx-auto select-none">
             <div className="flex justify-center py-1 px-1 gap-x-6">
               <Navigation />
-              <Tabs defaultValue={theme} className="mt-1">
+              <Tabs defaultValue={theme} className="mt-[2.5px]">
                   <TabsList className='border duration-400'>
                       <TabsTrigger value='light' onClick={() => setTheme('light')}>
                           <SunIcon className='!transition-all h-[1.2rem] w-[1.2rem] rotate-0 duration-500 dark:rotate-180' />
