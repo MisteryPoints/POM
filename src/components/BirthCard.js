@@ -32,13 +32,13 @@ const BirthCard = ({
                 /> 
             </div>
             <div className="w-full flex flex-col items-start justify-between mt-1">  
-                <h2 className="bg-gradient-to-b from-red-500 via-red-900 to-black my-2 w-full text-center text-base font-bold lg:text-lg text-white select-none max-w-[150px] rounded-full mx-auto">
-                {nombre}
+                <h2 className="bg-gradient-to-b from-red-500 via-red-900 to-black my-2 w-full text-center text-base font-bold lg:text-lg text-white select-none max-w-[180px] rounded-full mx-auto">
+                    {nombre}
                 </h2> 
-                <div className='text-black font-extrabold text-3xl mt-[35px] text-sm  text-center w-full select-none flex justify-center'  >
-                <motion.p 
-                animate={{ y: [-5, -10, -5, 0], }}
-                transition={{ duration: 1, repeat: Infinity }}><FaAnglesDown size={20}/></motion.p>  
+                <div className='text-black font-extrabold text-3xl mt-[35px] text-center w-full select-none flex justify-center'>
+                    <motion.p 
+                    animate={{ y: [-5, -10, -5, 0], }}
+                    transition={{ duration: 1, repeat: Infinity }}><FaAnglesDown size={20}/></motion.p>  
                 </div>
                 <div className="-mt-3 w-full flex justify-center flex-wrap">  
                     <p

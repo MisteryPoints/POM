@@ -7,6 +7,8 @@ import { AOffers } from "@/api/API";
 import { NavDropdown } from "react-bootstrap";
 import { useOnOutsideClick } from "@/components/useOnOutsideClick";
 import { ToastContainer, toast } from "react-toastify";
+import { Label } from "@/components/ui/label"
+import { Switch } from "@/components/ui/switch"
 import "react-toastify/dist/ReactToastify.css";
 
 const Offers = ({
@@ -90,6 +92,7 @@ const Offers = ({
 
 const Home = () => {
   const [calculo, setCalculo] = useState("");
+  const [calSwitch, setCalSwitch] = useState(false);
   const [search, setSearch] = useState("");
   const [searchID, setSearchID] = useState("");
   const [category, setCategory] = useState("");
@@ -191,7 +194,23 @@ const Home = () => {
             Cálculo de Rollover
           </h1>
         </motion.div>
-        <motion.div
+        <motion.div className="flex gap-2 items-end justify-center my-6 mx-4 font-bold text-xl" 
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              delay: 0.6,
+              duration: 0.4,
+            },
+          }}
+          viewport={{ once: true }}>
+          <Label className="font-bold text-xl">MB</Label>
+          <Switch id="airplane-mode" className='mb-1' checked={calSwitch} onCheckedChange={() => setCalSwitch(!calSwitch)} />
+          <Label className="font-bold text-xl">GB</Label>
+        </motion.div>
+        {!calSwitch ? (
+          <motion.div
           className="select-none m-auto mb-4 flex justify-center gap-4"
           initial={{ opacity: 0, x: -70 }}
           whileInView={{
@@ -206,7 +225,7 @@ const Home = () => {
         >
           <input
             type="number"
-            placeholder="Coloque Balance en GB"
+            placeholder="Coloque Balance en MB"
             value={calculo}
             onChange={(e) => setCalculo(e.target.value)}
             className={`bg-[#343a40] hover:bg-[#343a40]/90 py-3 min-w-[450px] max-w-[450px] pl-6 xl:py-4 text-3xl translate-all duration-300 text-gray-300 font-bold border-2 border-[#343a40] rounded-2xl focus:!border-2 active:!border-[#343a40] placeholder:italic [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`}
@@ -235,6 +254,54 @@ const Home = () => {
             </h2>
           </motion.div>
         </motion.div>
+        ) : (
+          <motion.div
+          className="select-none m-auto mb-4 flex justify-center gap-4"
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              delay: 0.6,
+              duration: 0.4,
+            },
+          }}
+          viewport={{ once: true }}
+        >
+          <input
+            type="number"
+            placeholder="Coloque Balance en GB"
+            value={calculo}
+            onChange={(e) => setCalculo(e.target.value)}
+            className={`bg-[#343a40] hover:bg-[#343a40]/90 py-3 min-w-[450px] max-w-[450px] pl-6 xl:py-4 text-3xl translate-all duration-300 text-gray-300 font-bold border-2 border-[#343a40] rounded-2xl focus:!border-2 active:!border-[#343a40] placeholder:italic [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`}
+          />
+          <motion.div
+            className={`flex justify-center items-center text-center bg-white rounded-3xl min-w-[100px] ${
+              calculo > 0 ? "cursor-pointer" : "cursor-not-allowed"
+            }`}
+            whileTap={{ scale: calculo == "" ? 1 : 0.9 }}
+            onClick={() => {
+              if (calculo == "") return;
+              navigator.clipboard.writeText(calculo * 1024 * 1024 * 1024);
+              toast.success("Cálculo de Rollover copiado Correctamente!", {
+                position: "top-right",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "dark",
+              });
+            }}
+          >
+            <h2 className="text-2xl font-bold px-3 m-0">
+              {calculo !== "" ? Math.round(calculo * 1024 * 1024 * 1024) : ""}
+            </h2>
+          </motion.div>
+        </motion.div>
+        )}
+        
+        
         <motion.div
           className="select-none m-auto bg-gradient-to-br from-red-700 via-purple-800 to-violet-600 mb-4"
           initial={{ opacity: 0, x: -70 }}

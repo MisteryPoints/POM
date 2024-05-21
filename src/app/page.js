@@ -62,7 +62,7 @@ export default function Home() {
     <div className="bg-slate-300 w-full">
       <TransitionEffect />
       <NavHome />
-      <div className="grid grid-cols-12 mx-24 mt-0 justify-center gap-x-5 gap-y-6">
+      <div className="grid grid-cols-12 mx-24 -mt-8 justify-center gap-x-5 gap-y-6">
         <motion.div
           className="col-span-12 select-none m-auto duration-300"
           initial={{ opacity: 0, y: 70 }}
@@ -92,7 +92,7 @@ export default function Home() {
         </motion.div>
         
         <motion.div
-          className="col-span-12 rounded-3xl select-none m-auto bg-gradient-to-br from-sky-700 via-blue-800 to-teal-600"
+          className="col-span-12 select-none m-auto bg-gradient-to-br from-sky-700 via-blue-800 to-teal-600"
           initial={{ opacity: 0, x: -70 }}
           whileInView={{
             opacity: 1,
@@ -104,7 +104,7 @@ export default function Home() {
           }}
           viewport={{ once: true }}
         >
-          <h1 className="justify-center text-center mix-blend-lighten  font-extrabold text-6xl bg-slate-300 m-auto w-full uppercase">
+          <h1 className="justify-center text-center mix-blend-lighten font-extrabold text-6xl bg-slate-300 m-auto w-full uppercase">
             NUESTRO PROPóSITO
           </h1>
         </motion.div>
@@ -128,8 +128,8 @@ export default function Home() {
         </motion.div>
 
         <div className="col-span-12 flex w-full justify-center">
-          <button className={`text-2xl ${!selector ? 'bg-red-800' : 'bg-red-600'} text-white font-bold uppercase px-6 py-4 rounded-l-2xl transition-all duration-400`} disabled={!selector} onClick={changeSelector}>Claro</button>
-          <button className={`text-2xl ${selector ? 'bg-blue-800' : 'bg-blue-500'} text-white font-bold uppercase px-6 py-4 rounded-r-2xl transition-all duration-400`} disabled={selector} onClick={changeSelector}>Operaciones Móviles</button>
+          <button className={`text-2xl ${!selector ? 'bg-red-800' : 'bg-red-600 hover:bg-red-600/90'} text-white font-bold uppercase px-6 py-4 rounded-l-2xl !transition-all !duration-400`} disabled={!selector} onClick={changeSelector}>Claro</button>
+          <button className={`text-2xl ${selector ? 'bg-blue-800' : 'bg-blue-500 hover:bg-blue-500/90'} text-white font-bold uppercase px-6 py-4 rounded-r-2xl !transition-all !duration-400`} disabled={selector} onClick={changeSelector}>Operaciones Móviles</button>
         </div>
         { !selector ? (
         <motion.div 

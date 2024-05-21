@@ -23,7 +23,8 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))', 
         hero: "url('/BG.png')",
         darkHero: "url('/DarkBG.png')",
-        birthday: "url('/Bg-Bday.png')"
+        birthday: "url('/Bg-Bday.png')",
+        bg: "url('/PAE2024.png')"
       },
       colors: {
         border: "hsl(var(--border))",

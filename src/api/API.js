@@ -268,7 +268,7 @@ const ALinks = [
     name: "Commplex",
     img: "../Commplex.png",
     category: ["favoritos"],
-    link: "",
+    link: "\\corp.codetel.com.do/dfs/Control/Commplex/",
   },
   {
     name: "Ensamble Switch",

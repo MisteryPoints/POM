@@ -2,17 +2,16 @@
 import React from "react";
 import NavHome from "@/components/NavHome";
 import TransitionEffect from "@/components/TransitionEffect";
-import { motion } from "framer-motion";
-import Image from "next/image";
-
-const FramerImage = motion(Image);
+import { motion } from "framer-motion"; 
+import { forceDark } from '@/api/forceDark';
+import Script from 'next/script' 
 
 const Home = () => {
   return (
     <div className="bg-slate-300 w-full">
       <TransitionEffect />
       <NavHome />
-      <div className="grid grid-cols-12 mx-24 mt-0 justify-center gap-x-5 gap-y-6">
+      <div className="grid grid-cols-12 mx-24 mt-0 justify-center gap-x-5 gap-y-2">
         <motion.div
           className="col-span-12 select-none m-auto duration-300"
           initial={{ opacity: 0, y: 70 }}
@@ -39,7 +38,7 @@ const Home = () => {
           </div>
         </motion.div>
         <motion.div
-          className="col-span-12 select-none m-auto duration-300 pt-12"
+          className="col-span-12 select-none m-auto duration-300 w-full min-h-screen"
           initial={{ opacity: 0, y: -70 }}
           whileInView={{
             opacity: 1,
@@ -50,28 +49,16 @@ const Home = () => {
             },
           }}
           viewport={{ once: true }}
-        >
-          <FramerImage
-            src="/mantenimiento.png"
-            priority="true"
-            width="600"
-            height="600"
-            alt="Mantenimiento"
-            className="mx-auto"
-            initial={{ opacity: 0, y: 70 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                delay: 1,
-                duration: 0.4,
-              },
-            }}
-            viewport={{ once: true }}
-          />
-          <h1 className="text-center text-7xl font-extrabold uppercase">
-            Mantenimiento
-          </h1>
+        >  
+            <iframe
+              loading='lazy'
+              defaulttheme="system"
+              src="https://ntppbirpt0001/reports/powerbi/POC/Estadistica%20SAAM?rs:Command=Render&rc:Toolbar=false"
+              className='min-h-screen min-w-full rounded-lg shadow-xl shadow-slate-500 forceDark'
+              style={{background: "#C4C4C4", color: "black"}} >
+              <meta name="color-scheme" content="dark"></meta>
+              <Script src="https://ntppbirpt0001/reports/powerbi/POC/Estadistica%20SAAM?rs:Command=Render&rc:Toolbar=false" strategy="afterInteractive" onReady={() => forceDark}/>    
+            </iframe>   
         </motion.div>
       </div>
     </div>
