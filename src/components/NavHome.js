@@ -113,9 +113,14 @@ const NavHome = () => {
     <>
       <main
         className={
-          "bg-hero dark:bg-darkHero h-screen -mt-12 lg:min-h-[900px] 2xl:max-h-[1200px] bg-cover bg-no-repeat relative -z-0 selection:bg-red-700 selection:text-white shadow-[0px_15px_25px_10px_rgba(17,20,26,0.65)]"
+          "h-screen -mt-12 lg:min-h-[900px] 2xl:max-h-[1200px] bg-cover bg-no-repeat relative -z-0 selection:bg-red-700 selection:text-white shadow-[0px_15px_25px_10px_rgba(17,20,26,0.65)]"
         }
       >
+        <div className='absolute z-[-2] flex flex-col content-between h-full w-full'>
+          <div className="flex w-full bg-black !min-h-[30%]"></div>
+          <div className="flex w-full bg-transparent min-h-[40%]"></div>
+          <div className="flex w-full bg-black !min-h-[30%]"></div>
+        </div>
         <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/10 absolute -z-10 select-none"></div>
         <Link href="/">
           <FramerImage

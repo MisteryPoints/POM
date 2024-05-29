@@ -55,9 +55,8 @@ const Home = () => {
               defaulttheme="system"
               src="https://ntppbirpt0001/reports/powerbi/POC/Estadistica%20SAAM?rs:Command=Render&rc:Toolbar=false"
               className='min-h-screen min-w-full rounded-lg shadow-xl shadow-slate-500 forceDark'
-              style={{background: "#C4C4C4", color: "black"}} >
-              <meta name="color-scheme" content="dark"></meta>
-              <Script src="https://ntppbirpt0001/reports/powerbi/POC/Estadistica%20SAAM?rs:Command=Render&rc:Toolbar=false" strategy="afterInteractive" onReady={() => forceDark}/>    
+              style={{background: "#C4C4C4", color: "black"}} onLoadStart={() => forceDark} >
+              <meta name="color-scheme" content="dark"></meta>   
             </iframe>   
         </motion.div>
       </div>
