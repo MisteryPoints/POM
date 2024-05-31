@@ -117,9 +117,9 @@ const NavHome = () => {
         }
       >
         <div className='absolute z-[-2] flex flex-col content-between h-full w-full'>
-          <div className="flex w-full bg-black !min-h-[30%]"></div>
-          <div className="flex w-full bg-transparent min-h-[40%]"></div>
-          <div className="flex w-full bg-black !min-h-[30%]"></div>
+          <div className="flex w-full bg-black !min-h-[20.5%]"></div>
+          <div className="flex w-full bg-transparent min-h-[62%]"></div>
+          <div className="flex w-full bg-black !min-h-[17.5%]"></div>
         </div>
         <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/10 absolute -z-10 select-none"></div>
         <Link href="/">
