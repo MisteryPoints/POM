@@ -59,7 +59,7 @@ export default function Home() {
   }
  
   return (
-    <div className="bg-slate-300 w-full">
+    <div className="w-full">
       <TransitionEffect />
       <NavHome />
       <div className="grid grid-cols-12 mx-24 -mt-8 justify-center gap-x-5 gap-y-6">
@@ -83,7 +83,7 @@ export default function Home() {
             }}
             className="m-20"
           >
-            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
+            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-red-800 dark:mix-blend-normal dark:bg-slate-900 uppercase">
               BIENVENIDOS A
               <br />
               OPERACIONES MOVILES
@@ -104,7 +104,7 @@ export default function Home() {
           }}
           viewport={{ once: true }}
         >
-          <h1 className="justify-center text-center mix-blend-lighten font-extrabold text-6xl bg-slate-300 m-auto w-full uppercase">
+          <h1 className="justify-center text-center mix-blend-lighten dark:mix-blend-darken dark:text-white font-extrabold text-6xl bg-slate-300 dark:bg-slate-900 m-auto w-full uppercase">
             NUESTRO PROPóSITO
           </h1>
         </motion.div>
@@ -122,7 +122,7 @@ export default function Home() {
           }}
           viewport={{ once: true }}
         >
-          <h1 className="justify-center font-extrabold text-5xl w-full uppercase  mix-blend-lighten bg-slate-300">
+          <h1 className="justify-center font-extrabold text-5xl w-full uppercase  mix-blend-lighten bg-slate-300 dark:text-white dark:bg-slate-900 dark:mix-blend-darken">
             Hacer Posible un Mundo Mejor
           </h1>
         </motion.div>
@@ -156,7 +156,7 @@ export default function Home() {
             }}
             className="m-12"
           >
-            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
+            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-red-600 dark:mix-blend-normal dark:bg-slate-900 uppercase">
               CLARO
             </h1>
           </div>
@@ -196,7 +196,7 @@ export default function Home() {
           </h1>
         </motion.div>
         <motion.div
-          className="col-start-2 col-end-6 xl:col-span-6 rounded-3xl bg-white/30 text-sky-700  hover:bg-white/60 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5 mx-6"
+          className="col-start-2 col-end-6 xl:col-span-6 rounded-3xl bg-white/30 dark:bg-white/70 text-sky-700  hover:bg-white/60 dark:hover:bg-white/80 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5 mx-6"
           initial={{ opacity: 0, x: 70 }}
           whileInView={{
             opacity: 1,
@@ -213,7 +213,7 @@ export default function Home() {
           </p>
         </motion.div>
         <motion.div
-          className="col-start-8 col-end-12 xl:col-span-6 rounded-3xl bg-white/30 text-blue-600 hover:bg-white/60 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5 mx-6"
+          className="col-start-2 col-end-6 xl:col-span-6 rounded-3xl bg-white/30 dark:bg-white/70 text-blue-600  hover:bg-white/60 dark:hover:bg-white/80 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5 mx-6"
           initial={{ opacity: 0, x: 70 }}
           whileInView={{
             opacity: 1,
@@ -245,7 +245,7 @@ export default function Home() {
           <h1 className="justify-center text-center text-teal-600 font-bold text-6xl m-auto w-full mb-3">
             VALORES
           </h1>
-          <motion.ul className="list-disc mx-12 xl:mx-20 rounded-3xl bg-white/30 hover:bg-white/60 text-teal-700 2xl:py-5 2xl:px-20 py-3 px-12 transition-all duration-600">
+          <motion.ul className="list-disc mx-12 xl:mx-20 rounded-3xl bg-white/30 dark:bg-white/70 dark:hover:bg-white/80 hover:bg-white/60 text-teal-700 2xl:py-5 2xl:px-20 py-3 px-12 transition-all duration-600">
             <Valor
               nombre="Sustentabilidad"
               descripcion="Usar nuestros recursos apoyando el desarrollo económico a largo plazo de nuestro país, protegiendo al mismo tiempo los elementos medioambientales, sociales y culturales."
@@ -309,7 +309,7 @@ export default function Home() {
             }}
             className="m-12"
           >
-            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
+            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-red-600 dark:mix-blend-normal dark:bg-slate-900 uppercase">
               Operaciones Móviles
             </h1>
           </div>
@@ -350,7 +350,7 @@ export default function Home() {
           </h1>
         </motion.div>
         <motion.div
-          className="col-span-6 rounded-3xl bg-white/30 text-gray-800 hover:bg-white/60 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5"
+          className="col-start-2 col-end-6 xl:col-span-6 rounded-3xl bg-white/30 dark:bg-white/70 text-blue-600  hover:bg-white/60 dark:hover:bg-white/80 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5 mx-6"
           initial={{ opacity: 0, x: 70 }}
           whileInView={{
             opacity: 1,
@@ -372,7 +372,7 @@ export default function Home() {
           </p>
         </motion.div>
         <motion.div
-          className="col-span-6 rounded-3xl bg-white/30 text-gray-800 hover:bg-white/60 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5"
+          className="col-start-2 col-end-6 xl:col-span-6 rounded-3xl bg-white/30 dark:bg-white/70 text-blue-600  hover:bg-white/60 dark:hover:bg-white/80 select-none m-auto drop-shadow-md duration-300 max-w-[800px] my-5 mx-6"
           initial={{ opacity: 0, x: 70 }}
           whileInView={{
             opacity: 1,
@@ -406,7 +406,7 @@ export default function Home() {
           <h1 className="justify-center text-center text-red-600 font-bold text-6xl m-auto w-full mb-3">
             VALORES
           </h1>
-          <motion.ul className="list-disc  mx-20 rounded-3xl bg-white/30 hover:bg-white/60 text-gray-800 2xl:py-5 2xl:px-20 xl:py-3 xl:px-12 ">
+          <motion.ul className="list-disc mx-12 xl:mx-20 rounded-3xl bg-white/30 dark:bg-white/70 dark:hover:bg-white/80 hover:bg-white/60 text-teal-700 2xl:py-5 2xl:px-20 py-3 px-12 transition-all duration-600 ">
             <Valor
               nombre="Honestidad"
               descripcion="Ser coherentes entre lo que decimos y hacemos, respetando las leyes, las políticas y las normas de la compañía."

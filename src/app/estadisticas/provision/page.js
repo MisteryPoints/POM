@@ -9,7 +9,7 @@ const FramerImage = motion(Image);
 
 const Home = () => {
   return (
-    <div className="bg-slate-300 w-full">
+    <div className="w-full">
       <TransitionEffect />
       <NavHome />
       <div className="grid grid-cols-12 mx-24 mt-0 justify-center gap-x-5 gap-y-6">
@@ -33,7 +33,7 @@ const Home = () => {
             }}
             className="m-20"
           >
-            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
+            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-red-800 dark:mix-blend-normal dark:bg-slate-900 uppercase">
               Estadísticas Diarias
             </h1>
           </div>
@@ -69,7 +69,7 @@ const Home = () => {
             }}
             viewport={{ once: true }}
           />
-          <h1 className="text-center text-7xl font-extrabold uppercase">
+          <h1 className="text-center text-7xl font-extrabold uppercase dark:text-slate-200">
             Mantenimiento
           </h1>
         </motion.div>

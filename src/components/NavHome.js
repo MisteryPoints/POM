@@ -117,9 +117,11 @@ const NavHome = () => {
         }
       >
         <div className='absolute z-[-2] flex flex-col content-between h-full w-full'>
-          <div className="flex w-full bg-black !min-h-[20.5%]"></div>
-          <div className="flex w-full bg-transparent min-h-[62%]"></div>
-          <div className="flex w-full bg-black !min-h-[17.5%]"></div>
+          <div className="flex relative justify-end align-bottom w-full border-b-[3px] border-red-700 dark:border-red-900 bg-gradient-to-b from-slate-700 to-gray-400 dark:from-slate-800 dark:to-slate-950 !min-h-[20.3%]">
+            <div className="w-full absolute !bottom-0 h-[22.5%] z-[1] border-t-[3px] border-red-700 dark:border-red-900 bg-gradient-to-b from-slate-700 to-gray-400 dark:from-slate-950 dark:to-black " />
+          </div>
+          <div className="flex w-full bg-transparent !min-h-[62.5%]"></div>
+          <div className="flex w-full border-y-[3px] border-slate-200 dark:border-slate-300 bg-gradient-to-t from-slate-500 to-gray-400 dark:from-slate-800 dark:to-slate-950 !min-h-[17.5%]"></div>
         </div>
         <div className="h-screen mt-12 min-h-[650px] max-h-[750px] w-full bg-gray-700/10 absolute -z-10 select-none"></div>
         <Link href="/">
@@ -154,7 +156,7 @@ const NavHome = () => {
         <div className="pt-[89px] mx-auto select-none">
             <div className="flex justify-center py-1 px-1 gap-x-6">
               <Navigation />
-              <Tabs defaultValue={theme} className="mt-[2.5px]">
+              <Tabs defaultValue={theme} className="mt-[1px]">
                   <TabsList className='border duration-400'>
                       <TabsTrigger value='light' onClick={() => setTheme('light')}>
                           <SunIcon className='!transition-all h-[1.2rem] w-[1.2rem] rotate-0 duration-500 dark:rotate-180' />

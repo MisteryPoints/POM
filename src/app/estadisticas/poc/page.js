@@ -8,7 +8,7 @@ import Script from 'next/script'
 
 const Home = () => {
   return (
-    <div className="bg-slate-300 w-full">
+    <div className="w-full">
       <TransitionEffect />
       <NavHome />
       <div className="grid grid-cols-12 mx-24 mt-0 justify-center gap-x-5 gap-y-2">
@@ -32,7 +32,7 @@ const Home = () => {
             }}
             className="m-20"
           >
-            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
+            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-red-700 dark:mix-blend-normal dark:bg-slate-900 uppercase">
               Dashboard POC
             </h1>
           </div>
@@ -54,7 +54,7 @@ const Home = () => {
               loading='lazy'
               defaulttheme="system"
               src="https://ntppbirpt0001/reports/powerbi/POC/Estadistica%20SAAM?rs:Command=Render&rc:Toolbar=false"
-              className='min-h-screen min-w-full rounded-lg shadow-xl shadow-slate-500 forceDark'
+              className='min-h-screen min-w-full rounded-lg shadow-xl shadow-slate-500 dark:shadow-slate-900 forceDark'
               style={{background: "#C4C4C4", color: "black"}} onLoadStart={() => forceDark} >
               <meta name="color-scheme" content="dark"></meta>   
             </iframe>   

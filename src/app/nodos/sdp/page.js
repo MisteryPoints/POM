@@ -7,7 +7,7 @@ import Slideshow from "@/components/SlideShow";
 
 const Home = () => {
   return (
-    <div className="bg-slate-300 w-full">
+    <div className="w-full">
       <TransitionEffect />
       <NavHome />
       <div className="grid grid-cols-12 mx-24 mt-0 justify-center gap-x-5 gap-y-6">
@@ -31,7 +31,7 @@ const Home = () => {
             }}
             className="m-20"
           >
-            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
+            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-red-700 dark:mix-blend-normal dark:bg-slate-900 uppercase">
               SDP
             </h1>
           </div>
@@ -49,7 +49,7 @@ const Home = () => {
           }}
           viewport={{ once: true }}
         >
-          <h3 className="bg-gradient-to-b from-gray-400 via-slate-600 to-slate-900 py-12 px-16 rounded-3xl text-white font-bold mx-12 text-4xl opacity-90 hover:opacity-100 transition-all duration-400">
+          <h3 className="bg-gradient-to-b from-gray-400 via-slate-600 to-slate-700 py-12 px-16 rounded-3xl text-white font-bold mx-12 text-4xl opacity-90 hover:opacity-100 transition-all duration-400">
             SDP es un nodo de <span className="text-red-600">Claro</span>{" "}
             significa “Session Description Protocol” (Protocolo de descripción
             de sesión). Contiene información fundamental del Suscriptor y una
@@ -76,7 +76,7 @@ const Home = () => {
           viewport={{ once: true }}
         >
           <Slideshow
-            bg={"bg-gradient-to-b from-gray-400 via-slate-600 to-slate-900"}
+            bg={"bg-gradient-to-b from-gray-400 via-slate-600 to-slate-700"}
             images={["/sdp/SDP1.png", "/sdp/SDP2.png"]}
           />
         </motion.div>

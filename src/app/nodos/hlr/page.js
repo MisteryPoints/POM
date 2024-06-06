@@ -35,7 +35,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-slate-300 w-full">
+    <div className="w-full">
       <TransitionEffect />
       <NavHome />
       <div className="grid grid-cols-12 mx-24 mt-0 justify-center gap-x-5 gap-y-6">
@@ -59,7 +59,7 @@ const Home = () => {
             }}
             className="m-20"
           >
-            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
+            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-red-700 dark:mix-blend-normal dark:bg-slate-900 uppercase">
               HLR
             </h1>
           </div>
@@ -131,7 +131,7 @@ const Home = () => {
             }}
             viewport={{ once: true }}
           >
-            <h1 className="text-center text-7xl font-extrabold uppercase mb-8">
+            <h1 className="text-center text-7xl text-slate-700 dark:text-slate-300 font-extrabold uppercase mb-8">
               Glosario
             </h1>
             <motion.div
@@ -144,9 +144,9 @@ const Home = () => {
               dragElastic={{ left: 0, right: 0.8 }}
               onDragEnd={handleDragEnd}
             >
-              <ul className="text-white font-semibold text-xl py-5 px-6 bg-gradient-to-br from-slate-900 to-blue-950 rounded-l-2xl drop-shadow-lg max-w-[800px]">
+              <ul className="text-white font-semibold text-xl py-5 px-6 bg-gradient-to-br from-slate-900 dark:from-slate-400 to-blue-950 rounded-l-2xl drop-shadow-lg max-w-[800px]">
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     HLR:
                   </span>{" "}
                   Home Location Register, Forma parte de la infraestructura de
@@ -155,7 +155,7 @@ const Home = () => {
                   agrupamiento de conexiones.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     VLR:
                   </span>{" "}
                   Visitor Location Register, es una base de datos más volátil
@@ -165,7 +165,7 @@ const Home = () => {
                   tramo de la red.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     MSC:
                   </span>{" "}
                   Mobile Switching Center, son vitales para cualquier consumidor
@@ -175,7 +175,7 @@ const Home = () => {
                   dentro de las áreas circundantes.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     MSISDN:
                   </span>{" "}
                   Mobile Station Integrated Services Digital Network, es el
@@ -183,14 +183,14 @@ const Home = () => {
                   llamadas o las sesiones de datos.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     IMSI:
                   </span>{" "}
                   International Mobile Subscriber Identity, es un número único
                   que identifica a una sim card.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     SIM:
                   </span>{" "}
                   Subscriber Identity Module, son las encargadas de almacenar la
@@ -198,14 +198,14 @@ const Home = () => {
                   identificarse en la red de manera única.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     AUC:
                   </span>{" "}
                   Authentication Centre, es el centro de autenticación de las
                   tarjetas SIM.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     NAM:
                   </span>{" "}
                   Network Access Mode, propiedad que mantiene el acceso a la red
@@ -213,44 +213,44 @@ const Home = () => {
                   en 2 bloqueado.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     PDP:
                   </span>{" "}
                   Policy Decision Point, define los protocolos de RED a
                   utilizar, pueden ser IPV4 o IPV6.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     TS11:
                   </span>{" "}
                   Servicio de Telefonía.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     TS12:
                   </span>{" "}
                   Servicio de Telefonía para Emergencias.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     TS21:
                   </span>{" "}
                   Servicio de Minimensajes Entrantes.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     TS21:
                   </span>{" "}
                   Servicio de Minimensajes Salientes.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     CAW:
                   </span>{" "}
                   Call Waiting, servicio de Llamada en Espera.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     CFU:
                   </span>{" "}
                   Call Forwarding Unconditional, Desvío de llamada
@@ -258,56 +258,56 @@ const Home = () => {
                   llamadas entrantes.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     CFB:
                   </span>{" "}
                   Call Forwarding on Busy, Desvío de llamada en caso de que el
                   abonado destino esté comunicando.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     CFNRC:
                   </span>{" "}
                   Call Forwarding on Not Reachable, Desvío de llamada en caso de
                   que el abonado destino no esté alcanzable.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     CFNRC:
                   </span>{" "}
                   Call Forwarding on Not Reachable, Desvío de llamada en caso de
                   que el abonado destino no esté alcanzable.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     CFNRY:
                   </span>{" "}
                   Call Forwarding on Not Reply, Desvío de llamada en caso de no
                   tener respuesta.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     BAOC:
                   </span>{" "}
                   Barring of All Outgoing Calls, Prohibición de todas las
                   llamadas salientes.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     BOIC:
                   </span>{" "}
                   Barring of All Outgoing International Calls, Prohibición de
                   todas las llamadas salientes internacionales.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     APN:
                   </span>{" "}
                   Access Point Name, es el nombre de la puerta de acceso entre
                   la red GPRS y otra red.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     GPRS:
                   </span>{" "}
                   General Packet Radio Service, Estándar de comunicación para
@@ -315,14 +315,14 @@ const Home = () => {
                   significativos o paquetes.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     EPS:
                   </span>{" "}
                   Evolved Packet System, es la evolución de la red de internet
                   siendo manejada por paquetes de datos.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     HSS:
                   </span>{" "}
                   Home Subscriber Server, sirve como depósito principal de la
@@ -330,7 +330,7 @@ const Home = () => {
                   core network LTE/EPC o IMS.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     PGW:
                   </span>{" "}
                   Packet Gateway, es un servidor/sistema dentro de una red móvil
@@ -339,21 +339,21 @@ const Home = () => {
                   redes, como Internet.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     ODB:
                   </span>{" "}
                   Operator Determined call Barring, es la estructura de la
                   operadora donde se puede configurar los bloqueos de llamadas.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     QOS:
                   </span>{" "}
                   Quality of Service, es la calidad de la velocidad de la red.
                 </li>
               </ul>
               <div
-                className="h-auto mb-3 rounded-r-2xl bg-slate-900 text-white cursor-pointer flex justify-center items-center text-3xl"
+                className="h-auto mb-3 rounded-r-2xl bg-slate-900 dark:bg-blue-700 text-white cursor-pointer flex justify-center items-center text-3xl"
                 onClick={() => setGlosario(false)}
               >
                 <SlArrowRightCircle />
@@ -362,7 +362,7 @@ const Home = () => {
           </motion.div>
         ) : (
           <button
-            className="-rotate-90 text-2xl font-bold p-3 bg-slate-900 text-white rounded-t-3xl text-center absolute bottom-[-200px] -right-10 hover:bg-slate-950 transition-all duration-400"
+            className="-rotate-90 text-2xl font-bold p-3 bg-slate-900 dark:bg-blue-700 text-white rounded-t-3xl text-center absolute bottom-[-200px] -right-10 hover:bg-slate-950 transition-all duration-400"
             onClick={() => setGlosario(true)}
             style={{
               y: yPosAnim,

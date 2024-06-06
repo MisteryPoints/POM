@@ -135,7 +135,7 @@ const Home = () => {
     });
 
   return (
-    <div className="bg-slate-300 w-full">
+    <div className="w-full">
       <ToastContainer
         position="top-right"
         autoClose={1500}
@@ -172,7 +172,7 @@ const Home = () => {
             }}
             className="m-20"
           >
-            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
+            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-red-700 dark:mix-blend-normal dark:bg-slate-900 uppercase">
               SUBSCRIPTION MANAGER
             </h1>
           </div>
@@ -190,7 +190,7 @@ const Home = () => {
           }}
           viewport={{ once: true }}
         >
-          <h1 className="justify-center text-center mix-blend-lighten font-extrabold text-6xl bg-slate-300 m-auto w-full uppercase">
+          <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-sky-700 dark:mix-blend-normal dark:bg-slate-900 uppercase">
             Cálculo de Rollover
           </h1>
         </motion.div>
@@ -205,9 +205,9 @@ const Home = () => {
             },
           }}
           viewport={{ once: true }}>
-          <Label className="font-bold text-xl">MB</Label>
+          <Label className="font-bold text-xl dark:text-slate-300">MB</Label>
           <Switch id="airplane-mode" className='mb-1' checked={calSwitch} onCheckedChange={() => setCalSwitch(!calSwitch)} />
-          <Label className="font-bold text-xl">GB</Label>
+          <Label className="font-bold text-xl dark:text-slate-300">GB</Label>
         </motion.div>
         {!calSwitch ? (
           <motion.div
@@ -315,7 +315,7 @@ const Home = () => {
           }}
           viewport={{ once: true }}
         >
-          <h1 className="justify-center text-center mix-blend-lighten font-extrabold text-6xl bg-slate-300 m-auto w-full uppercase">
+          <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-purple-700 dark:mix-blend-normal dark:bg-slate-900 uppercase">
             Consulta de Offers
           </h1>
         </motion.div>

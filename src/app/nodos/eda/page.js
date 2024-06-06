@@ -35,7 +35,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-slate-300 w-full">
+    <div className="w-full">
       <TransitionEffect />
       <NavHome />
       <div className="grid grid-cols-12 mx-24 mt-0 justify-center gap-x-5 gap-y-6">
@@ -59,8 +59,8 @@ const Home = () => {
             }}
             className="m-20"
           >
-            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
-              EMA / EDA
+            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-red-700 dark:mix-blend-normal dark:bg-slate-900 uppercase">
+              EDA
             </h1>
           </div>
         </motion.div>
@@ -129,7 +129,7 @@ const Home = () => {
             }}
             viewport={{ once: true }}
           >
-            <h1 className="text-center text-7xl font-extrabold uppercase mb-8">
+            <h1 className="text-center text-7xl text-slate-700 dark:text-slate-300 font-extrabold uppercase mb-8">
               Glosario
             </h1>
             <motion.div
@@ -142,35 +142,35 @@ const Home = () => {
               dragElastic={{ left: 0, right: 0.8 }}
               onDragEnd={handleDragEnd}
             >
-              <ul className="text-white font-semibold text-xl py-5 px-6 bg-gradient-to-br from-slate-900 to-blue-950 rounded-l-2xl drop-shadow-lg max-w-[800px]">
+              <ul className="text-white font-semibold text-xl py-5 px-6 bg-gradient-to-br from-slate-700 to-blue-950 rounded-l-2xl drop-shadow-lg max-w-[800px]">
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     EMA:
                   </span>{" "}
                   Ericsson Multi - Activation. Multi Activador.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     EDA:
                   </span>{" "}
                   Ericsson Dynamic Activation. Activador Dinámico.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     Service Class:
                   </span>{" "}
                   Es la identificación denominada a través de EMA/EDA que posee
                   la configuración del Plan y su descripción en ECMS.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     Rebote:
                   </span>{" "}
                   Es provocado cuando una transacción no completa
                   satisfactoriamente y retorna un error.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     FL1:
                   </span>{" "}
                   Es el Puerto Flota Gateway que utiliza el Switch para activar
@@ -179,7 +179,7 @@ const Home = () => {
                   de rebotes.
                 </li>
                 <li>
-                  <span className="font-bold text-2xl text-blue-600 underline-offset-1 underline">
+                  <span className="font-bold text-2xl text-blue-600 dark:text-blue-700 underline-offset-1 underline">
                     MST1:
                   </span>{" "}
                   Es el Puerto MINSAT OLM que utiliza el Switch para activar o
@@ -188,7 +188,7 @@ const Home = () => {
                 </li>
               </ul>
               <div
-                className="h-auto mb-3 rounded-r-2xl bg-slate-900 text-white cursor-pointer flex justify-center items-center text-3xl"
+                className="h-auto mb-3 rounded-r-2xl bg-slate-900 dark:bg-blue-700 text-white cursor-pointer flex justify-center items-center text-3xl"
                 onClick={() => setGlosario(false)}
               >
                 <SlArrowRightCircle />
@@ -197,7 +197,7 @@ const Home = () => {
           </motion.div>
         ) : (
           <button
-            className="-rotate-90 text-2xl font-bold p-3 bg-slate-900 text-white rounded-t-3xl text-center absolute bottom-[-200px] -right-10 hover:bg-slate-950 transition-all duration-400"
+            className="-rotate-90 text-2xl font-bold p-3 bg-slate-900 dark:bg-blue-700 text-white rounded-t-3xl text-center absolute bottom-[-200px] -right-10 hover:bg-slate-950 transition-all duration-400"
             onClick={() => setGlosario(true)}
             style={{
               y: yPosAnim,

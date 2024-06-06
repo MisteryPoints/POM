@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <body
         className={
           poppins.variable +
-          " bg-slate-300 !scrollbar !scrollbar-thumb-red-600 !scrollbar-track-[#11141a] !scroll-smooth !overflow-x-hidden pb-[80px]"
+          " bg-slate-300 dark:bg-slate-900 !scrollbar !scrollbar-thumb-red-600 !scrollbar-track-[#11141a] !scroll-smooth !overflow-x-hidden pb-[80px]"
         }
       >
         <ThemeProvider
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         > 
           {children}
-          <footer className="flex justify-between xl:flex-wrap 2xl:flex-nowrap w-full bg-slate-200 text-lg 2xl:text-xl text-slate-700/90 shadow-[0px_-18px_25px_0px_rgba(241,245,249,0.75)] gap-x-5 px-20 translate-y-[80px] mt-[10px] select-none text-center">
+          <footer className="flex justify-between xl:flex-wrap 2xl:flex-nowrap w-full bg-slate-200 dark:bg-slate-800 text-lg 2xl:text-xl text-slate-700/90 dark:text-slate-200/90 shadow-[0px_-18px_25px_0px_rgba(241,245,249,0.75)] dark:shadow-slate-800 gap-x-5 px-20 translate-y-[80px] mt-[10px] select-none text-center">
             <p className="2xl:mt-[10px] mb-2 w-full">
               Copyright © 2023, Claro República Dominicana. Todos los derechos
               reservados

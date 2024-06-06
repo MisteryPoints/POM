@@ -7,7 +7,7 @@ import Slideshow from "@/components/SlideShow";
 
 const Home = () => {
   return (
-    <div className="bg-slate-300 w-full">
+    <div className="w-full">
       <TransitionEffect />
       <NavHome />
       <div className="grid grid-cols-12 mx-24 mt-0 justify-center gap-x-5 gap-y-6">
@@ -31,7 +31,7 @@ const Home = () => {
             }}
             className="m-20"
           >
-            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 uppercase">
+            <h1 className="text-center text-7xl font-extrabold mix-blend-lighten bg-slate-300 dark:text-red-700 dark:mix-blend-normal dark:bg-slate-900 uppercase">
               VOLTE
             </h1>
           </div>
@@ -49,7 +49,7 @@ const Home = () => {
           }}
           viewport={{ once: true }}
         >
-          <h3 className="bg-gradient-to-b from-gray-700 via-slate-800 to-slate-900 py-12 px-16 rounded-3xl text-white font-bold mx-12 text-4xl">
+          <h3 className="bg-gradient-to-b from-gray-700 via-cyan-500 to-cyan-700 py-12 px-16 rounded-3xl text-white font-bold mx-12 text-4xl">
             VoLTE significa Voz sobre LTE, ofrece la posibilidad de realizar
             llamadas de voz a través de la red móvil LTE/4G
             <br />
@@ -78,7 +78,7 @@ const Home = () => {
           viewport={{ once: true }}
         >
           <Slideshow
-            bg={"bg-gradient-to-b from-gray-700 via-slate-800 to-slate-900"}
+            bg={"bg-gradient-to-b from-gray-700 via-cyan-500 to-cyan-700"}
             images={[
               "/volte/VOLTE1.png",
               "/volte/VOLTE2.png",
