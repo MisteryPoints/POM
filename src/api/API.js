@@ -37,7 +37,7 @@ const ALinks = [
     link: "https://flota.claro.com.do/config/subs",
   },
   {
-    name: "WEB BOUNCE",
+    name: "Portal Rebote",
     img: "../Bounce.png",
     category: ["favoritos"],
     link: "https://bounces-web-prod-bounces-app-prod.apps.newprod.prod.cloudapps.claro.com.do/dashboard",
@@ -52,7 +52,7 @@ const ALinks = [
     name: "HP SM",
     img: "../SM%20Consulta.png",
     category: ["reportes"],
-    link: "http://dweb:8080/smanager/index.do?",
+    link: "http://smweb:8080/smanager/index.do",
   },
   {
     name: "SM Report",
